@@ -1,0 +1,99 @@
+// 420
+@mixin small {
+  @media (max-width: #{$xs}) {
+    @content;
+  }
+}
+
+// 580
+@mixin phone {
+  @media (max-width: #{$sm}) {
+    @content;
+  }
+}
+
+// 730
+@mixin tablet {
+  @media (max-width: #{$smm}) {
+    @content;
+  }
+}
+
+// 790
+@mixin tablet790 {
+  @media (max-width: #{$smd}) {
+    @content;
+  }
+}
+
+// 1000
+@mixin laptop {
+  @media (max-width: #{$md}) {
+    @content;
+  }
+}
+
+// 1200
+@mixin desktop {
+  @media (max-width: #{$lg}) {
+    @content;
+  }
+}
+
+@mixin media($media) {
+  @media (max-width: $media) {
+    @content;
+  }
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@function col($col) {
+  @return 100%/12 * $col;
+}
+
+@mixin col($col) {
+  max-width: col($col);
+  flex: 0 0 col($col);
+  padding-left: $offset_one_side;
+  padding-right: $offset_one_side;
+
+  @include tablet {
+    padding-right: $offset_one_side-tablet;
+    padding-left: $offset_one_side-tablet;
+  }
+}
+
+@mixin shift-left-col($n) {
+  $val: 100% / 12 * $n;
+
+  padding-left: #{calc(#{$val} - #{$offset_one_side})};
+
+  @include tablet {
+    padding-left: #{calc(#{$val} - #{$offset_one_side-tablet})};
+  }
+}
+
+@mixin shift-right-col($n) {
+  $val: 100% / 12 * $n;
+
+  padding-right: #{calc(#{$val} - #{$offset_one_side})};
+
+  @include tablet {
+    padding-left: #{calc(#{$val} - #{$offset_one_side-tablet})};
+  }
+}

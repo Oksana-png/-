@@ -1,0 +1,126 @@
+.work {
+  & .wrapper {
+    grid-template-columns: 1fr 3fr;
+    position: relative;
+    @include laptop {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -139px;
+      left: -149px;
+      z-index: -1;
+      border: 40px solid #C5E5FD;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      background-color: transparent;
+      @include desktop {
+        bottom: auto;
+        top: -100px;
+        left: -65px;
+      }
+      @include phone {
+        display: none;
+      }
+    }
+  }
+  & .title-group {
+    gap: 30px;
+    @include tablet790 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: end;
+    }
+    @include tablet {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+  }
+  & .wrap {
+    flex-basis: 50%;
+  }
+  & h2 {
+    margin-bottom: 36px;
+    @include laptop {
+      margin-bottom: 0;
+    }
+    @include tablet {
+      margin-bottom: 40px;
+    }
+  }
+  &-slider {
+    @include tablet {
+      max-width: 260px;
+      margin: 0 auto;
+    }
+    & .swiper-wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 48px;
+    
+      @include laptop {
+        gap: 30px;
+      }
+    
+      @include tablet {
+        grid-template-columns: 1fr;
+        display: flex;
+        gap: 0;
+      }
+    }
+    &__item {
+      padding: 24px;
+      @include tablet {
+        padding: 24px 20px;
+        max-width: 220px;
+        height: 372px;
+      }
+    }
+    &__num {
+      display: inline-block;
+      font-weight: 700;
+      font-size: 120px;
+      line-height: 100%;
+      letter-spacing: -0.02em;
+      color: #C5E5FD;
+      margin-bottom: 16px;
+    }
+    &__title {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 1.4;
+      color: $c-main;
+      margin-bottom: 12px;
+      @include laptop {
+        margin-bottom: 12px;
+        font-size: 20px;
+      }
+    }
+    &__text {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.5;
+      color: #85919E;
+    }
+  }
+  & .swiper-pagination {
+    display: none;
+    bottom: -22px !important;
+    @include tablet {
+      display: block;
+    }
+  }
+  & .swiper-slider {
+    width: 100%;
+  }
+  & .slider-arrow {
+    display: none;
+    @include tablet {
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+// grid gutter
+$offset_one_side: 24px;
+// if adaptive
+$offset_one_side-tablet: 15px;
+
+// fonts
+$f-heading: "PlusJakartaSans", arial, sans-serif;
+
+// colors
+$c-main: #30373E;
+$c-white: #fff;
+$c-light: #85919E;
+
+$c-primary: #FF7B43;
+
+// size
+$small: 320px;
+$middle: 560px;
+$tablet: 760px;
+$laptop: 960px;
+$desktop: 1200px;
+$wide: 1340px;
+$large: 1800px;
+
+// breakpoints
+$xs: 420px;
+$sm: 580px;
+$smm: 730px;
+$smd: 790px;
+$md: 1000px;
+$lg: 1200px;
+$extra-lg: 1440px;
+$xlg: 1925px;

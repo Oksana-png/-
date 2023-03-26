@@ -1,0 +1,105 @@
+.advantages {
+  &-slider {
+    position: relative;
+    &__item {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    &__title {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 140%;
+      margin-bottom: 23px;
+      color: $c-main;
+      text-align: center;
+    }
+    &__text {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      color: $c-light;
+      text-align: center;
+      @include phone {
+        line-height: 140%;
+      }
+    }
+  }
+  & .wrapper {
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -198px;
+      right: -120px;
+      z-index: -1;
+      border: 40px solid #C5E5FD;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      background-color: transparent;
+      @include desktop {
+        bottom: -96px;
+      }
+      @include laptop {
+        display: none;
+      }
+    }
+  }
+  & .title-group {
+    margin-bottom: 60px;
+    @include tablet {
+      margin-bottom: 40px;
+    }
+  }
+  & .swiper {
+    &-wrapper {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 48px;
+      @include desktop {
+        gap: 16px 30px;
+      }
+      @include laptop {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include tablet {
+        display: flex;
+        gap: 0;
+      }
+    }
+    &-slide {
+      padding: 24px 30px;
+      @include laptop {
+        padding: 24px;
+      }
+    }
+  }
+  & .icon {
+    margin-right: 0;
+  }
+  & h2 {
+    font-size: 40px;
+    @include tablet {
+      font-size: 24px;
+    }
+  }
+  & .slider-arrow {
+    display: none;
+    @include tablet {
+      display: block;
+    }
+  }
+  & .swiper-pagination {
+    display: none;
+    bottom: -22px;
+
+    @include tablet {
+      display: block;
+    }
+  }
+  & picture {
+    margin-bottom: 24px;
+  }
+}

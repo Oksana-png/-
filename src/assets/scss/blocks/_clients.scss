@@ -1,0 +1,31 @@
+.clients {
+  &-slider {
+    position: relative;
+    width: calc(251 * 5 - 32);
+    margin: 0 auto;
+    &__item {
+      padding: 12px;
+      @include tablet790 {
+        width: 214px;
+      }
+    }
+    & picture {
+      width: 100%;
+    }
+    & img {
+      width: 100%;
+    }
+  }
+  & .title-group {
+    margin-bottom: 56px;
+    @include tablet {
+      margin-bottom: 40px;
+    }
+  }
+  & .slider-arrow {
+    bottom: -36px;
+  }
+  & .swiper-pagination {
+    bottom: -27px;
+  }
+}

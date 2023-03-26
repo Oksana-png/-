@@ -1,0 +1,73 @@
+.header {
+  padding: 16px 0;
+  background-color: $c-main;
+  @include laptop {
+    background-color: $c-white;
+    color: $c-main;
+    &-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  @include tablet {
+    padding: 0;
+  }
+  &-logo {
+    display: none;
+    @include laptop {
+      display: flex;
+      width: 170px;
+    }
+    @include tablet {
+      width: 87px;
+    }
+  }
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include laptop {
+    gap: 30px;
+  }
+  &__block {
+    color: $c-white;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    &:nth-child(n+4) {
+      font-size: 16px;
+      line-height: 150%;
+      @include laptop {
+        display: block;
+      }
+    }
+    @include laptop {
+      display: none;
+      &>.icon {
+        fill: $c-main;
+      }
+      color: $c-main;
+    }
+    @include tablet {
+      &:nth-child(n+4) {
+        display: none;
+      }
+      &:nth-child(n+5) {
+        display: block;
+        font-size: 13px;
+        line-height: 1.3;
+      }
+      & .icon {
+        display: none;
+      }
+    }
+    a:hover {
+      color: $c-primary;
+    }
+  }
+}

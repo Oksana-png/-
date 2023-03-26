@@ -1,0 +1,112 @@
+.services {
+  &-card {
+    border-radius: 16px;
+    color: $c-main;
+    overflow: hidden;
+    box-shadow: 0px 0px 40px rgba(41, 105, 153, 0.2);
+    height: 100%;
+    &:hover {
+      box-shadow: 0px 0px 40px rgba(41, 105, 153, 0.2);
+      & .services-card__link {
+        opacity: 1;
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+    & h3 {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 1.4;
+      margin-bottom: 20px;
+      @include laptop {
+        font-size: 20px;
+        margin-bottom: 12px;
+      }
+    }
+    & p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.5;
+      color: $c-light;
+      margin-bottom: 24px;
+    }
+    & figcaption {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 24px 28px 24px 24px;
+      @include laptop {
+        padding: 24px 13.5px 24px 24px;
+      }
+      @include small {
+        padding: 24px;
+      }
+    }
+    picture {
+      width: 100%;
+      & img {
+        width: 100%;
+        height: 369px;
+        object-fit: cover;
+      }
+    }
+    &__link {
+      opacity: 0;
+      font-family: 'PlusJakartaSans';
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 24px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      padding: 4px;
+      position: relative;
+      align-self: flex-start;
+      @include tablet790 {
+        opacity: 1;
+        position: absolute;
+        bottom: 0;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 1px;
+        background-color: $c-primary;
+        transition: width 0.3s ease-out;
+        @include tablet790 {
+          width: 100%;
+        }
+      }
+    }
+  }
+  &-list {
+    grid-template-columns: repeat(3, 1fr);
+    @include laptop {
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-flow: row dense;
+    }
+    @include phone {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    & .card-col {
+      position: relative;
+      &:nth-child(n + 4) {
+        & picture {
+          display: none;
+        }
+      }
+      @include tablet790 {
+        &:nth-child(3) {
+          grid-row: span 3;
+          & .services-card__link {
+            position: relative;
+          }
+      }
+      }
+    }
+    
+  }
+}
