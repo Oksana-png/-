@@ -82,12 +82,9 @@ const swiperClients = new Swiper(".clients-slider", {
 
 const swiperParthrers = new Swiper(".partners-slider", {
   direction: 'horizontal',
-  slidesPerView: 2,
-  grid: {
-    rows: 2,
-  },
+  slidesPerView: 1,
   pagination: {
-    el: ".swiper-pagination",
+    el: ".partners-pagination",
     dynamicBullets: true,
   },
   navigation: {
@@ -97,7 +94,11 @@ const swiperParthrers = new Swiper(".partners-slider", {
   spaceBetween: 24,
   breakpoints: {
     290: {
+      slidesPerView: 2,
       centeredSlides: false,
+      grid: {
+        rows: 1,
+      },
     },
     580: {
       slidesPerColumn: 1,
@@ -105,6 +106,9 @@ const swiperParthrers = new Swiper(".partners-slider", {
     730: {
       slidesPerView: 3,
       centeredSlides: true,
+      grid: {
+        rows: 2,
+      },
     },
   }
 });

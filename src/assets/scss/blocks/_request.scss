@@ -1,0 +1,96 @@
+.request {
+  &-bg {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    padding-right: calc(50% + 24px);
+    height: 533px;
+    @include laptop {
+      position: relative;
+      height: 460px;
+      margin-bottom: 30px;
+      padding-right: 15px;
+    }
+    @include phone {
+      margin-bottom: 40px;
+      height: 300px;
+    }
+    @include small {
+      position: static;
+      padding-left: 15px;
+      height: 200px;
+    }
+    & picture {
+      height: 100%;
+      width: 100%;
+      border-radius: 0 60px 60px 0;
+      overflow: hidden;
+      @include small {
+        border-radius: 0;
+      }
+      &>* {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  & .title-group, form {
+    width: calc(col(6) - 24px);
+    margin-right: 0;
+    margin-left: auto;
+    @include laptop {
+      width: 100%;
+    }
+    @include tablet {
+      margin-bottom: 40px;
+    }
+  }
+  & .title-group {
+    margin-bottom: 36px;
+  }
+  & h2 {
+    margin-bottom: 0;
+  }
+  & textarea {
+    height: 150px;
+    margin-bottom: 24px;
+    @include tablet {
+      margin-bottom: 20px;
+    }
+  }
+  & .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 24px;
+    @include tablet {
+      flex-direction: column;
+      gap: 30px;
+      margin-bottom: 20px;
+      & input {
+        width: 100%;
+      }
+    }
+    &-btn {
+      display: flex;
+      align-items: center;
+      margin-top: 36px;
+      @include tablet {
+        flex-direction: column-reverse;
+        gap: 24px;
+        margin-top: 40px;
+      }
+      & .btn {
+        margin-right: 24px;
+        @include tablet {
+          margin-right: 0;
+        }
+      }
+    }
+    &>* {
+      flex-grow: 1;
+    }
+  }
+}

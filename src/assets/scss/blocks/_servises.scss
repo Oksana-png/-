@@ -3,7 +3,6 @@
     border-radius: 16px;
     color: $c-main;
     overflow: hidden;
-    height: 100%;
     &:hover {
       box-shadow: 0px 0px 40px rgba(41, 105, 153, 0.2);
       & .services-card__link {
@@ -35,6 +34,7 @@
       flex-direction: column;
       justify-content: flex-start;
       padding: 24px 28px 24px 24px;
+      height: 100%;
       @include laptop {
         padding: 24px 13.5px 24px 24px;
       }
@@ -54,6 +54,7 @@
       opacity: 0;      
       position: relative;
       align-self: flex-start;
+      margin-top: auto;
       @include tablet790 {
         opacity: 1;
         position: absolute;
@@ -88,6 +89,12 @@
       &:nth-child(n + 4) {
         & picture {
           display: none;
+        }
+        & .services-card {
+          height: 100%;
+        }
+        & figcaption {
+          height: 100%;
         }
       }
       @include tablet790 {

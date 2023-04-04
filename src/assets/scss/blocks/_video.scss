@@ -97,9 +97,6 @@
       padding: 12px 17px;
     }
   }
-  & .icon {
-    stroke: $c-white;
-  }
 
   & .video {
     &-block {
@@ -116,6 +113,9 @@
         border-radius: 60px;
         @include laptop {
           width: 100%;
+        }
+        @include tablet {
+          border-radius: 30px;
         }
       }
       & .svg-indicator {

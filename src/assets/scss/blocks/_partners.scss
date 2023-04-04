@@ -4,7 +4,7 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 48px;
-    @include laptop {
+    @include desktop {
       gap: 0px;
       grid-template-columns: 1fr;
     }
@@ -25,7 +25,6 @@
       }
     }
   }
-
   &.section-padding {
     padding: 100px 0;
     @include laptop {
@@ -36,7 +35,7 @@
     }
   }
   & .title-group {
-    @include laptop {
+    @include desktop {
       margin-bottom: 60px;
     }
     @include tablet {
@@ -52,8 +51,16 @@
   &-slider {
     overflow: hidden;
     position: relative;
-    margin-top: 20px;
     height: 318px;
+    @include desktop {
+      margin-bottom: 45px;
+    }
+    @include tablet {
+      height: 149px;
+    }
+    @include phone {
+      height: 129px;
+    }
     &__item {
       padding: 24px 27px;
       background-color: $c-white;
@@ -75,8 +82,29 @@
       bottom: 10px;
     }
   }
+  &-nav {
+    position: relative;
+    grid-column: 2/3;
+    @include desktop {
+      grid-column: 1;
+    }
+    & .slider-arrow {
+      bottom: 0;
+    }
+    & .partners-pagination {
+      position: absolute;
+      right: 50%;
+    }
+  }
   & .swiper-slide {
     height: calc((100% - 30px) / 2) !important;
+    @include tablet {
+      margin-top: 0 !important;
+      height: 100% !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
   & .swiper-pagination-bullet {
     background-color: #F1F9FF;

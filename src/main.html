@@ -475,7 +475,61 @@
       </div>
     </section>
 
-    <!-- ! НЕ ДОДЕЛАН. НЕ РАБОТАЮТ 2 СТРОКИ СЛАЙДОВ В СЛАЙДЕРЕ  -->
+    <section class="request section-margin">
+      <div class="request-bg">
+        <picture>
+          <source srcset="assets/image/product/request-bg.jpg" type="image/webp">
+          <img src="assets/image/product/request-bg.jpg" alt="alt" title="title">
+        </picture>
+      </div>
+
+      <div class="wrapper">
+        <div class="title-group">
+          <span class="intro">Оставьте заявку</span>
+          <h2>Индивидуальные решения для вашего дома</h2>
+        </div>
+        <form>
+          <div class="wrap">
+            <input type="text" name="name" placeholder="Имя">
+            <input type="text" name="phone" placeholder="Телефон">
+          </div>
+          <textarea name="message" placeholder="Опишите ваши требования максимально подробно (необязательно). При необходимости можете прикрепить файл ниже"></textarea>
+          
+          <div class="i-agree__checkbox">
+            <label class="custom-checkbox">
+              <input name="agree" type="checkbox" class="default-checkbox">
+              <span class="fake-checkbox">
+                <svg class="icon icon-checkbox">
+                  <use xlink:href="assets/image/svg/sprite.svg#checkbox"></use>
+                </svg>
+              </span>
+              <span class="checkbox-title">
+                Я согласен с
+                <a href="#">Политикой обработки персональных данных</a>
+              </span>
+            </label>
+          </div>
+
+          <div class="wrap-btn">
+            <button type="submit" class="btn btn-flex btn-bg-primary">
+              Оставить заявку
+              <svg class="icon icon-arrow">
+                <use xlink:href="assets/image/svg/sprite.svg#next-arrow"></use>
+              </svg>
+            </button>
+
+            <div class="input-button-file">
+              <input id="file" type="file">
+              <label for="file">
+                Прикрепить файл
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </section>
+
     <section class="partners section-margin section-padding grey-block">
       <div class="wrapper">
         <div class="title-group">
@@ -537,12 +591,14 @@
               </picture>
             </div>
           </div>
+        </div>
+        <div class="partners-nav">
           <button class="partners-arrows-prev slider-arrow arrow-prev">
             <svg class="icon">
               <use xlink:href="assets/image/svg/sprite.svg#prev-arrow"></use>
             </svg>
           </button>
-          <div class="swiper-pagination"></div>
+          <div class="partners-pagination"></div>
           <button class="partners-arrows-next slider-arrow arrow-next">
             <svg class="icon">
               <use xlink:href="assets/image/svg/sprite.svg#next-arrow"></use>
@@ -802,7 +858,6 @@
       </div>
     </section>
 
-
     <section class="consultation">
       <div class="consultation-bg">
         <picture>
@@ -810,7 +865,6 @@
           <img src="assets/image/product/consultation-bg.jpg" alt="alt" title="title">
         </picture>
       </div>
-
       <div class="wrapper">
         <div class="consultation-wrapper">
           <div class="title-group">
