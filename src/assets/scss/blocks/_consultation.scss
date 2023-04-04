@@ -1,0 +1,142 @@
+.consultation {
+  position: relative;
+  top: 1px;
+  background-color: $c-main;
+  color: $c-white;
+  margin-top: 235px;
+  @include laptop {
+    margin-top: 80px;
+  }
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -267px;
+    left: 15%;
+    z-index: 1;
+    border: 40px solid #C5E5FD;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    @include media(1500px) {
+      left: 15px;
+    }
+    @include laptop {
+      left: auto;
+      top: -61px;
+      right: -68px;
+    }
+    @include tablet {
+      display: none;
+    }
+
+  }
+  &-wrapper {
+    position: relative;
+    width: calc(col(7) - 24px);
+    padding: 60px 0;
+    @include desktop {
+      width: 100%;
+    }
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: -1;
+      top: -133px;
+      left: 189px;
+      border: 40px solid #C5E5FD;
+      border-radius: 60px;
+      background-color: transparent;
+      width: 217px;
+      height: 231px;
+      @include laptop {
+        display: none;
+      }
+    }
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: -2;
+      top: -75px;
+      left: 359px;
+      border: 40px solid #76C1FB;
+      border-radius: 60px;
+      background-color: transparent;
+      width: 241px;
+      height: 140px;
+      @include laptop {
+        display: none;
+      }
+    }
+  }
+  &-bg {
+    position: absolute;
+    top: -75px;
+    right: 0;
+    @include shift-left-col(7);
+    @include desktop {
+      display: none;
+    }
+    & picture {
+      border-radius: 60px 0px 0px 0px;
+      overflow: hidden;
+      & img, source {
+        @include media(1500px) {
+          height: 501px;
+        }
+      }
+    }
+  }
+  & h2 {
+    margin-bottom: 0;
+  }
+  & p {
+    line-height: 150%;
+    color: #85919E;
+    margin-bottom: 24px;
+  }
+  & .title-group {
+    margin-bottom: 36px;
+    @include tablet {
+      margin-bottom: 40px;
+    }
+  }
+  & .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    @include desktop {
+      gap: 24px;
+    }
+    @include tablet {
+      flex-direction: column;
+      gap: 30px;
+    }
+    &>* {
+      @include desktop {
+        flex-grow: 1;
+      }
+      @include tablet {
+        width: 100%;
+      }
+    }
+  }
+  & .i-agree__checkbox>a {
+    display: inline;
+  }
+  & .btn {
+    padding: 12px 16px;
+    justify-content: center;
+    & .icon {
+      padding-top: 3px;
+      margin-right: 0;
+      margin-left: 4px;
+      stroke: $c-white;
+    }
+  }
+
+}

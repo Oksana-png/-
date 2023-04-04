@@ -1,0 +1,107 @@
+.portfolio {
+  &-slider {
+    background-color: $c-white;
+    overflow: hidden;
+    border-radius: 0px 60px 60px 0px;
+    @include desktop {
+      border-radius: 0;
+    }
+  }
+  & .wrapper-nav {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  & .slider {
+    margin-bottom: 36px;
+    @include phone {
+      margin-bottom: 34px;
+    }
+  }
+  & .portfolio-slider-nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 94px;
+    margin-left: 207px;
+    @include laptop {
+      margin-left: 334px;
+    }
+    @include tablet {
+      margin-left: 0;
+    }
+    &>* {
+      position: relative;
+      left: auto !important;
+      bottom: auto;
+      transform: translate(0) !important;
+    }
+    &>.arrow-next {
+      position: absolute;
+      top: 0;
+      right: -24px;
+    }
+  }
+  & .title-group {
+    margin-bottom: 33px;
+    display: grid;
+    gap: 48px;
+    align-items: end;
+    grid-template-columns: repeat(2, 1fr);
+    @include desktop {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+    @include tablet790 {
+      margin-bottom: 30px;
+    }
+    @include tablet {
+      gap: 40px;
+    }
+    @include phone {
+      margin-bottom: 32px;
+    }
+  }
+  & .wrapper-left {
+    position: relative;
+    width: calc(50% + 600px);
+    @include desktop {
+      width: 100%;
+    }
+    &::after {
+      content: '';
+      background-color: #C5E5FD;
+      border-radius: 60px;
+      width: 936px;
+      height: 450px;
+      position: absolute;
+      right: -215px;
+      top: 130px;
+      z-index: -1;
+      @include desktop {
+        display: none;
+      }
+    }
+  }
+  & .swiper-slide {
+    height: 450px;
+    width: 100%;
+    @include desktop {
+      height: 400px;
+    }
+    @include laptop {
+      height: 350px;
+    }
+    @include phone {
+      height: 200px;
+      padding: 0 15px;
+    }
+    & picture, img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  & h2 {
+    margin-bottom: 0;
+  }
+}

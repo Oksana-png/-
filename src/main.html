@@ -5,61 +5,179 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>АльфаВент</title>
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+  <link rel="stylesheet" href="assets/libs/fancybox/jquery.fancybox.css">
+
   <link rel="stylesheet" href="assets/css/main.css">
-  <script src="assets/js/main.js" defer></script>
-  <script src="assets/js/sliders.js" defer></script>
 </head>
 <body>
   <header class="header">
-    <div class="wrapper header-row header-contact">
-      <div class="logo header-logo">
-        <a href="/">
-          <img src="assets/image/logo2.png" alt="alt" title="">
-        </a>
+    <div class="grey-bg">
+      <div class="wrapper header-row header-contact">
+        <div class="logo header-logo">
+          <a href="/">
+            <img src="assets/image/logo2.png" alt="alt" title="">
+          </a>
+        </div>
+        <div class="contact">
+          <div class="contact__block">
+            <svg class="icon icon-mini">
+              <use xlink:href="assets/image/svg/sprite.svg#geolocation"></use>
+            </svg>
+            <p>М.О, д.Кукуево, ул.Водопадная, д.45</p>
+          </div>
+          <div class="contact__block">
+            <svg class="icon icon-mini">
+              <use xlink:href="assets/image/svg/sprite.svg#email"></use>
+            </svg>
+            <a href="mailto:info@atmosfera.ru">info@atmosfera.ru</a>
+          </div>
+          <div class="contact__block">
+            <svg class="icon icon-mini">
+              <use xlink:href="assets/image/svg/sprite.svg#clock"></use>
+            </svg>
+            <p>Пн-Пт с 8:00 до 20:00</p>
+          </div>
+          <div class="contact__block">
+            <svg class="icon icon-mini">
+              <use xlink:href="assets/image/svg/sprite.svg#phone"></use>
+            </svg>
+            <a href="tel:+74958008080">+7 495 800-80-80</a>
+          </div>
+          <div class="contact__block">
+            <svg class="icon icon-mini">
+              <use xlink:href="assets/image/svg/sprite.svg#watsapp"></use>
+            </svg>
+            <a href="tel:+79168888888">+7 916 888-88-88</a>
+          </div>
+        </div>
+        <div class="burger-menu">
+          <button class="burger-menu__btn ">
+            <span></span>
+          </button>
+        </div>
       </div>
-      <div class="contact">
-        <div class="contact__block">
-          <svg class="icon icon-mini">
-            <use xlink:href="assets/image/svg/sprite.svg#geolocation"></use>
-          </svg>
-          <p>М.О, д.Кукуево, ул.Водопадная, д.45</p>
+    </div>
+    <div class="wrapper header-row header-nav">
+      <a href="/" class="logo">
+        <img src="assets/image/logo-large.png" alt="АльфаВент">
+      </a>
+      <div class="header__nav">
+        <div class="row">
+          <ul class="header__list-nav">
+            <li class="header__item"><a href="#" class="header__link">О компании</a></li>
+            <li class="header__item"><a href="#" class="header__link">Портфолио</a></li>
+            <li class="header__item"><a href="#" class="header__link">Акции</a></li>
+            <li class="header__item"><a href="#" class="header__link">Контакты</a></li>
+          </ul>
+
+          <form>
+            <input type="text" name="search" placeholder="Поиск">
+          </form>
+
+          <button class="btn btn-primary btn-primary-line">Перезвоните мне</button>
         </div>
-        <div class="contact__block">
-          <svg class="icon icon-mini">
-            <use xlink:href="assets/image/svg/sprite.svg#email"></use>
-          </svg>
-          <a href="mailto:info@atmosfera.ru">info@atmosfera.ru</a>
+        <div class="nav">
+          <ul class="header__list-nav">
+            <li class="header__item">
+              <a href="#" class="header__link">Вентиляция</a>
+              <ul class="submenu">
+                <li class="submenu__item"><a href="#" class="submenu__link">Вентиляции бассейнов</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link">Промышленные вентиляции</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link">Противодымная вентиляция</a></li>
+              </ul>
+            </li>
+            <li class="header__item"><a href="#" class="header__link">Отопление</a></li>
+            <li class="header__item"><a href="#" class="header__link">Водоснабжение</a></li>
+            <li class="header__item"><a href="#" class="header__link">Сервисное обслуживание</a></li>
+            <li class="header__item"><a href="#" class="header__link">Ремонт</a></li>
+            <li class="header__item"><a href="#" class="header__link">Отчёты и акты газового хозяйства</a></li>
+          </ul>
         </div>
-        <div class="contact__block">
-          <svg class="icon icon-mini">
-            <use xlink:href="assets/image/svg/sprite.svg#clock"></use>
-          </svg>
-          <p>Пн-Пт с 8:00 до 20:00</p>
-        </div>
-        <div class="contact__block">
-          <svg class="icon icon-mini">
-            <use xlink:href="assets/image/svg/sprite.svg#phone"></use>
-          </svg>
-          <a href="tel:+74958008080">+7 495 800-80-80</a>
-        </div>
-        <div class="contact__block">
-          <svg class="icon icon-mini">
-            <use xlink:href="assets/image/svg/sprite.svg#watsapp"></use>
-          </svg>
-          <a href="tel:+79168888888">+7 916 888-88-88</a>
-        </div>
-      </div>
-      <div class="burger-menu">
-        <button class="burger-menu__btn ">
-          <span></span>
-        </button>
       </div>
     </div>
   </header>
   <main>
+
+    <section class="hero section-main">
+      <div class="wrapper">
+        <div class="title-group">
+          <h1>Отопление Водоснабжение Вентиляция</h1>
+          <div class="hero-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide hero-slider__item">
+                <picture>
+                  <source srcset="" type="image/webp">
+                  <img src="assets/image/product/hero-bg.jpg" alt="alt" title="title">
+                </picture>
+              </div>
+              <div class="swiper-slide hero-slider__item">
+                <picture>
+                  <source srcset="" type="image/webp">
+                  <img src="assets/image/product/hero-bg.jpg" alt="alt" title="title">
+                </picture>
+              </div>
+              <div class="swiper-slide hero-slider__item">
+                <picture>
+                  <source srcset="" type="image/webp">
+                  <img src="assets/image/product/privilege-bd.jpg" alt="alt" title="title">
+                </picture>
+              </div>
+            </div>
+          </div>
+          <div class="hero-nav">
+            <button class="hero-arrows-prev slider-arrow arrow-prev">
+              <svg class="icon">
+                <use xlink:href="assets/image/svg/sprite.svg#prev-arrow"></use>
+              </svg>
+            </button>
+            <div class="hero-pagination swiper-pagination"></div>
+            <button class="hero-arrows-next slider-arrow arrow-next">
+              <svg class="icon">
+                <use xlink:href="assets/image/svg/sprite.svg#next-arrow"></use>
+              </svg>
+            </button>
+          </div>
+          <p>Полный спектр инженерных услуг на высоком уровне по цене частного мастера</p>
+          <button class="btn btn-flex btn-bg-primary">
+            Заказать расчёт
+            <svg class="icon icon-arrow">
+              <use xlink:href="assets/image/svg/sprite.svg#next-arrow"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="privilege section-margin">
+      <div class="wrapper">
+        <div class="privilege-image">
+          <picture>
+            <source srcset="" type="image/webp">
+            <img src="assets/image/product/privilege-bd.jpg" alt="alt" title="title">
+          </picture>
+        </div>
+        <div class="privilege-items">
+          <ul>
+            <li>
+              <h3>Гарантия 2 года</h3>
+              <p>на все работы. Все условия закреплены в договоре</p>
+            </li>
+            <li>
+              <h3>Собственное производство</h3>
+              <p>деталей для вентиляционных систем даёт выгоду до 30%</p>
+            </li>
+            <li>
+              <h3>Профессиональная команда</h3>
+              <p>развивающихся специалистов с опытом работы от 5 лет</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <section class="services section-margin">
       <div class="wrapper">
         <div class="title-group">
@@ -77,7 +195,7 @@
                 <figcaption>
                   <h3>Вентиляция</h3>
                   <p>Разработка, проектирование, изготовление, монтаж вентилляционных систем под ключ</p>
-                  <a href="/" class="services-card__link">Подробнее</a>
+                  <a href="/" class="services-card__link btn-primary">Подробнее</a>
                 </figcaption>
               </figure>
               
@@ -93,7 +211,7 @@
                 <figcaption>
                   <h3>Отопление</h3>
                   <p>Разработка, проектирование, изготовление, монтаж отопительных систем под ключ</p>
-                  <a href="/" class="services-card__link">Подробнее</a>
+                  <a href="/" class="btn-primary services-card__link">Подробнее</a>
                 </figcaption>
               </figure>
             </div>
@@ -108,7 +226,7 @@
                 <figcaption>
                   <h3>Водоснабжение</h3>
                   <p>Разработка, проектирование, изготовление, монтаж систем водоснабжения под ключ</p>
-                  <a href="/" class="services-card__link">Подробнее</a>
+                  <a href="/" class="btn-primary services-card__link">Подробнее</a>
                 </figcaption>
               </figure>
             </div>
@@ -123,7 +241,7 @@
                 <figcaption>
                   <h3>Сервисное обслуживание</h3>
                   <p>Систем вентиляции, водоснобжения и отопления</p>
-                  <a href="/" class="services-card__link">Подробнее</a>
+                  <a href="/" class="btn-primary services-card__link">Подробнее</a>
                 </figcaption>
               </figure>
             </div>
@@ -138,7 +256,7 @@
                 <figcaption>
                   <h3>Ремонт и модернизация</h3>
                   <p>Разработка, проектирование, изготовление, монтаж вентилляционных систем под ключ.</p>
-                  <a href="/" class="services-card__link">Подробнее</a>
+                  <a href="/" class="btn-primary services-card__link">Подробнее</a>
                 </figcaption>
               </figure>
             </div>
@@ -153,12 +271,111 @@
                 <figcaption>
                   <h3>Предоставление документации для газового хозяйства</h3>
                   <p>Акт ВДПО, Договор ТО ВГДТО, Молниезащита и заземление</p>
-                  <a href="/" class="services-card__link">Подробнее</a>
+                  <a href="/" class="btn-primary services-card__link">Подробнее</a>
                 </figcaption>
               </figure>
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="portfolio section-margin">
+      <div class="wrapper">
+        <div class="title-group">
+          <div class="wrap">
+            <span class="intro">Портфолио</span>
+            <h2>Убедитесь в качестве наших работ</h2>
+          </div>
+          <p>Ознакомьтесь с выполненными работами нашей компании</p>
+        </div>
+      </div>
+      <div class="slider">
+        <div class="wrapper-left">
+          <div class="portfolio-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide portfolio-slider__item">
+                <a data-fancybox href="assets/image/portfolio/Ventilation_SP_0228_Commercial_Ventilation-1440x960.jpg" class="hover-images__icon">
+                  <picture>
+                    <source srcset="" type="image/webp">
+                    <img src="assets/image/portfolio/Ventilation_SP_0228_Commercial_Ventilation-1440x960.jpg" alt="alt" title="title">
+                  </picture>
+                  <svg class="icon icon-hover">
+                    <use xlink:href="assets/image/svg/sprite.svg#hover-img"></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="swiper-slide portfolio-slider__item">
+                <a data-fancybox href="assets/image/portfolio/ventilation-systems2.jpg"
+                  class="hover-images__icon">
+                  <picture>
+                    <source srcset="" type="image/webp">
+                    <img src="assets/image/portfolio/ventilation-systems2.jpg" alt="alt" title="title">
+                  </picture>
+                  <svg class="icon icon-hover">
+                    <use xlink:href="assets/image/svg/sprite.svg#hover-img"></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="swiper-slide portfolio-slider__item">
+                <a data-fancybox href="assets/image/portfolio/Ventilation_SP_0228_Commercial_Ventilation-1440x960.jpg"
+                  class="hover-images__icon">
+                  <picture>
+                    <source srcset="" type="image/webp">
+                    <img src="assets/image/portfolio/Ventilation_SP_0228_Commercial_Ventilation-1440x960.jpg" alt="alt" title="title">
+                  </picture>
+                  <svg class="icon icon-hover">
+                    <use xlink:href="assets/image/svg/sprite.svg#hover-img"></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="swiper-slide portfolio-slider__item">
+                <a data-fancybox href="assets/image/portfolio/ventilation-systems2.jpg" class="hover-images__icon">
+                  <picture>
+                    <source srcset="" type="image/webp">
+                    <img src="assets/image/portfolio/ventilation-systems2.jpg" alt="alt" title="title">
+                  </picture>
+                  <svg class="icon icon-hover">
+                    <use xlink:href="assets/image/svg/sprite.svg#hover-img"></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="swiper-slide portfolio-slider__item">
+                <a data-fancybox href="assets/image/portfolio/Ventilation_SP_0228_Commercial_Ventilation-1440x960.jpg"
+                  class="hover-images__icon">
+                  <picture>
+                    <source srcset="" type="image/webp">
+                    <img src="assets/image/portfolio/Ventilation_SP_0228_Commercial_Ventilation-1440x960.jpg" alt="alt" title="title">
+                  </picture>
+                  <svg class="icon icon-hover">
+                    <use xlink:href="assets/image/svg/sprite.svg#hover-img"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper wrapper-nav">
+        <div class="portfolio-slider-nav">
+          <button class="portfolio-arrows-prev slider-arrow arrow-prev">
+            <svg class="icon">
+              <use xlink:href="assets/image/svg/sprite.svg#prev-arrow"></use>
+            </svg>
+          </button>
+          <div class="swiper-pagination portfolio-pagination"></div>
+          <button class="portfolio-arrows-next slider-arrow arrow-next">
+            <svg class="icon">
+              <use xlink:href="assets/image/svg/sprite.svg#next-arrow"></use>
+            </svg>
+          </button>
+        </div>
+        <a href="#" class="btn btn-flex btn-primary btn-primary-line">
+          все работы
+          <svg class="icon">
+            <use xlink:href="assets/image/svg/sprite.svg#next-arrow"></use>
+          </svg>
+        </a>
       </div>
     </section>
 
@@ -191,7 +408,32 @@
       </div>
     </section>
 
-    <section class="work section-margin">
+    <section class="about section-margin">
+      <div class="background"></div>
+      <div class="wrapper">
+        <div class="title-group">
+          <span class="intro">О нас</span>
+          <h2>Современный взгляд на инженерные системы</h2>
+          <picture>
+            <source srcset="" type="image/webp">
+            <img src="assets/image/product/about.jpg" alt="general" title="general">
+          </picture>
+          <p>Оказываем полный спектр инженерных услуг для частных домов и предприятий. В нашем штате знающие своё дело специалисты.
+            При проектировании учитываем каждый нюанс. Грамотно подбираем оборудование и помогаем экономить бюджет. Выполняем монтаж
+            аккуратно и чётко соблюдаем сроки.
+          </p>
+          <a href="#" class="btn-primary btn-flex about__btn">
+            ПОДРОБНЕЕ
+            <svg class="icon">
+              <use xlink:href="assets/image/svg/sprite.svg#next-arrow"></use>
+            </svg>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="work section-margin section-padding">
       <div class="wrapper row-grid">
         <div class="title-group">
           <div class="wrap">
@@ -233,13 +475,123 @@
       </div>
     </section>
 
+    <!-- ! НЕ ДОДЕЛАН. НЕ РАБОТАЮТ 2 СТРОКИ СЛАЙДОВ В СЛАЙДЕРЕ  -->
+    <section class="partners section-margin section-padding grey-block">
+      <div class="wrapper">
+        <div class="title-group">
+          <span class="intro">Наши партнёры</span>
+          <h2>Используем современное оборудование</h2>
+          <p>
+            Работаем с оборудованием ведущих мировых производителей <br>
+            Даём рекомендации по выбору оптимальных систем для конкретного случая
+          </p>
+        </div>
+        <div class="partners-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide partners-slider__item">
+              <picture>
+                <source srcset="" type="image/webp">
+                <img src="assets/image/icons/General.png" alt="general" title="general">
+              </picture>
+            </div>
+            <div class="swiper-slide partners-slider__item">
+              <picture>
+                <source srcset="" type="image/webp">
+                <img src="assets/image/icons/honeywell.png" alt="honeywell" title="honeywell">
+              </picture>
+            </div>
+            <div class="swiper-slide partners-slider__item">
+              <picture>
+                <source srcset="" type="image/webp">
+                <img src="assets/image/icons/Technoheat.png" alt="Technoheat" title="Technoheat">
+              </picture>
+            </div>
+            <div class="swiper-slide partners-slider__item">
+              <picture>
+                <source srcset="" type="image/webp">
+                <img src="assets/image/icons/Stout.png" alt="Stout" title="Stout">
+              </picture>
+            </div>
+            <div class="swiper-slide partners-slider__item">
+              <picture>
+                <source srcset="" type="image/webp">
+                <img src="assets/image/icons/MyHeat.png" alt="MyHeat" title="MyHeat">
+              </picture>
+            </div>
+            <div class="swiper-slide partners-slider__item">
+              <picture>
+                <source srcset="" type="image/webp">
+                <img src="assets/image/icons/honeywell.png" alt="honeywell" title="honeywell">
+              </picture>
+            </div>
+            <div class="swiper-slide partners-slider__item">
+              <picture>
+                <source srcset="" type="image/webp">
+                <img src="assets/image/icons/honeywell.png" alt="honeywell" title="honeywell">
+              </picture>
+            </div>
+            <div class="swiper-slide partners-slider__item">
+              <picture>
+                <source srcset="" type="image/webp">
+                <img src="assets/image/icons/honeywell.png" alt="honeywell" title="honeywell">
+              </picture>
+            </div>
+          </div>
+          <button class="partners-arrows-prev slider-arrow arrow-prev">
+            <svg class="icon">
+              <use xlink:href="assets/image/svg/sprite.svg#prev-arrow"></use>
+            </svg>
+          </button>
+          <div class="swiper-pagination"></div>
+          <button class="partners-arrows-next slider-arrow arrow-next">
+            <svg class="icon">
+              <use xlink:href="assets/image/svg/sprite.svg#next-arrow"></use>
+            </svg>
+          </button>
+        </div>
+
+
+      </div>
+    </section>
+
+    <section class="video section-margin">
+      <div class="wrapper">
+        <div class="video-block">
+          <picture>
+            <source srcset="" type="image/webp">
+            <img src="assets/image/product/photo-na-video.jpg" alt="general" title="general">
+          </picture>
+          <a data-fancybox href="https://www.youtube.com/watch?v=Rnh497vLloc" class="video__link">
+            <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="60" cy="60" r="42" fill="#FF7B43" stroke="white" stroke-width="4" />
+              <circle cx="60" cy="60" r="53" stroke="white" stroke-opacity="0.4" stroke-width="4" />
+              <circle class="svg-indicator" cx="60" cy="60" r="53" stroke="white" stroke-width="4" />
+              <path
+                d="M73 56.5359C75.6667 58.0755 75.6667 61.9245 73 63.4641L58 72.1244C55.3333 73.664 52 71.7395 52 68.6603V51.3397C52 48.2605 55.3333 46.336 58 47.8756L73 56.5359Z"
+                fill="white" />
+            </svg>
+          </a>
+        </div>
+        <div class="title-group">
+          <span class="intro">Видео о компании</span>
+          <h2>Монтаж инженерных систем любой сложности от профессионалов</h2>
+          <p>Для каждого объекта мы учитываем все индивидуальные нормативные требования и особенности. Находим оптимальные технические решения.</p>
+          <button class="btn btn-flex btn-bg-primary">
+            Получить консультацию
+            <svg class="icon icon-arrow">
+              <use xlink:href="assets/image/svg/sprite.svg#next-arrow"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
     <section class="advantages section-margin section-padding">
       <div class="wrapper">
         <div class="title-group">
           <span class="intro">наши преимущества</span>
           <h2>Полный спектр инженерных услуг на высоком уровне по цене частного мастера</h2>
         </div>
-
         <div class="advantages-slider">
           <div class="swiper-wrapper">
             <div class="swiper-slide advantages-slider__item">
@@ -370,10 +722,219 @@
       </div>
     </section>
 
+    <section class="news-block section-padding">
+      <div class="wrapper">
+        <div class="title-group">
+          <div class="wrap">
+            <span class="intro">Новости</span>
+            <h2>Актуальные новости нашей компании</h2>
+          </div>
+          <a href="#" class="btn btn-flex btn-primary btn-primary-line">
+            Все новости
+            <svg class="icon">
+              <use xlink:href="assets/image/svg/sprite.svg#next-arrow"></use>
+            </svg>
+          </a>
+        </div>
 
+        <div class="news">
+          <div class="new new-item">
+            <figure>
+              <a href="#" class="news-link">
+                <picture>
+                  <source srcset="assets/image/product/ventilation-systems.jpg" type="image/webp">
+                  <img src="assets/image/product/ventilation-systems.jpg" alt="alt" title="hand wings" class="clients__image">
+                </picture>
+              </a>
+              <figcaption>
+                <a href="#" class="new__text-link">
+                  <div class="new__date">15 Июнь 2022</div>
+                  <h3>Отметили 1000 юбилейный проект в сентябре 2023 года</h3>
+                  <p>Отмечаем сдачи 1000чного проекта в нашей компании. Приглашаем всех на бесплатный банкет в наш офис</p>
+                </a>
+                <a href="#" class="new-item__hover btn-primary btn-primary-line">ПОДРОБНЕЕ</a>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="new new-item">
+            <figure>
+              <a href="#" class="news-link">
+                <picture>
+                  <source srcset="assets/image/product/ventilation-systems.jpg" type="image/webp">
+                  <img src="assets/image/product/ventilation-systems.jpg" alt="alt" title="hand wings" class="clients__image">
+                </picture>
+              </a>
+              <figcaption>
+                <a href="#" class="new__text-link">
+                  <div class="new__date">15 Июнь 2022</div>
+                  <h3>Отметили 1000 юбилейный проект в сентябре 2023 года</h3>
+                  <p>Отмечаем сдачи 1000чного проекта в нашей компании. Приглашаем всех на бесплатный банкет в наш офис</p>
+                </a>
+                <a href="#" class="new-item__hover btn-primary btn-primary-line">ПОДРОБНЕЕ</a>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="new new-item">
+            <figure>
+              <a href="#" class="news-link">
+                <picture>
+                  <source srcset="assets/image/product/ventilation-systems.jpg" type="image/webp">
+                  <img src="assets/image/product/ventilation-systems.jpg" alt="alt" title="hand wings" class="clients__image">
+                </picture>
+              </a>
+              <figcaption>
+                <a href="#" class="new__text-link">
+                  <div class="new__date">15 Июнь 2022</div>
+                  <h3>Отметили 1000 юбилейный проект в сентябре 2023 года</h3>
+                  <p>Отмечаем сдачи 1000чного проекта в нашей компании. Приглашаем всех на бесплатный банкет в наш офис</p>
+                </a>
+                <a href="#" class="btn-primary new-item__hover btn-primary-line">ПОДРОБНЕЕ</a>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <a href="#" class="btn btn-flex btn-primary btn-primary-line">
+          Все новости
+          <svg class="icon">
+            <use xlink:href="assets/image/svg/sprite.svg#next-arrow"></use>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+
+    <section class="consultation">
+      <div class="consultation-bg">
+        <picture>
+          <source srcset="assets/image/product/consultation-bg.jpg" type="image/webp">
+          <img src="assets/image/product/consultation-bg.jpg" alt="alt" title="title">
+        </picture>
+      </div>
+
+      <div class="wrapper">
+        <div class="consultation-wrapper">
+          <div class="title-group">
+            <span class="intro">Консультация</span>
+            <h2>Нужна консультация специалиста?</h2>
+          </div>
+          <div class="consultation-form">
+            <p>Профессионально проконсультируем и поможем сделать правильный выбор</p>
+            <form action="">
+              <div class="wrap">
+                <input type="text" name="name" placeholder="Имя">
+                <input type="text" name="phone" placeholder="Телефон">
+                <button type="submit" class="btn btn-flex btn-bg-primary">
+                  Оставить заявку
+                  <svg class="icon icon-arrow">
+                    <use xlink:href="assets/image/svg/sprite.svg#next-arrow"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="i-agree__checkbox">
+                <label for="agree" class="custom-checkbox">
+                  <input id="agree" name="agree" type="checkbox" class="default-checkbox">
+                  <span class="fake-checkbox">
+                    <svg class="icon icon-checkbox">
+                      <use xlink:href="assets/image/svg/sprite.svg#checkbox"></use>
+                    </svg>
+                  </span>
+                  <span class="checkbox-title">
+                    Я согласен с
+                    <a href="#">Политикой обработки персональных данных</a>
+                  </span>
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+
+
+  <footer class="footer">
+    <div class="footer-navigation">
+      <div class="wrapper">
+        <div class="footer-label">
+          <a href="/" class="footer-label__logo">
+            <img src="assets/image/logo-white.png" alt="АльфаВент">
+          </a>
+          <p>Отопление, вентиляция, водоснабжение</p>
+        </div>
+        <div class="footer-catalog">
+          <h3 class="footer__title">услуги</h3>
+          <ul class="footer-catalog__list">
+            <li>
+              <a href="#">Отопление</a>
+            </li>
+            <li>
+              <a href="#">Вентиляции</a>
+            </li>
+            <li>
+              <a href="#">Водоснабжение</a>
+            </li>
+            <li>
+              <a href="#">Ремонт</a>
+            </li>
+            <li>
+              <a href="#">Сервисное обслуживание</a>
+            </li>
+            <li>
+              <a href="#">Предоставление документации для газового хозяйства</a>
+            </li>
+
+          </ul>
+        </div>
+        <div class="footer-nav">
+          <h3 class="footer__title">водоснабжение</h3>
+          <ul class="footer-catalog__list">
+            <li>
+              <a href="#">Акции</a>
+            </li>
+            <li>
+              <a href="#">Готовые решения</a>
+            </li>
+            <li>
+              <a href="#">Портфолио</a>
+            </li>
+            <li>
+              <a href="#">О компании</a>
+            </li>
+            <li>
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h3 class="footer__title">контакты</h3>
+          <a href="tel:74958008080">+7 495 800-80-80</a>
+          <a class="footer__tel" href="tel:79168888888">+7 916 888-88-88</a>
+          <p class="footer-contact__adress">М.О., д. Кукуево, ул. Водопадная, д. 45</p>
+          <a href="mailto:info@atmosfera.ru">info@atmosfera.ru</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="wrapper">
+        <a href="#" class="footer-privacy">Политика конфиденциальности</a>
+        <div class="footer-develop">
+          Сайт разработан 
+          <a href="#" class="footer--develop">«МКМ-Веб»</a>
+          © 2022
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/libs/jquery/jquery.js"></script>
+  <script src="assets/libs/fancybox/jquery.fancybox.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/sliders.js" defer></script>
 </body>
 </html>
 

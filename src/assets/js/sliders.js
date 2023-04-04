@@ -12,7 +12,7 @@ function swiperMode() {
           el: ".swiper-pagination",
           dynamicBullets: true,
         },
-        loop: true,
+        centeredSlides: true,
         navigation: {
           nextEl: '.work-arrows-next',
           prevEl: '.work-arrows-prev',
@@ -76,6 +76,80 @@ const swiperClients = new Swiper(".clients-slider", {
     },
     1000: {
       slidesPerView: 5,
+    }
+  }
+});
+
+const swiperParthrers = new Swiper(".partners-slider", {
+  direction: 'horizontal',
+  slidesPerView: 2,
+  grid: {
+    rows: 2,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    dynamicBullets: true,
+  },
+  navigation: {
+    nextEl: '.partners-arrows-next',
+    prevEl: '.partners-arrows-prev',
+  },
+  spaceBetween: 24,
+  breakpoints: {
+    290: {
+      centeredSlides: false,
+    },
+    580: {
+      slidesPerColumn: 1,
+    },
+    730: {
+      slidesPerView: 3,
+      centeredSlides: true,
+    },
+  }
+});
+
+const swiperHero = new Swiper(".hero-slider", {
+  direction: 'horizontal',
+  autoplay: {
+    delay: 3000,
+  },
+  loop: true,
+  pagination: {
+    el: ".hero-pagination",
+    dynamicBullets: true,
+  },
+  navigation: {
+    nextEl: '.hero-arrows-next',
+    prevEl: '.hero-arrows-prev',
+  },
+});
+
+const swiperPortfolio = new Swiper(".portfolio-slider", {
+  direction: 'horizontal',
+  spaceBetween: 48,
+  slidesPerView: 1.95,
+  loop: true,
+  pagination: {
+    el: ".portfolio-pagination",
+    dynamicBullets: true,
+  },
+  navigation: {
+    nextEl: '.portfolio-arrows-next',
+    prevEl: '.portfolio-arrows-prev',
+  },
+  breakpoints: {
+    290: {
+      slidesPerView: 1,
+      spaceBetween: 15,
+    },
+    730: {
+      slidesPerView: 1.5,
+      spaceBetween: 30,
+    },
+    1000: {
+      slidesPerView: 2,
+      spaceBetween: 48,
     }
   }
 });

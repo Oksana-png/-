@@ -1,0 +1,84 @@
+.partners {
+  & .wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 48px;
+    @include laptop {
+      gap: 0px;
+      grid-template-columns: 1fr;
+    }
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -140px;
+      right: 0;
+      z-index: 1;
+      border: 40px solid #C5E5FD;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      background-color: transparent;
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+
+  &.section-padding {
+    padding: 100px 0;
+    @include laptop {
+      padding: 80px 0;
+    }
+    @include tablet {
+      padding: 60px 0;
+    }
+  }
+  & .title-group {
+    @include laptop {
+      margin-bottom: 60px;
+    }
+    @include tablet {
+      margin-bottom: 40px;
+    }
+    & h2 {
+      margin-bottom: 36px;
+      @include tablet {
+        margin-bottom: 40px;
+      }
+    }
+  }
+  &-slider {
+    overflow: hidden;
+    position: relative;
+    margin-top: 20px;
+    height: 318px;
+    &__item {
+      padding: 24px 27px;
+      background-color: $c-white;
+      border-radius: 16px;
+      text-align: center;
+      height: 147px;
+      @include tablet790 {
+        padding: 24px 20px;
+        height: 129px;
+      }
+      @include phone {
+        padding: 15px;
+      }
+    }
+    & .slider-arrow {
+      bottom: 0;
+    }
+    & .swiper-pagination {
+      bottom: 10px;
+    }
+  }
+  & .swiper-slide {
+    height: calc((100% - 30px) / 2) !important;
+  }
+  & .swiper-pagination-bullet {
+    background-color: #F1F9FF;
+  }
+}

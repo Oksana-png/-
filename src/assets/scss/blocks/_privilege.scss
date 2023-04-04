@@ -1,0 +1,125 @@
+.privilege {
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -71px;
+    right: 9%;
+    z-index: -1;
+    border: 40px solid #C5E5FD;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    @include desktop {
+      display: none;
+    }
+  }
+  &-items {
+    @include laptop {
+      padding-top: 60px;
+      padding-bottom: 84px;
+      grid-column-start: 2;
+    }
+    @include tablet {
+      padding: 0;
+      grid-column-start: 1;
+    }
+    & li {
+      max-width: 352px;
+      padding: 24px 24px 24px 64px;
+      position: relative;
+      margin-bottom: 48px;
+      @include tablet790 {
+        margin-bottom: 30px;
+      }
+      @include tablet {
+        max-width: 100%;
+      }
+      
+      &:nth-child(2)::after {
+        top: 100px;
+      }
+      &:last-child {
+        margin-bottom: 0px;
+      }
+      &::before {
+        content: '';
+        background-image: url('../image/svg/icon-ok.svg');
+        position: absolute;
+        top: 27px;
+        left: 24px;
+        width: 24px;
+        height: 24px;
+        @include laptop {
+          top: 24px;
+        }
+      }
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 94px;
+        height: 215px;
+        z-index: -2;
+        top: 50px;
+        right: -94px;
+        background-image: url('../image/svg/rect-over.svg');
+        @include laptop {
+          display: none;
+        }
+      }
+      &:last-child::after {
+        display: none;
+      }
+    }
+    & h3 {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 140%;
+      margin-bottom: 8px;
+      color: $c-main;
+      @include tablet790 {
+        font-size: 20px;
+      }
+    }
+    p {
+      font-family: "OpenSans";
+      line-height: 150%;
+      color: #85919E;
+    }
+  }
+  &-image {
+    border-radius: 60px;
+    overflow: hidden;
+    @include laptop {
+      position: absolute;
+      left: 0;
+      height: 662px;
+      width: col(6);
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+    }
+    @include tablet790 {
+      width: 417px;
+    }
+    @include tablet {
+      display: none;
+    }
+    & picture, img {
+      height: 100%;
+    }
+  }
+  & .wrapper {
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    gap: 48px;
+    @include laptop {
+      gap: 30px;
+    }
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+}

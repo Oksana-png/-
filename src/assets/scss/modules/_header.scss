@@ -1,17 +1,77 @@
 .header {
-  padding: 16px 0;
-  background-color: $c-main;
   @include laptop {
-    background-color: $c-white;
-    color: $c-main;
     &-row {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
   }
-  @include tablet {
-    padding: 0;
+  &-nav {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    gap: 48px;
+    padding: 9px 0;
+    @include desktop {
+      gap: 23.5px;
+    }
+    @include laptop {
+      display: none;
+    }
+  }
+  &__list-nav {
+    display: flex;
+    align-items: center;
+    gap: 24.5px;
+    justify-content: space-between;
+    @include desktop {
+      gap: 0 17px;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    &:hover {
+      & .submenu {
+        display: block;
+      }
+    }
+  }
+
+  & form {
+    width: 276px;
+    & input {
+      width: 100%;
+      padding: 12px 16px;
+      background: #F1F9FF;
+      border-radius: 16px;
+      border: none;
+      color: #85919E;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      &::placeholder {
+        color: #85919E;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+      }
+    }
+  }
+  & .logo {
+    justify-self: center;
+  }
+  & .grey-bg {
+    padding: 16px 0;
+    background-color: $c-main;
+  
+    @include laptop {
+      background-color: $c-white;
+      color: $c-main;
+    }
+  
+    @include tablet {
+      padding: 0;
+    }
   }
   &-logo {
     display: none;
@@ -23,6 +83,17 @@
       width: 87px;
     }
   }
+  & .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+}
+
+.submenu {
+  display: none;
+  position: absolute;
 }
 
 .contact {
@@ -71,3 +142,4 @@
     }
   }
 }
+

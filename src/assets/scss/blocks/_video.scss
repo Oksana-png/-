@@ -1,0 +1,144 @@
+.video {
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 227px;
+    left: -263px;
+    border: 40px solid #76C1FB;
+    border-radius: 60px;
+    background-color: transparent;
+    width: 313px;
+    height: 405px;
+    @include desktop {
+      display: none;
+    }
+  }
+  & .wrapper {
+    position: relative;
+    display: grid;
+    gap: 48px;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    @include laptop {
+      gap: 40px;
+      grid-template-columns: 1fr;
+    }
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: -2;
+      top: 142px;
+      right: -423px;
+      border: 40px solid #C5E5FD;
+      border-radius: 60px;
+      background-color: transparent;
+      width: 313px;
+      height: 576px;
+      @include laptop {
+        display: none;
+      }
+    }
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: -2;
+      top: 60px;
+      right: calc(100% + 75px);
+      border: 40px solid #C5E5FD;
+      border-radius: 60px;
+      background-color: transparent;
+      width: 313px;
+      height: 405px;
+      @include laptop {
+        display: none;
+      }
+    }
+  }
+  & .title-group {
+    order: -1;
+    @include laptop {
+      order: 0;
+    }
+    & p {
+      max-width: 473px;
+      margin-bottom: 24px;
+      @include laptop {
+        max-width: 481px;
+      }
+      @include phone {
+        margin-bottom: 40px;
+      }
+    }
+
+    & h2 {
+      @include tablet790 {
+        margin-bottom: 60px;
+      }
+      @include tablet {
+        margin-bottom: 40px;
+      }
+    }
+  }
+  & .btn {
+    padding: 12px 32px;
+    background: #FF7B43;
+    border-radius: 16px;
+    color: $c-white;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 24px;
+    text-transform: uppercase;
+    @include tablet {
+      padding: 12px 17px;
+    }
+  }
+  & .icon {
+    stroke: $c-white;
+  }
+
+  & .video {
+    &-block {
+      position: relative;
+      height: 518px;
+      @include tablet {
+        height: 350px;
+      }
+      @include phone {
+        height: 200px;
+      }
+      & picture, img {
+        height: 100%;
+        border-radius: 60px;
+        @include laptop {
+          width: 100%;
+        }
+      }
+      & .svg-indicator {
+        transition: 0.1s ease;
+        stroke-linecap: round;
+        stroke-dasharray: 0;
+        animation: btnPlay 8s ease-in-out infinite;
+      }
+    }
+    &__link {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+@keyframes btnPlay {
+  0% {
+    stroke-dasharray: 0;
+  }
+  10% {
+    stroke-dasharray: calc((2 * 3.14 * 53) / 8);
+  }
+}

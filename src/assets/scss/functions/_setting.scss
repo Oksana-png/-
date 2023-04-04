@@ -1,8 +1,6 @@
-
-
 .wrapper {
   padding: 0 15px;
-  max-width: 1200px;
+  max-width: 1230px;
   margin: 0 auto;
   @include desktop {
     max-width: 1000px;
@@ -11,7 +9,7 @@
     max-width: 768px;
   }
   @include tablet790 {
-    max-width: 738px;
+    max-width: 768px;
   }
   @include tablet {
     max-width: 580px;
@@ -32,4 +30,8 @@
 .icon-mini {
   width: 20px;
   height: 20px;
+}
+
+figure {
+  height: 100%;
 }

@@ -1,0 +1,188 @@
+.hero {
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 2%;
+    z-index: -1;
+    border: 40px solid #C5E5FD;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    @include desktop {
+      display: none;
+    }
+  }
+  & .wrapper {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    @include desktop {
+      grid-template-columns: 1fr;
+    }
+  }
+  & .title-group {
+    padding: 100px 0;
+    @include desktop {
+      padding: 0;
+    }
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: -2;
+      top: 122px;
+      right: 30%;
+      border: 40px solid #76C1FB;
+      border-radius: 60px;
+      background-color: transparent;
+      width: 439px;
+      height: 372px;
+      @include media(1800px) {
+        right: 28%;
+      }
+      @include media(1630px) {
+        right: 25%;
+      }
+      @include media(1430px) {
+        right: 21%;
+      }
+      @include desktop {
+        right: -350px;
+      }
+      @include tablet {
+        display: none;
+      }
+    }
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: -2;
+      top: 203px;
+      right: 10%;
+      border: 40px solid #C5E5FD;
+      border-radius: 60px;
+      background-color: transparent;
+      width: 354px;
+      height: 440px;
+      @include desktop {
+        height: 184px;
+        right: 15px;
+      }
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+  & .hero-slider {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    height: 595px;
+    overflow: hidden;
+    width: 54%;
+    border-radius: 60px 0px 0px 60px;
+    background-color: white;
+    @include desktop {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 1084px;
+      margin-bottom: 24px;
+    }
+    @include laptop {
+      height: 428px;
+      max-width: 869px;
+    }
+    @include tablet {
+      max-width: 641px;
+    }
+    @include phone {
+      left: -95px;
+      border-radius: 0;
+      height: 300px;
+    }
+    @include small {
+      left: -15px;
+      max-width: 421px;
+      height: 200px;
+    }
+  }
+  & .swiper-wrapper {
+    max-width: 1040px;
+    @include desktop {
+      max-width: 1084px;
+    }
+    @include laptop {
+      max-width: 869px;
+    }
+    @include tablet {
+      max-width: 641px;
+    }
+    @include phone {
+      max-width: 581px;
+    }
+    & picture, img {
+      height: 100%;
+      @include desktop {
+        width: 100%;
+      }
+    }
+    
+  }
+  & h1 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 130%;
+    margin-bottom: 24px;
+    color: $c-main;
+    max-width: 469px;
+    @include tablet {
+      max-width: 423px;
+      margin-bottom: 16px;
+      font-size: 30px;
+      line-height: 140%;
+    }
+  }
+  & p {
+    font-size: 24px;
+    line-height: 30px;
+    color: $c-main;
+    margin-bottom: 48px;
+    @include laptop {
+      margin-bottom: 40px;
+      max-width: 610px;
+    }
+    @include tablet {
+      margin-bottom: 30px;
+      font-size: 16px;
+      line-height: 150%;
+      max-width: 490px;
+    }
+    @include phone {
+      max-width: 290px;
+    }
+  }
+  & .swiper-pagination {
+    bottom: -49px;
+  }
+  & .slider-arrow {
+    bottom: -58px;
+  }
+
+  & .hero-nav {
+    @include desktop {
+      display: none;
+    }
+  }
+  & .icon-arrow {
+    stroke: $c-white;
+    margin-right: 0;
+    margin-left: 4px;
+    width: 28px;
+    height: 28px;
+  }
+}

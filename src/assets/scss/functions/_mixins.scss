@@ -40,6 +40,12 @@
   }
 }
 
+@mixin hover {
+  @media (min-width: 790px) {
+    @content;
+  }
+}
+
 @mixin media($media) {
   @media (max-width: $media) {
     @content;
