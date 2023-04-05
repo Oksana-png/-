@@ -4,6 +4,7 @@
   background-color: $c-main;
   color: $c-white;
   margin-top: 235px;
+  border-bottom: 1px solid rgba(241, 249, 255, 0.1);
   @include laptop {
     margin-top: 80px;
   }
@@ -76,7 +77,10 @@
     position: absolute;
     top: -75px;
     right: 0;
-    @include shift-left-col(7);
+    padding-left: calc(100% / 12 * 7 + 24px);
+    @include tablet {
+      padding-left: calc(100% / 12 * 7 + 15px);
+    }
     @include desktop {
       display: none;
     }
@@ -84,7 +88,7 @@
       border-radius: 60px 0px 0px 0px;
       overflow: hidden;
       & img, source {
-        @include media(1500px) {
+        @include media(1760px) {
           height: 501px;
         }
       }

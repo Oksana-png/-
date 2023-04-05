@@ -11,6 +11,7 @@
     grid-template-columns: 2fr 10fr;
     gap: 48px;
     padding: 9px 0;
+    border-bottom: 1px solid #F1F9FF;
     @include desktop {
       gap: 23.5px;
     }
@@ -38,10 +39,11 @@
   }
 
   & form {
+    position: relative;
     width: 276px;
     & input {
       width: 100%;
-      padding: 12px 16px;
+      padding: 12px 49px 12px 16px;
       background: #F1F9FF;
       border-radius: 16px;
       border: none;
@@ -55,6 +57,13 @@
         font-size: 16px;
         line-height: 150%;
       }
+    }
+    & .icon-search {
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      top: 12px;
+      right: 16px;
     }
   }
   & .logo {

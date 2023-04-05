@@ -1,22 +1,6 @@
 .authority {
   color: $c-white;
   position: relative;
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    z-index: -1;
-    left: 173px;
-    bottom: -118px;
-    border: 40px solid #C5E5FD;
-    border-radius: 60px;
-    background-color: transparent;
-    width: 313px;
-    height: 375px;
-    @include desktop {
-      display: none;
-    }
-  }
   & .wrapper-bg {
     position: relative;
     display: flex;
@@ -42,7 +26,7 @@
       width: 40px;
       height: 40px;
       background-color: transparent;
-      @include tablet790 {
+      @include laptop {
         right: auto;
         left: -70px;
         top: -55px;
@@ -74,8 +58,8 @@
     }
   }
   & .title-group {
-    @include col(7);
-    @include shift-left-col(1);
+    padding-left: 104px;
+    padding-right: 50px;
     @include desktop {
       margin-bottom: 40px;
       max-width: 100%;
@@ -86,7 +70,7 @@
     }
   }
   &-number {
-    @include shift-right-col(1);
+    padding-right: 58px;
     color: #F1F9FF;
     display: flex;
     flex-wrap: wrap;
@@ -98,6 +82,9 @@
     }
     @include tablet {
       gap: 30px 22px;
+    }
+    @include phone {
+      justify-content: center;
     }
     &__item {
       display: flex;
@@ -123,6 +110,7 @@
       font-size: 16px;
       line-height: 150%;
       text-align: center;
+      color: #F1F9FF;
       @include phone {
         font-size: 13px;
         line-height: 130%;

@@ -1,4 +1,6 @@
 .advantages {
+  background: #F1F9FF;
+  border-radius: 0px 0px 360px 0px;
   &-slider {
     position: relative;
     &__item {
@@ -33,7 +35,6 @@
       position: absolute;
       bottom: -198px;
       right: -120px;
-      z-index: -1;
       border: 40px solid #C5E5FD;
       border-radius: 50%;
       width: 40px;

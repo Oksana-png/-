@@ -31,6 +31,8 @@
       padding: 24px 24px 24px 64px;
       position: relative;
       margin-bottom: 48px;
+      background: #F1F9FF;
+      border-radius: 16px;
       @include tablet790 {
         margin-bottom: 30px;
       }

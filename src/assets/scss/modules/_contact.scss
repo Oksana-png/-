@@ -1,0 +1,13 @@
+.page-contact {
+  & .wrapper {
+    margin-bottom: 60px;
+  }
+
+  & .title-group {
+    margin-bottom: 60px;
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
+  }
+}

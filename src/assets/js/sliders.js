@@ -54,6 +54,7 @@ window.addEventListener("resize", function () {
 const swiperClients = new Swiper(".clients-slider", {
   slidesPerView: 1.5,
   centeredSlides: true,
+  centeredSlidesBounds: true,
   pagination: {
     el: ".swiper-pagination",
     dynamicBullets: true,
@@ -83,6 +84,7 @@ const swiperClients = new Swiper(".clients-slider", {
 const swiperParthrers = new Swiper(".partners-slider", {
   direction: 'horizontal',
   slidesPerView: 1,
+  centeredSlidesBounds: true,
   pagination: {
     el: ".partners-pagination",
     dynamicBullets: true,

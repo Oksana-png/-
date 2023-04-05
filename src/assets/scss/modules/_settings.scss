@@ -118,6 +118,15 @@
       line-height: 1.4;
     }
   }
+  & h1 {
+    margin-top: 20px;
+    font-size: 40px;
+    line-height: 130%;
+    @include tablet {
+      font-size: 24px;
+      line-height: 140%;
+    }
+  }
 }
 
 .intro {
@@ -236,11 +245,21 @@
   font-weight: 700;
   font-size: 15px;
   line-height: 24px;
+  transition: .3s ease;
   & .icon {
     margin-right: 0;
     margin-left: 4px;
     stroke: $c-white;
     padding-top: 4px;
+    transition: transform .4s;
+  }
+  @include hover {
+    &:hover {
+      color: $c-main;
+      &> .icon {
+        transform: translateX(10px);
+      }
+    }
   }
 }
 
