@@ -275,11 +275,19 @@
     background-color: #FF7B43;
     transition: width 0.3s ease-out;
   }
+  & .icon {
+    transition: transform 0.3s ease-out;
+  }
 
-  &:hover {
-    color: $c-primary;
-    &::after {
-      width: 0;
+  @include hover {
+    &:hover {
+      color: $c-primary;
+      &::after {
+        width: 0;
+      }
+      &> .icon {
+        transform: translateX(10px);
+      }
     }
   }
 
