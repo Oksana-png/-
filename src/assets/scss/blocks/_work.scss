@@ -78,6 +78,8 @@
       }
     }
     &__item {
+      background-color: $c-white;
+      border-radius: 16px;
       padding: 24px;
       @include tablet {
         padding: 24px 20px;
@@ -121,6 +123,7 @@
   }
   & .swiper-slider {
     width: 100%;
+    
   }
   & .slider-arrow {
     display: none;

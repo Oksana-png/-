@@ -78,18 +78,18 @@
     top: -75px;
     right: 0;
     padding-left: calc(100% / 12 * 7 + 24px);
-    @include tablet {
-      padding-left: calc(100% / 12 * 7 + 15px);
-    }
     @include desktop {
       display: none;
+    }
+    @include tablet {
+      padding-left: calc(100% / 12 * 7 + 15px);
     }
     & picture {
       border-radius: 60px 0px 0px 0px;
       overflow: hidden;
       & img, source {
-        @include media(1760px) {
-          height: 501px;
+        @include media(2048px) {
+          height: 515px;
         }
       }
     }
@@ -113,17 +113,13 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 24px;
-    @include desktop {
-      gap: 24px;
-    }
+    gap: 24px;
     @include tablet {
       flex-direction: column;
       gap: 30px;
     }
     &>* {
-      @include desktop {
-        flex-grow: 1;
-      }
+      flex-grow: 1;
       @include tablet {
         width: 100%;
       }

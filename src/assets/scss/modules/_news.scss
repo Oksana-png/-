@@ -19,7 +19,7 @@
     line-height: 140%;
     color: $c-main;
     margin-bottom: 16px;
-    transition: color 0.3s;
+    transition: color 0.3s ease-out;
   }
   p {
     font-size: 16px;
@@ -36,12 +36,19 @@
     display: block;
     border-radius: 16px;
     overflow: hidden;
+    transition: filter 0.3s ease-out;
+    @include hover {
+      &:hover {
+        filter: brightness(0.8);
+      }
+    }
     & picture {
       height: 100%;
     }
   }
   & .new-item__hover {
     opacity: 0;
+    transition: opacity 0.3s ease-out;
   }
   @include hover {
     &:hover {

@@ -716,12 +716,14 @@ textarea:focus {
   line-height: 150%;
 }
 .header form input::-moz-placeholder {
+  font-family: "OpenSans";
   color: #85919E;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
 }
 .header form input::placeholder {
+  font-family: "OpenSans";
   color: #85919E;
   font-weight: 400;
   font-size: 16px;
@@ -851,7 +853,7 @@ textarea:focus {
   line-height: 140%;
   color: #30373E;
   margin-bottom: 16px;
-  transition: color 0.3s;
+  transition: color 0.3s ease-out;
 }
 .new p {
   font-size: 16px;
@@ -868,12 +870,19 @@ textarea:focus {
   display: block;
   border-radius: 16px;
   overflow: hidden;
+  transition: filter 0.3s ease-out;
+}
+@media (min-width: 790px) {
+  .news-link:hover {
+    filter: brightness(0.8);
+  }
 }
 .news-link picture {
   height: 100%;
 }
 .new .new-item__hover {
   opacity: 0;
+  transition: opacity 0.3s ease-out;
 }
 @media (min-width: 790px) {
   .new:hover .new-item__hover {
@@ -1009,6 +1018,7 @@ textarea:focus {
 }
 .services-card {
   border-radius: 16px;
+  background-color: #fff;
   color: #30373E;
   overflow: hidden;
 }
@@ -1381,6 +1391,8 @@ textarea:focus {
   }
 }
 .work-slider__item {
+  background-color: #fff;
+  border-radius: 16px;
   padding: 24px;
 }
 @media (max-width: 730px) {
@@ -1484,6 +1496,7 @@ textarea:focus {
   display: flex;
   align-items: center;
   flex-direction: column;
+  background-color: #fff;
 }
 .advantages-slider__title {
   font-weight: 700;
@@ -2819,23 +2832,23 @@ textarea:focus {
   right: 0;
   padding-left: calc(58.3333333333% + 24px);
 }
-@media (max-width: 730px) {
-  .consultation-bg {
-    padding-left: calc(58.3333333333% + 15px);
-  }
-}
 @media (max-width: 1200px) {
   .consultation-bg {
     display: none;
+  }
+}
+@media (max-width: 730px) {
+  .consultation-bg {
+    padding-left: calc(58.3333333333% + 15px);
   }
 }
 .consultation-bg picture {
   border-radius: 60px 0px 0px 0px;
   overflow: hidden;
 }
-@media (max-width: 1760px) {
+@media (max-width: 2048px) {
   .consultation-bg picture img, .consultation-bg picture source {
-    height: 501px;
+    height: 515px;
   }
 }
 .consultation h2 {
@@ -2859,11 +2872,7 @@ textarea:focus {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 24px;
-}
-@media (max-width: 1200px) {
-  .consultation .wrap {
-    gap: 24px;
-  }
+  gap: 24px;
 }
 @media (max-width: 730px) {
   .consultation .wrap {
@@ -2871,10 +2880,8 @@ textarea:focus {
     gap: 30px;
   }
 }
-@media (max-width: 1200px) {
-  .consultation .wrap > * {
-    flex-grow: 1;
-  }
+.consultation .wrap > * {
+  flex-grow: 1;
 }
 @media (max-width: 730px) {
   .consultation .wrap > * {

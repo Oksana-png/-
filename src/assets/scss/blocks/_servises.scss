@@ -6,6 +6,7 @@
   }
   &-card {
     border-radius: 16px;
+    background-color: $c-white;
     color: $c-main;
     overflow: hidden;
     &:hover {
@@ -89,6 +90,7 @@
     @include phone {
       grid-template-columns: repeat(1, 1fr);
     }
+
     & .card-col {
       position: relative;
       &:nth-child(n + 4) {
