@@ -4,7 +4,7 @@
     left: 0;
     right: 0;
     z-index: 1;
-    padding-right: calc(50% + 24px);
+    margin-right: calc(50% + 24px);
     height: 533px;
     & img {
       transition: transform 1s ease-in;
@@ -20,6 +20,7 @@
       position: relative;
       height: 460px;
       margin-bottom: 30px;
+      margin-right: 0;
       padding-right: 15px;
     }
     @include phone {

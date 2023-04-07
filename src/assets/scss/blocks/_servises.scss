@@ -1,7 +1,7 @@
 .services {
   background: #F1F9FF;
   border-radius: 0px 360px 0px 0px;
-  @include laptop {
+  @include media(1440px) {
     border-radius: 0;
   }
   &-card {
@@ -18,6 +18,12 @@
           width: 100%;
         }
       }
+      & img {
+        transform: scale(1.2);
+      }
+    }
+    & a {
+      display: block;
     }
     & h3 {
       font-weight: 700;
@@ -51,10 +57,12 @@
     }
     picture {
       width: 100%;
+      overflow: hidden;
       & img {
         width: 100%;
         height: 369px;
         object-fit: cover;
+        transition: transform 1s ease-in;
       }
     }
     &__link {

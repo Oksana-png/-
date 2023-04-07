@@ -663,6 +663,44 @@ textarea:focus {
   }
 }
 
+.btn-up {
+  width: 48px;
+  height: 48px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 80px;
+  bottom: 80px;
+  background: #C5E5FD;
+  border: none;
+  border-radius: 50%;
+  z-index: 100;
+  transition: box-shadow 0.3s;
+}
+@media (max-width: 1000px) {
+  .btn-up {
+    right: 60px;
+    bottom: 60px;
+  }
+}
+@media (max-width: 580px) {
+  .btn-up {
+    right: 25px;
+    bottom: 20px;
+  }
+}
+@media (min-width: 790px) {
+  .btn-up:hover {
+    box-shadow: 0px 0px 20px rgba(31, 79, 116, 0.4);
+  }
+}
+.btn-up .icon {
+  width: 20px;
+  height: 16px;
+  margin-right: 0;
+}
+
 @media (max-width: 1000px) {
   .header-row {
     display: flex;
@@ -673,7 +711,7 @@ textarea:focus {
 .header-nav {
   display: grid;
   grid-template-columns: 2fr 10fr;
-  gap: 48px;
+  gap: 44px;
   padding-top: 16px;
   padding-bottom: 9px;
   border-bottom: 1px solid #F1F9FF;
@@ -688,6 +726,11 @@ textarea:focus {
     display: none;
   }
 }
+.header__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .header__list-nav {
   display: flex;
   align-items: center;
@@ -696,12 +739,28 @@ textarea:focus {
 }
 @media (max-width: 1200px) {
   .header__list-nav {
-    gap: 0 17px;
+    gap: 0 14px;
     flex-wrap: wrap;
   }
 }
-.header__item:hover .submenu {
-  display: block;
+.header__list-nav .icon {
+  width: 17px;
+  height: 10px;
+  margin-left: 6px;
+  margin-right: 0;
+  stroke: #30373E;
+  transition: transform 0.3s ease-in;
+}
+.header .nav .header__list-nav {
+  gap: 16px;
+}
+@media (min-width: 790px) {
+  .header__item:hover .submenu {
+    display: block;
+  }
+  .header__item:hover .icon {
+    transform: rotate(180deg);
+  }
 }
 .header form {
   position: relative;
@@ -742,6 +801,11 @@ textarea:focus {
 .header .logo {
   justify-self: center;
 }
+.header .logo-desktop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .header .grey-bg {
   padding: 16px 0;
   background-color: #30373E;
@@ -781,6 +845,7 @@ textarea:focus {
 .submenu {
   display: none;
   position: absolute;
+  z-index: 1;
 }
 
 .contact {
@@ -1014,7 +1079,7 @@ textarea:focus {
   background: #F1F9FF;
   border-radius: 0px 360px 0px 0px;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1440px) {
   .services {
     border-radius: 0;
   }
@@ -1034,6 +1099,12 @@ textarea:focus {
 }
 .services-card:hover .services-card__link::after {
   width: 100%;
+}
+.services-card:hover img {
+  transform: scale(1.2);
+}
+.services-card a {
+  display: block;
 }
 .services-card h3 {
   font-weight: 700;
@@ -1073,12 +1144,14 @@ textarea:focus {
 }
 .services-card picture {
   width: 100%;
+  overflow: hidden;
 }
 .services-card picture img {
   width: 100%;
   height: 369px;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: transform 1s ease-in;
 }
 .services-card__link {
   opacity: 0;
@@ -2195,8 +2268,17 @@ textarea:focus {
     display: none;
   }
 }
-.privilege-image picture, .privilege-image img {
+@media (min-width: 790px) {
+  .privilege-image:hover img {
+    transform: scale(1.07);
+  }
+}
+.privilege-image picture {
   height: 100%;
+}
+.privilege-image img {
+  height: 100%;
+  transition: transform 1s ease-in;
 }
 .privilege .wrapper {
   display: grid;
@@ -2396,6 +2478,11 @@ textarea:focus {
   margin-bottom: 24px;
   color: #30373E;
   max-width: 469px;
+}
+@media (max-width: 1000px) {
+  .hero h1 {
+    margin-bottom: 40px;
+  }
 }
 @media (max-width: 730px) {
   .hero h1 {
@@ -2938,7 +3025,7 @@ textarea:focus {
   left: 0;
   right: 0;
   z-index: 1;
-  padding-right: calc(50% + 24px);
+  margin-right: calc(50% + 24px);
   height: 533px;
 }
 .request-bg img {
@@ -2954,6 +3041,7 @@ textarea:focus {
     position: relative;
     height: 460px;
     margin-bottom: 30px;
+    margin-right: 0;
     padding-right: 15px;
   }
 }
@@ -3188,7 +3276,7 @@ textarea:focus {
 @media (max-width: 730px) {
   .footer-label__logo {
     margin-bottom: 0;
-    width: 117px;
+    width: 150px;
   }
 }
 @media (max-width: 1000px) {

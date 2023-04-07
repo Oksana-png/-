@@ -9,7 +9,7 @@
   &-nav {
     display: grid;
     grid-template-columns: 2fr 10fr;
-    gap: 48px;
+    gap: 44px;
     padding-top: 16px;
     padding-bottom: 9px;
     border-bottom: 1px solid #F1F9FF;
@@ -20,21 +20,43 @@
       display: none;
     }
   }
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   &__list-nav {
     display: flex;
     align-items: center;
     gap: 24.5px;
     justify-content: space-between;
     @include desktop {
-      gap: 0 17px;
+      gap: 0 14px;
       flex-wrap: wrap;
     }
+    & .icon {
+      width: 17px;
+      height: 10px;
+      margin-left: 6px;
+      margin-right: 0;
+      stroke: $c-main;
+      transition: transform .3s ease-in;
+    }
   }
-
+  & .nav {
+    & .header__list-nav {
+      gap: 16px;
+    }
+  }
   &__item {
-    &:hover {
-      & .submenu {
-        display: block;
+    @include hover {
+      &:hover {
+        & .submenu {
+          display: block;
+        }
+        & .icon {
+          transform: rotate(180deg);
+        }
       }
     }
   }
@@ -70,6 +92,11 @@
   }
   & .logo {
     justify-self: center;
+    &-desktop {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
   & .grey-bg {
     padding: 16px 0;
@@ -105,6 +132,7 @@
 .submenu {
   display: none;
   position: absolute;
+  z-index: 1;
 }
 
 .contact {

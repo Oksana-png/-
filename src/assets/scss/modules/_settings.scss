@@ -461,3 +461,37 @@ textarea {
     }
   }
 }
+
+.btn-up {
+  width: 48px;
+  height: 48px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 80px;
+  bottom: 80px;
+  background: #C5E5FD;
+  border: none;
+  border-radius: 50%;
+  z-index: 100;
+  transition: box-shadow .3s;
+  @include laptop {
+    right: 60px;
+    bottom: 60px;
+  }
+  @include phone {
+    right: 25px;
+    bottom: 20px;
+  }
+  @include hover {
+    &:hover {
+      box-shadow: 0px 0px 20px rgba(31, 79, 116, 0.4)
+    }
+  }
+  & .icon {
+    width: 20px;
+    height: 16px;
+    margin-right: 0;
+  }
+}

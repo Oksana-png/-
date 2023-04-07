@@ -140,6 +140,9 @@
     margin-bottom: 24px;
     color: $c-main;
     max-width: 469px;
+    @include laptop {
+      margin-bottom: 40px;
+    }
     @include tablet {
       max-width: 423px;
       margin-bottom: 16px;
