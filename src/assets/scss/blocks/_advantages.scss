@@ -76,6 +76,7 @@
     }
     &-slide {
       padding: 24px 30px;
+      border-radius: 16px;
       @include laptop {
         padding: 24px;
       }
