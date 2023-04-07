@@ -4,6 +4,7 @@
     position: relative;
     width: calc(251 * 5 - 32);
     margin: 0 auto;
+    cursor: grab;
     &__item {
       padding: 12px;
       @include tablet790 {
@@ -21,6 +22,18 @@
     margin-bottom: 56px;
     @include tablet {
       margin-bottom: 40px;
+    }
+  }
+  & .swiper-slide {
+    & img {
+      transition: transform .3s ease-in;
+    }
+    &:hover {
+      @include hover {
+        & img {
+          transform: scale(1.1);
+        }
+      }
     }
   }
   & .slider-arrow {
