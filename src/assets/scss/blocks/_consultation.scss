@@ -88,8 +88,14 @@
       border-radius: 60px 0px 0px 0px;
       overflow: hidden;
       & img, source {
+        transition: transform 1s ease-in;
         @include media(2048px) {
           height: 515px;
+        }
+        @include hover {
+          &:hover {
+            transform: scale(1.07);
+          }
         }
       }
     }

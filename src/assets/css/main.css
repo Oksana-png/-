@@ -878,7 +878,7 @@ textarea:focus {
   height: 100%;
 }
 .news-link img {
-  transition: transform 0.5s ease-in;
+  transition: transform 1s ease-in;
 }
 .new .new-item__hover {
   opacity: 0;
@@ -892,7 +892,7 @@ textarea:focus {
     color: #FF7B43;
   }
   .new:hover img {
-    transform: scale(1.07);
+    transform: scale(1.2);
   }
 }
 .new .new-item__hover {
@@ -1699,6 +1699,7 @@ textarea:focus {
   overflow: hidden;
   position: relative;
   height: 318px;
+  cursor: grab;
 }
 @media (max-width: 1200px) {
   .partners-slider {
@@ -1828,7 +1829,9 @@ textarea:focus {
 }
 .about picture {
   position: absolute;
-  z-index: -1;
+  border-radius: 60px;
+  overflow: hidden;
+  z-index: 1;
   top: 0;
   left: calc(-100% - 152px);
 }
@@ -1881,8 +1884,13 @@ textarea:focus {
   }
 }
 .about picture img, .about picture source {
-  border-radius: 60px;
   width: 100%;
+  transition: transform 1s ease-in;
+}
+@media (min-width: 790px) {
+  .about picture img:hover, .about picture source:hover {
+    transform: scale(1.07);
+  }
 }
 .about .icon {
   padding: 7px 5px 6px 5px;
@@ -2867,9 +2875,17 @@ textarea:focus {
   border-radius: 60px 0px 0px 0px;
   overflow: hidden;
 }
+.consultation-bg picture img, .consultation-bg picture source {
+  transition: transform 1s ease-in;
+}
 @media (max-width: 2048px) {
   .consultation-bg picture img, .consultation-bg picture source {
     height: 515px;
+  }
+}
+@media (min-width: 790px) {
+  .consultation-bg picture img:hover, .consultation-bg picture source:hover {
+    transform: scale(1.07);
   }
 }
 .consultation h2 {
@@ -2921,9 +2937,17 @@ textarea:focus {
   position: absolute;
   left: 0;
   right: 0;
-  z-index: -1;
+  z-index: 1;
   padding-right: calc(50% + 24px);
   height: 533px;
+}
+.request-bg img {
+  transition: transform 1s ease-in;
+}
+@media (min-width: 790px) {
+  .request-bg img:hover {
+    transform: scale(1.07);
+  }
 }
 @media (max-width: 1000px) {
   .request-bg {
