@@ -452,13 +452,15 @@ figure {
   margin-left: 4px;
   stroke: #fff;
   padding-top: 4px;
-  transition: transform 0.4s;
+  transition-duration: 0.4s;
+  transition-property: stroke, transform;
 }
 @media (min-width: 790px) {
   .btn-bg-primary:hover {
     color: #30373E;
   }
   .btn-bg-primary:hover > .icon {
+    stroke: #30373E;
     transform: translateX(10px);
   }
 }
@@ -1021,6 +1023,7 @@ textarea:focus {
   background-color: #fff;
   color: #30373E;
   overflow: hidden;
+  transition: box-shadow 0.3s linear;
 }
 .services-card:hover {
   box-shadow: 0px 0px 40px rgba(41, 105, 153, 0.2);
@@ -1295,7 +1298,7 @@ textarea:focus {
   background: #F1F9FF;
   border-radius: 360px 0px 0px 360px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1440px) {
   .work {
     border-radius: 0;
   }
@@ -1451,6 +1454,9 @@ textarea:focus {
   }
 }
 
+.clients {
+  margin-bottom: 60px;
+}
 .clients-slider {
   position: relative;
   width: 1223;
@@ -1488,6 +1494,11 @@ textarea:focus {
 .advantages {
   background: #F1F9FF;
   border-radius: 0px 0px 360px 0px;
+}
+@media (max-width: 1440px) {
+  .advantages {
+    border-radius: 0;
+  }
 }
 .advantages-slider {
   position: relative;
@@ -2191,7 +2202,7 @@ textarea:focus {
   content: "";
   display: block;
   position: absolute;
-  top: 0;
+  top: 15px;
   left: 2%;
   z-index: -1;
   border: 40px solid #C5E5FD;
@@ -2417,7 +2428,6 @@ textarea:focus {
 }
 
 .portfolio-slider {
-  background-color: #fff;
   overflow: hidden;
   border-radius: 0px 60px 60px 0px;
 }

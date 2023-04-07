@@ -251,12 +251,14 @@
     margin-left: 4px;
     stroke: $c-white;
     padding-top: 4px;
-    transition: transform .4s;
+    transition-duration: .4s;
+    transition-property: stroke, transform;
   }
   @include hover {
     &:hover {
       color: $c-main;
       &> .icon {
+        stroke: $c-main;
         transform: translateX(10px);
       }
     }

@@ -1,6 +1,9 @@
 .advantages {
   background: #F1F9FF;
   border-radius: 0px 0px 360px 0px;
+  @include media(1440px) {
+      border-radius: 0;
+    }
   &-slider {
     position: relative;
     &__item {

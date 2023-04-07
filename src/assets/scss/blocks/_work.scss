@@ -1,7 +1,7 @@
 .work {
   background: #F1F9FF;
   border-radius: 360px 0px 0px 360px;
-  @include desktop {
+  @include media(1440px) {
     border-radius: 0;
   }
   & .wrapper {
