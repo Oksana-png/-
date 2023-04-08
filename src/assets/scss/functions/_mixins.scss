@@ -103,3 +103,16 @@
     padding-left: #{calc(#{$val} - #{$offset_one_side-tablet})};
   }
 }
+
+@mixin rect($w, $h, $color:#C5E5FD) {
+  $wid: #{$w} - 80;
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  border: 40px solid $color;
+  border-radius: 60px;
+  background-color: transparent;
+  width: $w - 80 + px;
+  height: $h - 80 + px;
+}

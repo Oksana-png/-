@@ -1,0 +1,140 @@
+.akt {
+  display: flex;
+  align-items: center;
+  position: relative;
+  &::before {
+    content: '';
+    width: 293px;
+    height: 360px;
+    position: absolute;
+    top: -61px;
+    left: 50%;
+    transform: translateX(-100%);
+    z-index: 1;
+    background-image: url('../image/vdpo-logo.png');
+    background-size: cover;
+    @include desktop {
+      width: 226px;
+      height: 264px;
+      top: auto;
+      bottom: 72px;
+      left: auto;
+      right: 15px;
+      transform: translateX(0);
+    }
+    @include tablet {
+      width: 113px;
+      height: 132px;
+      top: 8px;
+      bottom: auto;
+    }
+  }
+  &-bg {
+    border-radius: 0px 60px 60px 0px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 779px;
+    @include desktop {
+      display: none;
+    }
+    & img {
+      width: 100%;
+      height: 100%;
+      transition: transform 1s ease-in;
+    }
+    & picture {
+      width: 100%;
+      height: 100%;
+      @include hover {
+        &:hover {
+          & img {
+            transform: scale(1.07);
+          }
+        }
+      }
+    }
+  }
+  & .wrapper {
+    position: relative;
+    min-height: 659px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include desktop {
+      min-height: auto;
+      grid-template-columns: 1fr;
+    }
+    &::before {
+      right: -318px;
+      top: -82px;
+      @include rect(393, 485);
+    }
+    &::after {
+      @include rect(629, 485);
+      bottom: -107px;
+      right: -303px;
+    }
+  }
+  & .wrap {
+    grid-column: 2;
+    padding-top: 100px;
+    padding-left: 48px;
+    @include desktop {
+      padding: 80px 0;
+    }
+    @include tablet {
+      padding: 60px 0;
+    }
+  }
+  & .title-group {
+    margin-bottom: 36px;
+    @include tablet {
+      max-width: 460px;
+    }
+    @include phone {
+      max-width: 310px;
+    }
+  }
+  & .content {
+    margin-bottom: 36px;
+    line-height: 150%;
+    @include desktop {
+      max-width: 482px;
+    }
+    & p {
+      color: #85919E;
+      margin-bottom: 24px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    & strong {
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 160%;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: $c-white;
+    }
+    & ul {
+      margin-bottom: 24px;
+    }
+    & li {
+      padding-left: 32px;
+      position: relative;
+      &::before {
+        content: '';
+        background-image: url('../image/svg/icon-ok.svg');
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+  & h2 {
+    margin-bottom: 0;
+  }
+}

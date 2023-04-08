@@ -41,33 +41,18 @@
       width: 100%;
     }
     &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      z-index: -1;
       top: -133px;
       left: 189px;
-      border: 40px solid #C5E5FD;
-      border-radius: 60px;
-      background-color: transparent;
-      width: 217px;
-      height: 231px;
+      @include rect(297, 311);
       @include laptop {
         display: none;
       }
     }
     &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      z-index: -2;
+      @include rect(321, 220, #76C1FB);
       top: -75px;
       left: 359px;
-      border: 40px solid #76C1FB;
-      border-radius: 60px;
-      background-color: transparent;
-      width: 241px;
-      height: 140px;
+      z-index: -2;
       @include laptop {
         display: none;
       }

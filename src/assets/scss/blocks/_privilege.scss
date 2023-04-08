@@ -17,6 +17,8 @@
     }
   }
   &-items {
+    display: flex;
+    align-items: center;
     @include laptop {
       padding-top: 60px;
       padding-bottom: 84px;

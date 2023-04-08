@@ -1,6 +1,17 @@
 .authority {
   color: $c-white;
   position: relative;
+  & .wrapper {
+    position: relative;
+    &::before {
+      @include rect(393, 455);
+      left: -187px;
+      top: 141px;
+      @include desktop {
+        display: none;
+      }
+    }
+  }
   & .wrapper-bg {
     position: relative;
     display: flex;
@@ -36,17 +47,9 @@
       }
     }
     &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      z-index: -1;
       right: -78px;
       top: 44px;
-      border: 40px solid #C5E5FD;
-      border-radius: 60px;
-      background-color: transparent;
-      width: 313px;
-      height: 221px;
+      @include rect(393, 301);
       @include laptop {
         right: -140px;
         top: auto;
