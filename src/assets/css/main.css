@@ -1080,6 +1080,184 @@ textarea:focus {
   stroke: transparent;
 }
 
+.page-about {
+  position: relative;
+}
+.page-about .wrapper {
+  position: relative;
+}
+.page-about .wrapper::after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  border: 40px solid #76C1FB;
+  border-radius: 60px;
+  background-color: transparent;
+  width: 313px;
+  height: 181px;
+  left: -489px;
+  top: 544px;
+}
+@media (max-width: 1200px) {
+  .page-about .wrapper::after {
+    display: none;
+  }
+}
+.page-about .wrapper::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  border: 40px solid #C5E5FD;
+  border-radius: 60px;
+  background-color: transparent;
+  width: 603px;
+  height: 193px;
+  top: 674px;
+  left: -419px;
+}
+@media (max-width: 1200px) {
+  .page-about .wrapper::before {
+    display: none;
+  }
+}
+.page-about .content {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 60px 48px;
+}
+@media (max-width: 1000px) {
+  .page-about .content {
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 730px) {
+  .page-about .content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+.page-about .content p {
+  line-height: 150%;
+  color: #85919E;
+  grid-column: 4/7;
+}
+@media (max-width: 1000px) {
+  .page-about .content p {
+    grid-column: 1/2;
+  }
+}
+@media (max-width: 730px) {
+  .page-about .content p {
+    grid-column: 1/2;
+  }
+}
+@media (max-width: 420px) {
+  .page-about .content p {
+    max-width: 290px;
+  }
+}
+.page-about .content p:first-child {
+  grid-column: 1/4;
+}
+@media (max-width: 1000px) {
+  .page-about .content p:first-child {
+    grid-column: 1/2;
+  }
+}
+@media (max-width: 730px) {
+  .page-about .content p:first-child {
+    grid-column: 1/2;
+  }
+}
+.page-about .content-pic {
+  max-height: 250px;
+  grid-column: 1/3;
+}
+@media (max-width: 1000px) {
+  .page-about .content-pic {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    max-height: 312px;
+  }
+}
+@media (max-width: 730px) {
+  .page-about .content-pic {
+    grid-column: 1/2;
+  }
+}
+.page-about picture {
+  border-radius: 60px;
+  overflow: hidden;
+  grid-column: 3/7;
+  max-height: 535px;
+}
+@media (min-width: 790px) {
+  .page-about picture:hover img {
+    transform: scale(1.07);
+  }
+}
+@media (max-width: 1000px) {
+  .page-about picture {
+    grid-column: 1/3;
+    max-height: 310px;
+  }
+}
+@media (max-width: 730px) {
+  .page-about picture {
+    grid-column: 1/2;
+    border-radius: 0;
+    position: relative;
+    left: 0;
+    right: 0;
+  }
+}
+@media (max-width: 420px) {
+  .page-about picture {
+    position: relative;
+    left: -15px;
+    width: 420px;
+    height: 200px;
+  }
+}
+.page-about picture img {
+  height: 100%;
+  width: 100%;
+  transition: transform 1s ease-in;
+}
+
+.list ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+}
+@media (max-width: 1000px) {
+  .list ul {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+.list li {
+  position: relative;
+  padding: 24px 24px 24px 64px;
+  background: #F1F9FF;
+  border-radius: 16px;
+  line-height: 150%;
+  color: #85919E;
+}
+.list li::before {
+  content: "";
+  background-image: url("../image/svg/icon-ok.svg");
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  width: 24px;
+  height: 24px;
+}
+
 .services {
   background: #F1F9FF;
   border-radius: 0px 360px 0px 0px;
@@ -3245,7 +3423,7 @@ textarea:focus {
   top: -61px;
   left: 50%;
   transform: translateX(-100%);
-  z-index: 1;
+  z-index: 2;
   background-image: url("../image/vdpo-logo.png");
   background-size: cover;
 }
@@ -3275,6 +3453,7 @@ textarea:focus {
   left: 0;
   width: 50%;
   height: 779px;
+  z-index: 1;
 }
 @media (max-width: 1200px) {
   .akt-bg {
@@ -3308,8 +3487,6 @@ textarea:focus {
   }
 }
 .akt .wrapper::before {
-  right: -318px;
-  top: -82px;
   content: "";
   display: block;
   position: absolute;
@@ -3319,6 +3496,13 @@ textarea:focus {
   background-color: transparent;
   width: 313px;
   height: 405px;
+  right: -318px;
+  top: -82px;
+}
+@media (max-width: 1200px) {
+  .akt .wrapper::before {
+    display: none;
+  }
 }
 .akt .wrapper::after {
   content: "";
@@ -3332,6 +3516,11 @@ textarea:focus {
   height: 405px;
   bottom: -107px;
   right: -303px;
+}
+@media (max-width: 1200px) {
+  .akt .wrapper::after {
+    display: none;
+  }
 }
 .akt .wrap {
   grid-column: 2;

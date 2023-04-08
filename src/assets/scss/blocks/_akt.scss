@@ -10,7 +10,7 @@
     top: -61px;
     left: 50%;
     transform: translateX(-100%);
-    z-index: 1;
+    z-index: 2;
     background-image: url('../image/vdpo-logo.png');
     background-size: cover;
     @include desktop {
@@ -36,6 +36,7 @@
     left: 0;
     width: 50%;
     height: 779px;
+    z-index: 1;
     @include desktop {
       display: none;
     }
@@ -66,14 +67,20 @@
       grid-template-columns: 1fr;
     }
     &::before {
+      @include rect(393, 485);
       right: -318px;
       top: -82px;
-      @include rect(393, 485);
+      @include desktop {
+        display: none;
+      }
     }
     &::after {
       @include rect(629, 485);
       bottom: -107px;
       right: -303px;
+      @include desktop {
+        display: none;
+      }
     }
   }
   & .wrap {

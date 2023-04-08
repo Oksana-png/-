@@ -15,7 +15,6 @@ btnUp.addEventListener('click', () => {
 });
 
 window.addEventListener('scroll', () => {
-  console.log(window);
   if (window.innerHeight < window.scrollY) {
     btnUp.style.display = 'flex';
   } else {
