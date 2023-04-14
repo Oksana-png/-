@@ -67,3 +67,103 @@
     }
   }
 }
+
+.page-news {
+  position: relative;
+  &::before {
+    @include rect(393, 485);
+    top: 1150px;
+    left: -191px;
+    @include media(1600px) {
+      display: none;
+    }
+  }
+  &::after {
+    @include curcle();
+    top: 650px;
+    left: 81px;
+    @include media(1600px) {
+      display: none;
+    }
+  }
+  & .wrapper {
+    position: relative;
+    &::before {
+      @include rect(393, 285, #76C1FB);
+      right: -460px;
+      top: 363px;
+      z-index: 1;
+    }
+    &::after {
+      @include rect(393, 485);
+      top: 453px;
+      right: -583px;
+    }
+  }
+  & .news {
+    grid-template-columns: repeat(6, 1fr);
+    display: grid;
+    gap: 48px;
+    @include desktop {
+      gap: 30px;
+    }
+    @include laptop {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include tablet {
+      grid-template-columns: 1fr;
+      grid-template-rows: none;
+    }
+  }
+
+  & .new {
+    grid-column: span 2;
+    @include laptop {
+      grid-column: span 1;
+    }
+    &:first-child {
+      grid-column: span 3;
+      @include laptop {
+        grid-column: span 2;
+      }
+      @include tablet {
+        grid-column: span 1;
+      }
+    }
+    &:nth-child(2) {
+      grid-column: span 3;
+      @include laptop {
+        grid-column: span 1;
+      }
+    }
+    &s-link {
+      height: 358px;
+      @include tablet {
+        height: 250px;
+      }
+      @include small {
+        height: 150px;
+      }
+    }
+    &-item__hover {
+      @include laptop {
+        opacity: 1;
+      }
+    }
+    & figcaption {
+      padding-top: 24px;
+      padding-bottom: 13px;
+    }
+  }
+
+  & h2 {
+    margin-bottom: 0;
+  }
+
+  & .title-group {
+    margin-bottom: 60px;
+    @include laptop {
+      margin-bottom: 40px;
+    }
+  }
+}

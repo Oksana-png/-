@@ -336,14 +336,16 @@
     transition: all .3s ease-in-out;
     visibility: hidden;
   }
-  &:hover {
-    &>.icon-hover {
-      top: 50%;
-      opacity: 1;
-    }
-    &::before {
-      visibility: visible;
-      background-color: rgba(48, 55, 62, 0.7)
+  @include hover {
+    &:hover {
+      &>.icon-hover {
+        top: 50%;
+        opacity: 1;
+      }
+      &::before {
+        visibility: visible;
+        background-color: rgba(48, 55, 62, 0.7)
+      }
     }
   }
 }

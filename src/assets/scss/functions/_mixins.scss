@@ -116,3 +116,14 @@
   width: $w - 80 + px;
   height: $h - 80 + px;
 }
+
+@mixin curcle() {
+  content: '';
+  display: block;
+  position: absolute;
+  border: 40px solid #C5E5FD;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+}

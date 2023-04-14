@@ -1,0 +1,119 @@
+.benefit {
+  & .title-group {
+    max-width: 728px;
+  }
+  & .wrap {
+    display: flex;
+    align-items: center;
+    & .wrapper {
+      position: relative;
+      &::before {
+        @include curcle();
+        right: -148px;
+        top: 400px;
+        @include laptop {
+          display: none;
+        }
+      }
+    }
+  }
+  & .wrapper {
+    width: 100%;
+    margin-bottom: 60px;
+    @include tablet {
+      margin-bottom: 40px;
+    }
+  }
+  &-bg {
+    position: absolute;
+    height: 722px;
+    width: 100% / 12 * 4.5;
+    @include media(1450px) {
+      display: none;
+    }
+    & picture {
+      width: 100%;
+      height: 100%;
+      border-radius: 0px 60px 60px 0px;
+      overflow: hidden;
+      @include hover {
+        & img {
+          &:hover {
+            transform: scale(1.07);
+          }
+        }
+      }
+      & img {
+        width: 100%;
+        height: 100%;
+        transition: transform 1s ease-in;
+      }
+    }
+  }
+  &-items {
+    width: calc(col(8) - 24px);
+    margin-right: 0;
+    margin-left: auto;
+    @include media(1450px) {
+      width: 100%;
+    }
+    & ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 48px;
+      @include laptop {
+        gap: 30px;
+      }
+      @include tablet {
+        grid-template-columns: 1fr;
+      }
+    }
+    & li {
+      max-width: 352px;
+      padding: 24px 40px 24px 64px;
+      position: relative;
+      background: #F1F9FF;
+      border-radius: 16px;
+      @include media(1450px) {
+        max-width: 100%;
+      }
+      @include laptop {
+        max-width: 354px;
+      }
+      @include tablet {
+        max-width: 100%;
+      }
+      &::before {
+        content: '';
+        background-image: url('../image/svg/icon-ok.svg');
+        position: absolute;
+        top: 27px;
+        left: 24px;
+        width: 24px;
+        height: 24px;
+        @include laptop {
+          top: 24px;
+        }
+      }
+    }
+
+    & h3 {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 140%;
+      margin-bottom: 8px;
+      color: $c-main;
+      @include tablet790 {
+        font-size: 20px;
+      }
+    }
+    p {
+      font-family: "OpenSans";
+      line-height: 150%;
+      color: #85919E;
+    }
+  }
+  & h2 {
+    margin-bottom: 0;
+  }
+}

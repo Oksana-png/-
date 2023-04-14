@@ -1,0 +1,20 @@
+.installation {
+  & .title-group {
+    margin-bottom: 60px;
+  }
+  & .content {
+    width: col(10);
+    margin: 0 auto;
+    @include desktop {
+      width: 100%;
+    }
+    & p {
+      line-height: 150%;
+      color: #85919E;
+      margin-bottom: 24px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

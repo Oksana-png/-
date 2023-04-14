@@ -1,6 +1,8 @@
 
 let swiperWork;
 let swiperAdvantages;
+let swiperWeWork;
+
 let init = false;
 function swiperMode() {
   let mobile = window.matchMedia("(min-width: 0px) and (max-width: 730px)");
@@ -33,10 +35,24 @@ function swiperMode() {
         spaceBetween: 30,
       });
     }
+
+    swiperWeWork = new Swiper(".we-work-slider", {
+        pagination: {
+          el: ".swiper-pagination",
+          dynamicBullets: true,
+        },
+        centeredSlides: true,
+        navigation: {
+          nextEl: '.we-work-arrows-next',
+          prevEl: '.we-work-arrows-prev',
+        },
+        spaceBetween: 30,
+      });
   } else {
     if (swiperWork) {
       swiperWork.destroy();
       swiperAdvantages.destroy();
+      swiperWeWork.destroy();
     }
     init = false;
   }

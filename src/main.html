@@ -8,7 +8,7 @@
 
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
-  <link rel="stylesheet" href="assets/libs/fancybox/jquery.fancybox.css">
+  <link rel="stylesheet" href="assets/libs/fancybox/fancybox.css">
 
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
@@ -108,7 +108,7 @@
     </div>
   </header>
 
-  
+
   <main>
 
     <section class="hero section-main">
@@ -328,7 +328,7 @@
                 </a>
               </div>
               <div class="swiper-slide portfolio-slider__item">
-                <a data-fancybox href="assets/image/portfolio/ventilation-systems2.jpg"
+                <a data-fancybox="portfolio-slider" href="assets/image/portfolio/ventilation-systems2.jpg"
                   class="hover-images__icon">
                   <picture>
                     <source srcset="" type="image/webp">
@@ -340,7 +340,7 @@
                 </a>
               </div>
               <div class="swiper-slide portfolio-slider__item">
-                <a data-fancybox href="assets/image/portfolio/Ventilation_SP_0228_Commercial_Ventilation-1440x960.jpg"
+                <a data-fancybox="portfolio-slider" href="assets/image/portfolio/Ventilation_SP_0228_Commercial_Ventilation-1440x960.jpg"
                   class="hover-images__icon">
                   <picture>
                     <source srcset="" type="image/webp">
@@ -352,7 +352,7 @@
                 </a>
               </div>
               <div class="swiper-slide portfolio-slider__item">
-                <a data-fancybox href="assets/image/portfolio/ventilation-systems2.jpg" class="hover-images__icon">
+                <a data-fancybox="portfolio-slider" href="assets/image/portfolio/ventilation-systems2.jpg" class="hover-images__icon">
                   <picture>
                     <source srcset="" type="image/webp">
                     <img src="assets/image/portfolio/ventilation-systems2.jpg" alt="alt" title="title">
@@ -363,7 +363,7 @@
                 </a>
               </div>
               <div class="swiper-slide portfolio-slider__item">
-                <a data-fancybox href="assets/image/portfolio/Ventilation_SP_0228_Commercial_Ventilation-1440x960.jpg"
+                <a data-fancybox="portfolio-slider" href="assets/image/portfolio/Ventilation_SP_0228_Commercial_Ventilation-1440x960.jpg"
                   class="hover-images__icon">
                   <picture>
                     <source srcset="" type="image/webp">
@@ -514,7 +514,6 @@
             <input type="text" name="phone" placeholder="Телефон">
           </div>
           <textarea name="message" placeholder="Опишите ваши требования максимально подробно (необязательно). При необходимости можете прикрепить файл ниже"></textarea>
-          
           <div class="i-agree__checkbox">
             <label class="custom-checkbox">
               <input name="agree" type="checkbox" class="default-checkbox">
@@ -923,6 +922,8 @@
         </div>
       </div>
     </section>
+
+    
   </main>
 
 
@@ -1007,10 +1008,9 @@
   
 
   <script src="assets/libs/jquery/jquery.js"></script>
-  <script src="assets/libs/fancybox/jquery.fancybox.js"></script>
+  <script src="assets/libs/fancybox/fancybox.umd.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
   
   <script src="assets/js/main.js" defer></script>
   <script src="assets/js/sliders.js" defer></script>

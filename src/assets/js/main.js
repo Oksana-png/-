@@ -21,3 +21,7 @@ window.addEventListener('scroll', () => {
     btnUp.style.display = 'none';
   }
 });
+
+Fancybox.bind("[data-fancybox]", {
+  // Your custom options
+});

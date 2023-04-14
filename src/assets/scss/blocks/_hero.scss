@@ -131,7 +131,12 @@
         width: 100%;
       }
     }
-    
+  }
+  & .swiper-slide>picture {
+    width: 100%;
+    & img {
+      width: 100%;
+    }
   }
   & h1 {
     font-weight: 700;
@@ -148,6 +153,9 @@
       margin-bottom: 16px;
       font-size: 30px;
       line-height: 140%;
+    }
+    @include small {
+      max-width: 400px;
     }
   }
   & p {

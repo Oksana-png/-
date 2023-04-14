@@ -1,0 +1,81 @@
+.we-work {
+  & .wrapper::before {
+    @include desktop {
+      top: 136px;
+      left: auto;
+      right: 81px;
+    }
+    @include tablet {
+      display: none;
+    }
+  }
+  & .title-group {
+    width: col(10);
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end;
+    gap: 48px;
+    margin-bottom: 48px;
+    @include desktop {
+      width: col(8);
+      margin-left: 0;
+      margin-bottom: 40px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 40px;
+    }
+    @include tablet {
+      width: 100%;
+    }
+    & h2 {
+      margin-bottom: 0;
+    }
+    & > * {
+      flex-basis: 50%;
+    }
+  }
+  & .row-grid {
+    display: block;
+  }
+  & .swiper-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(0, 1fr);
+    @include desktop {
+      grid-template-columns: 1fr;
+    }
+  }
+  & .swiper-slide {
+    padding: 20px;
+    @include desktop {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+    @include tablet {
+      padding: 24px;
+      flex-direction: column;
+      gap: 14px;
+    }
+  }
+  & .work-slider {
+    @include small {
+      margin-left: 0;
+    }
+    &__item {
+      @include tablet {
+        height: auto;
+        max-width: 260px;
+      }
+    }
+    &__text {
+      @include laptop {
+        max-width: 257px;
+      }
+    }
+    &__title {
+      @include laptop {
+        max-width: 230px;
+      }
+    }
+  }
+}
