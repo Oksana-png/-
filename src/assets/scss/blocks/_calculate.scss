@@ -81,6 +81,13 @@
     @include small {
       height: 200px;
     };
+    @include hover {
+      &:hover {
+        & img {
+          transform: scale(1.07);
+        }
+      }
+    }
     & picture {
       width: 100%;
       height: 100%;
@@ -92,6 +99,7 @@
       & img {
         width: 100%;
         height: 100%;
+        transition: transform 1s ease-in
       }
     }
   }
