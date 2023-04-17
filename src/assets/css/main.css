@@ -4602,6 +4602,11 @@ textarea:focus {
   margin-right: 0;
   margin-left: auto;
 }
+@media (max-width: 1800px) {
+  .benefit-items {
+    width: calc(66.6666666667% - 100px);
+  }
+}
 @media (max-width: 1450px) {
   .benefit-items {
     width: 100%;
@@ -4611,6 +4616,11 @@ textarea:focus {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 48px;
+}
+@media (max-width: 1800px) {
+  .benefit-items ul {
+    gap: 35px;
+  }
 }
 @media (max-width: 1000px) {
   .benefit-items ul {

@@ -54,6 +54,9 @@
     width: calc(col(8) - 24px);
     margin-right: 0;
     margin-left: auto;
+    @include media(1800px) {
+      width: calc(col(8) - 100px);
+    }
     @include media(1450px) {
       width: 100%;
     }
@@ -61,6 +64,9 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 48px;
+      @include media(1800px) {
+        gap: 35px;
+      }
       @include laptop {
         gap: 30px;
       }
