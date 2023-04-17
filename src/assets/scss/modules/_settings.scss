@@ -460,8 +460,8 @@ textarea {
 }
 
 .btn-up {
-  width: 48px;
-  height: 48px;
+  width: 80px;
+  height: 80px;
   display: none;
   align-items: center;
   justify-content: center;
@@ -474,6 +474,8 @@ textarea {
   z-index: 100;
   transition: box-shadow .3s;
   @include laptop {
+    width: 48px;
+    height: 48px;
     right: 60px;
     bottom: 60px;
   }
@@ -487,9 +489,13 @@ textarea {
     }
   }
   & .icon {
-    width: 20px;
-    height: 16px;
+    width: 42px;
+    height: 25px;
     margin-right: 0;
+    @include laptop {
+      width: 20px;
+      height: 16px;
+    }
   }
 }
 .overlay {

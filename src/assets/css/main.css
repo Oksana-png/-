@@ -663,8 +663,8 @@ textarea:focus {
 }
 
 .btn-up {
-  width: 48px;
-  height: 48px;
+  width: 80px;
+  height: 80px;
   display: none;
   align-items: center;
   justify-content: center;
@@ -679,6 +679,8 @@ textarea:focus {
 }
 @media (max-width: 1000px) {
   .btn-up {
+    width: 48px;
+    height: 48px;
     right: 60px;
     bottom: 60px;
   }
@@ -695,9 +697,15 @@ textarea:focus {
   }
 }
 .btn-up .icon {
-  width: 20px;
-  height: 16px;
+  width: 42px;
+  height: 25px;
   margin-right: 0;
+}
+@media (max-width: 1000px) {
+  .btn-up .icon {
+    width: 20px;
+    height: 16px;
+  }
 }
 
 .overlay {
