@@ -1,4 +1,5 @@
 .partners {
+  background-color: #F1F9FF;
   & .wrapper {
     position: relative;
     display: grid;
@@ -106,5 +107,14 @@
       align-items: center;
       justify-content: center;
     }
+  }
+}
+
+.grey-block {
+  background-color: $c-main;
+  color: $c-white;
+
+  & .swiper-pagination-bullet {
+    background-color: #F1F9FF;
   }
 }

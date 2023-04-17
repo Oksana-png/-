@@ -416,14 +416,6 @@ figure {
   transform: translateX(-50%);
 }
 
-.grey-block {
-  background-color: #30373E;
-  color: #fff;
-}
-.grey-block .swiper-pagination-bullet {
-  background-color: #F1F9FF;
-}
-
 .btn-primary {
   padding: 4px;
   font-family: "OpenSans";
@@ -2716,6 +2708,9 @@ textarea:focus {
   margin-bottom: 24px;
 }
 
+.partners {
+  background-color: #F1F9FF;
+}
 .partners .wrapper {
   position: relative;
   display: grid;
@@ -2849,6 +2844,14 @@ textarea:focus {
     align-items: center;
     justify-content: center;
   }
+}
+
+.grey-block {
+  background-color: #30373E;
+  color: #fff;
+}
+.grey-block .swiper-pagination-bullet {
+  background-color: #F1F9FF;
 }
 
 .about {
