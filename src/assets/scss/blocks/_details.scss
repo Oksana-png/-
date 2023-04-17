@@ -1,0 +1,125 @@
+.details {
+  & .wrapper {
+    padding-top: 60px;
+    position: relative;
+    @include desktop {
+      display: flex;
+      flex-direction: column;
+      margin-top: 0;
+    }
+  }
+  & .title-group {
+    margin-bottom: 36px;
+    width: calc(50% - 24px);
+    margin-right: 0;
+    margin-left: auto;
+    @include desktop {
+      width: 100%;
+    }
+    @include tablet {
+      margin-bottom: 40px;
+    }
+  }
+  &-bg {
+    position: absolute;
+    width: 728px;
+    height: 679px;
+    left: -148px;
+    top: 50%;
+    transform: translateY(-50%);
+    &::before {
+      content: '';
+      width: 748px;
+      height: 544px;
+      border-radius: 60px;
+      background-color: #C5E5FD;
+      position: absolute;
+      top: -95px;
+      left: -248px;
+      z-index: -2;
+      @include desktop {
+        height: 325px;
+        width: 728px;
+        top: auto;
+        bottom: -51px;
+        left: -118px;
+      }
+      @include tablet {
+        display: none;
+      }
+    }
+    @include desktop {
+      position: static;
+      width: 100%;
+      height: 400px;
+      left: auto;
+      top: auto;
+      transform: translate(0);
+      margin-bottom: 60px;
+    }
+    @include laptop {
+      height: 350px;
+    }
+    @include tablet {
+      margin-bottom: 40px;
+    }
+    @include phone {
+      height: 250px;
+    }
+    @include small {
+      height: 200px;
+    }
+  }
+  & .content {
+    width: calc(50% - 24px);
+    margin-right: 0;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    align-items: flex-start;
+    @include desktop {
+      width: 100%;
+    }
+    @include tablet {
+      margin-bottom: 40px;
+    }
+  }
+  & picture {
+    width: 100%;
+    height: 100%;
+    border-radius: 60px;
+    overflow: hidden;
+    @include hover {
+      &:hover {
+        & img {
+          transform: scale(1.07);
+        }
+      }
+    }
+    @include tablet {
+      border-radius: 16px;
+    }
+    & img {
+      transition: transform 1s ease-in;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  & .content {
+    & p {
+      line-height: 150%;
+      color: #85919E;
+      margin-bottom: 30px;
+      @include tablet {
+        margin-bottom: 20px;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  & h2 {
+    margin-bottom: 0;
+  }
+}

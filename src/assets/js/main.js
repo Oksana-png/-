@@ -2,6 +2,23 @@ const btnBurger = document.querySelector('.burger-menu__btn ');
 
 btnBurger.addEventListener('click', () => {
   btnBurger.classList.toggle('active');
+  const menu = document.querySelector(".header-nav");
+  const overlay = document.querySelector('.overlay');
+
+
+  if (btnBurger.classList.contains('active')) {
+    menu.classList.add('header-nav-active');
+    overlay.classList.add('active');
+  } else {
+    menu.classList.remove('header-nav-active');
+    overlay.classList.remove('active');
+  }
+
+  overlay.addEventListener('click', () => {
+    menu.classList.remove('header-nav-active');
+    overlay.classList.remove('active');
+    btnBurger.classList.remove('active');
+  });
 });
 
 const btnUp = document.querySelector('.btn-up');
@@ -24,4 +41,14 @@ window.addEventListener('scroll', () => {
 
 Fancybox.bind("[data-fancybox]", {
   // Your custom options
+});
+
+window.addEventListener('click', (event) => {
+  const target = event.target.closest('.open-mobile__menu');
+
+  if (target) {
+    const subMenu = event.target.closest('.has-submenu').querySelector('.submenu');
+    subMenu.classList.toggle('show');
+    event.target.closest('.has-submenu').classList.toggle('active');
+  }
 });

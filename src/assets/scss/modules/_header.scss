@@ -1,10 +1,17 @@
 .header {
+  position: relative;
+  z-index: 1000;
+  background-color: white;
   @include laptop {
     &-row {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      
     }
+  }
+  @include laptop {
+    position: relative;
   }
   &-nav {
     display: grid;
@@ -18,13 +25,33 @@
     }
     @include laptop {
       display: none;
+      position: absolute;
+      z-index: 1000;
+      left: 0;
+      right: 0;
+      max-width: 100%;
+      background-color: $c-white;
+      padding: 24px 15px 40px;
+      gap: 0;
+      grid-template-columns: 1fr;
+      & .logo-desktop {
+        display: none !important;
+      }
+      & .wrap {
+        width: 100%;
+        justify-content: space-between;
+      }
+      & .header__list-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+      }
+    }
+    &-active {
+      display: grid;
     }
   }
-  &__link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+
   &__list-nav {
     display: flex;
     align-items: center;
@@ -34,13 +61,19 @@
       gap: 0 14px;
       flex-wrap: wrap;
     }
-    & .icon {
+    & .open-mobile__menu {
+      padding-top: 3px;
       width: 17px;
       height: 10px;
       margin-left: 6px;
       margin-right: 0;
       stroke: $c-main;
-      transition: transform .3s ease-in;
+      transition: all .3s ease-in;
+      transition-property: transform, stroke;
+      & .icon {
+        transition: inherit;
+        transition-property: inherit;
+      }
     }
   }
   & .nav {
@@ -48,12 +81,48 @@
       gap: 16px;
     }
   }
-  &__item {
-    @include hover {
-      &:hover {
-        & .submenu {
-          display: block;
+  & .has-submenu {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    position: relative;
+    line-height: 150%;
+    color: #30373E;
+    @include laptop {
+      width: 100%;
+    }
+    &:hover {
+      @include hover1000 {
+        & .header__link {
+          color: #3E9AE0;
         }
+        & .submenu {
+          opacity: 1;
+          visibility: visible;
+          height: auto;
+          transform: rotateX(0);
+          transition: all .5s ease-out;
+        }
+        & .icon {
+          transform: rotate(180deg);
+          stroke: #3E9AE0;
+        }
+      }
+    }
+    & button {
+      border: none;
+      background-color: transparent;
+    }
+    &.active {
+      @include laptop {
+        & .header__link {
+          color: #3E9AE0;
+        }
+      
+        & .open-mobile__menu {
+          stroke: #3E9AE0;
+        }
+      
         & .icon {
           transform: rotate(180deg);
         }
@@ -126,13 +195,76 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 28px;
+    @include laptop {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+    & .wrap {
+      display: flex;
+      align-items: center;
+    }
+    & .btn {
+      margin-left: 85px;
+      @include desktop {
+        margin-left: 0px;
+      }
+    }
+    @include media(470px) {
+      & .wrap {
+        flex-direction: column-reverse;
+        gap: 24px;
+      }
+    }
   }
 }
 
 .submenu {
-  display: none;
+  visibility: hidden;
   position: absolute;
-  z-index: 1;
+  left: -3px;
+  top: 22px;
+  z-index: 20;
+  background: #F1F9FF;
+  border-radius: 0px 60px 60px 60px;
+  padding: 24px 60px 60px;
+  @include laptop {
+    left: auto;
+    top: auto;
+    position: relative;
+    display: flex;
+    height: 0;
+    padding: 0;
+    opacity: 0;
+    border-radius: 0;
+  }
+  &__item {
+    width: 214px;
+    @include laptop {
+      width: 100%;
+    }
+  }
+  &__link {
+    width: 100%;
+    padding: 12px 0;
+    line-height: 150%;
+    color: #30373E
+  }
+  &.show {
+    @include laptop {
+      min-width: calc(100% + 60px);
+      right: 0px;
+      left: -15px;
+      flex-direction: column;
+      visibility: visible;
+      padding: 12px 15px 12px 30px;
+      height: auto;
+      margin-top: 24px;
+      opacity: 1;
+      transition: all .5s ease-out;
+    }
+  }
 }
 
 .contact {
@@ -141,6 +273,36 @@
   justify-content: space-between;
   @include laptop {
     gap: 30px;
+  }
+  &-mobile {
+    display: none;
+    flex-wrap: wrap;
+    margin-top: 24px;
+    padding-top: 15px;
+    @include laptop {
+      display: flex;
+      justify-content: space-between;
+    }
+    @include phone {
+      flex-direction: column;
+      gap: 15px;
+    }
+    &__block {
+      font-size: 13px;
+      line-height: 130%;
+      color: #85919E;
+      display: flex;
+      align-items: center;
+      &--phone {
+        display: none;
+        @include phone {
+          display: flex;
+        }
+      }
+    }
+    & .icon {
+      fill: #85919E;
+    }
   }
   &__block {
     color: $c-white;

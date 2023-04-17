@@ -1,0 +1,12 @@
+.portfolio-performance {
+  & .title-group {
+    margin-bottom: 60px;
+    @include tablet {
+      margin-bottom: 40px;
+    }
+    & h2 {
+      margin-bottom: 0;
+    }
+  }
+}
+

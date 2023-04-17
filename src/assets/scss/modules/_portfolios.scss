@@ -1,0 +1,54 @@
+.portfolios {
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    & p {
+      line-height: 150%;
+      color: #85919E;
+    }
+  }
+  & .block-price {
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    line-height: 150%;
+    color: #30373E;
+    @include tablet {
+      margin: 0 auto;
+    }
+    & strong {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 140%;
+      color: #3E9AE0;
+    }
+    & .price {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      @include tablet {
+        flex-direction: column;
+      }
+    }
+  }
+  h3 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 140%;
+    color: #30373E;
+    margin-bottom: 36px;
+    @include laptop {
+      font-size: 20px;
+    }
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+  & .btn {
+    @include tablet {
+      margin: 0 auto;
+    }
+  }
+}
