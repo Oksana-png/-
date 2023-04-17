@@ -4623,7 +4623,7 @@ textarea:focus {
   }
 }
 .benefit-items li {
-  max-width: 352px;
+  max-width: 100%;
   padding: 24px 40px 24px 64px;
   position: relative;
   background: #F1F9FF;
