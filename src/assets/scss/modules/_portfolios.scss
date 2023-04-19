@@ -1,12 +1,148 @@
+.page-portfolio {
+  & .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    @include tablet {
+      margin-top: 40px;
+    }
+  }
+}
+
 .portfolios {
-  &__item {
+  & .title-group {
+    margin-bottom: 60px;
+    @include tablet {
+      margin-bottom: 40px;
+    }
+    & h2 {
+      margin-bottom: 0;
+    }
+  }
+  & .wrapper {
+    position: relative;
+    &::before {
+      @include rect(393, 485);
+      top: 777px;
+      left: calc(-393px - 158px);
+      @include desktop {
+        display: none;
+      }
+    }
+    &::after {
+      @include curcle();
+      top: 622px;
+      right: -193px;
+      @include desktop {
+        display: none;
+      }
+    }
+  }
+  & .container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
+    gap: 60px;
+    @include tablet {
+      gap: 40px;
+    }
+  }
+  &__item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 48px;
+    @include laptop {
+      column-gap: 30px;
+      grid-template-columns: 2fr 1fr;
+    }
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+    & .icon {
+      fill: #3E9AE0;
+    }
     & p {
       line-height: 150%;
       color: #85919E;
+    }
+    & > * {
+      grid-column: 1/2;
+    }
+    &:nth-child(2n) {
+      @include laptop {
+        grid-template-columns: 1fr 2fr;
+      }
+      @include tablet {
+        grid-template-columns: 1fr;
+      }
+      &>* {
+        grid-column: 2/3;
+        @include tablet {
+          grid-column: 1/2;
+        }
+      }
+      & .portfolios-gallery {
+        grid-column: 1/2;
+      }
+    }
+    & > a {
+      justify-self: flex-start;
+    }
+  }
+  &-gallery {
+    display: grid;
+    grid-template-columns: 1fr 184px;
+    gap: 24px;
+    grid-column: 2/3;
+    grid-row: 1/6;
+    height: 418px;
+    border-radius: 16px;
+    overflow: hidden;
+    @include laptop {
+      grid-template-columns: 1fr;
+      grid-template-rows: 136px 136px 136px;
+      gap: 30px;
+      height: auto;
+    }
+    @include tablet {
+      grid-column: 1/2;
+      grid-row: auto;
+      grid-template-rows: 1fr;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+    @include small {
+      grid-template-rows: 100px;
+    }
+    & a {
+      @include laptop {
+        max-height: 100%;
+      }
+      &:first-child {
+        grid-row: 1/3;
+        @include laptop {
+          grid-row: 1/2;
+        }
+      }
+    }
+    & picture, img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: minmax(max-content, min-content) minmax(123px, auto);
+    gap: 24px 12px;
+    & li {
+      font-size: 16px;
+      line-height: 150%;
+      color: #30373E;
+      display: flex;
+      align-items: center;
+      &:last-child {
+        grid-column: 1/3;
+      }
     }
   }
   & .block-price {
@@ -38,12 +174,12 @@
     font-size: 24px;
     line-height: 140%;
     color: #30373E;
-    margin-bottom: 36px;
+    margin-bottom: 20px;
     @include laptop {
       font-size: 20px;
     }
     @include tablet {
-      margin-bottom: 30px;
+      margin-bottom: 14px;
     }
   }
   & .btn {

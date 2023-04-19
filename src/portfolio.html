@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Портфолио</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+  <link rel="stylesheet" href="assets/libs/fancybox/fancybox.css">
+
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="grey-bg">
+      <div class="wrapper header-row header-contact">
+        <div class="logo header-logo">
+          <a href="/">
+            <img src="assets/image/logo2.png" alt="alt" title="">
+          </a>
+        </div>
+        <div class="contact">
+          <div class="contact__block">
+            <svg class="icon icon-mini">
+              <use xlink:href="assets/image/svg/sprite.svg#geolocation"></use>
+            </svg>
+            <p>М.О, д.Кукуево, ул.Водопадная, д.45</p>
+          </div>
+          <div class="contact__block">
+            <svg class="icon icon-mini">
+              <use xlink:href="assets/image/svg/sprite.svg#email"></use>
+            </svg>
+            <a href="mailto:info@atmosfera.ru">info@atmosfera.ru</a>
+          </div>
+          <div class="contact__block">
+            <svg class="icon icon-mini">
+              <use xlink:href="assets/image/svg/sprite.svg#clock"></use>
+            </svg>
+            <p>Пн-Пт с 8:00 до 20:00</p>
+          </div>
+          <div class="contact__block">
+            <svg class="icon icon-mini">
+              <use xlink:href="assets/image/svg/sprite.svg#phone"></use>
+            </svg>
+            <a href="tel:+74958008080">+7 495 800-80-80</a>
+          </div>
+          <div class="contact__block">
+            <svg class="icon icon-mini">
+              <use xlink:href="assets/image/svg/sprite.svg#watsapp"></use>
+            </svg>
+            <a href="tel:+79168888888">+7 916 888-88-88</a>
+          </div>
+        </div>
+        <div class="burger-menu">
+          <button class="burger-menu__btn ">
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper header-row header-nav">
+      <a href="/" class="logo logo-desktop">
+        <img src="assets/image/logo-new.png" alt="АльфаВент">
+      </a>
+      <div class="header__nav">
+        <div class="row">
+          <ul class="header__list-nav">
+            <li class="header__item"><a href="#" class="header__link">О компании</a></li>
+            <li class="header__item"><a href="#" class="header__link">Портфолио</a></li>
+            <li class="header__item"><a href="#" class="header__link">Акции</a></li>
+            <li class="header__item"><a href="#" class="header__link">Контакты</a></li>
+          </ul>
+
+          <div class="wrap">
+            <form>
+              <input type="text" name="search" placeholder="Поиск">
+              <svg class="icon icon-search">
+                <use xlink:href="assets/image/svg/sprite.svg#search"></use>
+              </svg>
+            </form>
+            <button class="btn btn-primary btn-primary-line">Перезвоните мне</button>
+          </div>
+        </div>
+        <div class="nav">
+          <ul class="header__list-nav">
+            <li class="header__item has-submenu">
+              <a href="#" class="header__link">
+                Вентиляция
+              </a>
+              <button class="open-mobile__menu">
+                <svg class="icon">
+                  <use xlink:href="assets/image/svg/sprite.svg#arrow-down"></use>
+                </svg>
+              </button>
+              <ul class="submenu">
+                <li class="submenu__item"><a href="#" class="submenu__link">Вентиляции бассейнов</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link">Промышленные вентиляции</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link">Противодымная вентиляция</a></li>
+              </ul>
+            </li>
+            <li class="header__item"><a href="#" class="header__link">Отопление</a></li>
+            <li class="header__item"><a href="#" class="header__link">Водоснабжение</a></li>
+            <li class="header__item"><a href="#" class="header__link">Сервисное обслуживание</a></li>
+            <li class="header__item"><a href="#" class="header__link">Ремонт</a></li>
+            <li class="header__item"><a href="#" class="header__link">Отчёты и акты газового хозяйства</a></li>
+          </ul>
+        </div>
+        <div class="contact-mobile">
+          <div class="contact-mobile__block">
+            <svg class="icon icon-mini">
+              <use xlink:href="assets/image/svg/sprite.svg#geolocation"></use>
+            </svg>
+            <p>М.О, д.Кукуево, ул.Водопадная, д.45</p>
+          </div>
+          <div class="contact-mobile__block">
+            <svg class="icon icon-mini">
+              <use xlink:href="assets/image/svg/sprite.svg#clock"></use>
+            </svg>
+            <p>Пн-Пт с 8:00 до 20:00</p>
+          </div>
+          <div class="contact-mobile__block contact-mobile__block--phone">
+            <svg class="icon icon-mini">
+              <use xlink:href="assets/image/svg/sprite.svg#phone"></use>
+            </svg>
+            <a href="tel:+74958008080">+7 495 800-80-80</a>
+          </div>
+          <div class="contact-mobile__block contact-mobile__block--phone">
+            <svg class="icon icon-mini">
+              <use xlink:href="assets/image/svg/sprite.svg#watsapp"></use>
+            </svg>
+            <a href="tel:+79168888888">+7 916 888-88-88</a>
+          </div>
+          <div class="contact-mobile__block">
+            <svg class="icon icon-mini">
+              <use xlink:href="assets/image/svg/sprite.svg#email"></use>
+            </svg>
+            <a href="mailto:info@atmosfera.ru">info@atmosfera.ru</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-portfolio section-margin portfolios">
+      <div class="wrapper">
+        <div class="title-group">
+          <span class="intro">Портфолио</span>
+          <h2>Убедитесь в качестве наших работ</h2>
+        </div>
+        <div class="container">
+          <div class="portfolios__item">
+            <h3 class="portfolios__title">Частный дом, Остафьево</h3>
+            <ul class="portfolios__list">
+              <li>
+                <svg class="icon icon-mini">
+                  <use xlink:href="assets/image/svg/sprite.svg#clock"></use>
+                </svg>
+                14 дней
+              </li>
+              <li>
+                <svg class="icon icon-mini">
+                  <use xlink:href="assets/image/svg/sprite.svg#data"></use>
+                </svg>
+                сентябрь 2019
+              </li>
+              <li>
+                <svg class="icon icon-mini">
+                  <use xlink:href="assets/image/svg/sprite.svg#ploshad"></use>
+                </svg>
+                200 м2
+              </li>
+              <li>
+                <svg class="icon icon-mini">
+                  <use xlink:href="assets/image/svg/sprite.svg#home"></use>
+                </svg>
+                Частный дом
+              </li>
+              <li>
+                <svg class="icon icon-mini">
+                  <use xlink:href="assets/image/svg/sprite.svg#geolocation"></use>
+                </svg>
+                г. Чехов, КП Ромашка
+              </li>
+            </ul>
+            <div class="portfolios-gallery">
+              <a data-fancybox="1" href="assets/image/portfolio/leo-kitchor-home4-banner3.jpg" class="hover-images__icon">
+                <picture>
+                  <source srcset="" type="image/webp">
+                  <img src="assets/image/portfolio/leo-kitchor-home4-banner3.jpg" alt="alt" title="title">
+                </picture>
+                <svg class="icon icon-hover">
+                  <use xlink:href="assets/image/svg/sprite.svg#hover-img"></use>
+                </svg>
+              </a>
+              <a data-fancybox="1" href="assets/image/portfolio/leo-kitchor-home4-banner1.jpg" class="hover-images__icon">
+                <picture>
+                  <source srcset="" type="image/webp">
+                  <img src="assets/image/portfolio/leo-kitchor-home4-banner1.jpg" alt="alt" title="title">
+                </picture>
+                <svg class="icon icon-hover">
+                  <use xlink:href="assets/image/svg/sprite.svg#hover-img"></use>
+                </svg>
+              </a>
+              <a data-fancybox="1" href="assets/image/portfolio/leo-kitchor-home4-banner2.jpg" class="hover-images__icon">
+                <picture>
+                  <source srcset="" type="image/webp">
+                  <img src="assets/image/portfolio/leo-kitchor-home4-banner2.jpg" alt="alt" title="title">
+                </picture>
+                <svg class="icon icon-hover">
+                  <use xlink:href="assets/image/svg/sprite.svg#hover-img"></use>
+                </svg>
+              </a>
+            </div>
+            <p>Изготовление дымохода и монтаж приточно-вытяжной вентиляции, проектирование котельной, канализации, монтаж
+              газового котла. Проведён комплексный монтаж всех инженерных систем.</p>
+            <div class="block-price">
+              <div class="price">
+                <span>Стоимость работ</span>
+                <strong>200 000 ₽</strong>
+              </div>
+              <div class="price price-full">
+                <span>Материалы и оборудование</span>
+                <strong>345 000 ₽</strong>
+              </div>
+            </div>
+            <a href="#" class="btn btn-primary btn-primary-line">
+              Перейти в проект
+            </a>
+          </div>
+          <div class="portfolios__item">
+            <h3 class="portfolios__title">Частный дом, Остафьево</h3>
+            <ul class="portfolios__list">
+              <li>
+                <svg class="icon icon-mini">
+                  <use xlink:href="assets/image/svg/sprite.svg#clock"></use>
+                </svg>
+                14 дней
+              </li>
+              <li>
+                <svg class="icon icon-mini">
+                  <use xlink:href="assets/image/svg/sprite.svg#data"></use>
+                </svg>
+                сентябрь 2019
+              </li>
+              <li>
+                <svg class="icon icon-mini">
+                  <use xlink:href="assets/image/svg/sprite.svg#ploshad"></use>
+                </svg>
+                200 м2
+              </li>
+              <li>
+                <svg class="icon icon-mini">
+                  <use xlink:href="assets/image/svg/sprite.svg#home"></use>
+                </svg>
+                Частный дом
+              </li>
+              <li>
+                <svg class="icon icon-mini">
+                  <use xlink:href="assets/image/svg/sprite.svg#geolocation"></use>
+                </svg>
+                г. Чехов, КП Ромашка
+              </li>
+            </ul>
+            <div class="portfolios-gallery">
+              <a data-fancybox="1" href="assets/image/portfolio/leo-kitchor-home4-banner3.jpg" class="hover-images__icon">
+                <picture>
+                  <source srcset="" type="image/webp">
+                  <img src="assets/image/portfolio/leo-kitchor-home4-banner3.jpg" alt="alt" title="title">
+                </picture>
+                <svg class="icon icon-hover">
+                  <use xlink:href="assets/image/svg/sprite.svg#hover-img"></use>
+                </svg>
+              </a>
+              <a data-fancybox="1" href="assets/image/portfolio/leo-kitchor-home4-banner1.jpg" class="hover-images__icon">
+                <picture>
+                  <source srcset="" type="image/webp">
+                  <img src="assets/image/portfolio/leo-kitchor-home4-banner1.jpg" alt="alt" title="title">
+                </picture>
+                <svg class="icon icon-hover">
+                  <use xlink:href="assets/image/svg/sprite.svg#hover-img"></use>
+                </svg>
+              </a>
+              <a data-fancybox="1" href="assets/image/portfolio/leo-kitchor-home4-banner2.jpg" class="hover-images__icon">
+                <picture>
+                  <source srcset="" type="image/webp">
+                  <img src="assets/image/portfolio/leo-kitchor-home4-banner2.jpg" alt="alt" title="title">
+                </picture>
+                <svg class="icon icon-hover">
+                  <use xlink:href="assets/image/svg/sprite.svg#hover-img"></use>
+                </svg>
+              </a>
+            </div>
+            <p>Изготовление дымохода и монтаж приточно-вытяжной вентиляции, проектирование котельной, канализации, монтаж
+              газового
+              котла. Проведён комплексный монтаж всех инженерных систем.</p>
+            <div class="block-price">
+              <div class="price">
+                <span>Стоимость работ</span>
+                <strong>200 000 ₽</strong>
+              </div>
+              <div class="price price-full">
+                <span>Материалы и оборудование</span>
+                <strong>345 000 ₽</strong>
+              </div>
+            </div>
+            <a href="#" class="btn btn-primary btn-primary-line">
+              Перейти в проект
+            </a>
+          </div>
+          <div class="portfolios__item">
+            <h3 class="portfolios__title">Частный дом, Остафьево</h3>
+            <ul class="portfolios__list">
+              <li>
+                <svg class="icon icon-mini">
+                  <use xlink:href="assets/image/svg/sprite.svg#clock"></use>
+                </svg>
+                14 дней
+              </li>
+              <li>
+                <svg class="icon icon-mini">
+                  <use xlink:href="assets/image/svg/sprite.svg#data"></use>
+                </svg>
+                сентябрь 2019
+              </li>
+              <li>
+                <svg class="icon icon-mini">
+                  <use xlink:href="assets/image/svg/sprite.svg#ploshad"></use>
+                </svg>
+                200 м2
+              </li>
+              <li>
+                <svg class="icon icon-mini">
+                  <use xlink:href="assets/image/svg/sprite.svg#home"></use>
+                </svg>
+                Частный дом
+              </li>
+              <li>
+                <svg class="icon icon-mini">
+                  <use xlink:href="assets/image/svg/sprite.svg#geolocation"></use>
+                </svg>
+                г. Чехов, КП Ромашка
+              </li>
+            </ul>
+            <div class="portfolios-gallery">
+              <a data-fancybox="1" href="assets/image/portfolio/leo-kitchor-home4-banner3.jpg" class="hover-images__icon">
+                <picture>
+                  <source srcset="" type="image/webp">
+                  <img src="assets/image/portfolio/leo-kitchor-home4-banner3.jpg" alt="alt" title="title">
+                </picture>
+                <svg class="icon icon-hover">
+                  <use xlink:href="assets/image/svg/sprite.svg#hover-img"></use>
+                </svg>
+              </a>
+              <a data-fancybox="1" href="assets/image/portfolio/leo-kitchor-home4-banner1.jpg" class="hover-images__icon">
+                <picture>
+                  <source srcset="" type="image/webp">
+                  <img src="assets/image/portfolio/leo-kitchor-home4-banner1.jpg" alt="alt" title="title">
+                </picture>
+                <svg class="icon icon-hover">
+                  <use xlink:href="assets/image/svg/sprite.svg#hover-img"></use>
+                </svg>
+              </a>
+              <a data-fancybox="1" href="assets/image/portfolio/leo-kitchor-home4-banner2.jpg" class="hover-images__icon">
+                <picture>
+                  <source srcset="" type="image/webp">
+                  <img src="assets/image/portfolio/leo-kitchor-home4-banner2.jpg" alt="alt" title="title">
+                </picture>
+                <svg class="icon icon-hover">
+                  <use xlink:href="assets/image/svg/sprite.svg#hover-img"></use>
+                </svg>
+              </a>
+            </div>
+            <p>Изготовление дымохода и монтаж приточно-вытяжной вентиляции, проектирование котельной, канализации, монтаж
+              газового
+              котла. Проведён комплексный монтаж всех инженерных систем.</p>
+            <div class="block-price">
+              <div class="price">
+                <span>Стоимость работ</span>
+                <strong>200 000 ₽</strong>
+              </div>
+              <div class="price price-full">
+                <span>Материалы и оборудование</span>
+                <strong>345 000 ₽</strong>
+              </div>
+            </div>
+            <a href="#" class="btn btn-primary btn-primary-line">
+              Перейти в проект
+            </a>
+          </div>
+          <div class="portfolios__item">
+            <h3 class="portfolios__title">Частный дом, Остафьево</h3>
+            <ul class="portfolios__list">
+              <li>
+                <svg class="icon icon-mini">
+                  <use xlink:href="assets/image/svg/sprite.svg#clock"></use>
+                </svg>
+                14 дней
+              </li>
+              <li>
+                <svg class="icon icon-mini">
+                  <use xlink:href="assets/image/svg/sprite.svg#data"></use>
+                </svg>
+                сентябрь 2019
+              </li>
+              <li>
+                <svg class="icon icon-mini">
+                  <use xlink:href="assets/image/svg/sprite.svg#ploshad"></use>
+                </svg>
+                200 м2
+              </li>
+              <li>
+                <svg class="icon icon-mini">
+                  <use xlink:href="assets/image/svg/sprite.svg#home"></use>
+                </svg>
+                Частный дом
+              </li>
+              <li>
+                <svg class="icon icon-mini">
+                  <use xlink:href="assets/image/svg/sprite.svg#geolocation"></use>
+                </svg>
+                г. Чехов, КП Ромашка
+              </li>
+            </ul>
+            <div class="portfolios-gallery">
+              <a data-fancybox="1" href="assets/image/portfolio/leo-kitchor-home4-banner3.jpg" class="hover-images__icon">
+                <picture>
+                  <source srcset="" type="image/webp">
+                  <img src="assets/image/portfolio/leo-kitchor-home4-banner3.jpg" alt="alt" title="title">
+                </picture>
+                <svg class="icon icon-hover">
+                  <use xlink:href="assets/image/svg/sprite.svg#hover-img"></use>
+                </svg>
+              </a>
+              <a data-fancybox="1" href="assets/image/portfolio/leo-kitchor-home4-banner1.jpg" class="hover-images__icon">
+                <picture>
+                  <source srcset="" type="image/webp">
+                  <img src="assets/image/portfolio/leo-kitchor-home4-banner1.jpg" alt="alt" title="title">
+                </picture>
+                <svg class="icon icon-hover">
+                  <use xlink:href="assets/image/svg/sprite.svg#hover-img"></use>
+                </svg>
+              </a>
+              <a data-fancybox="1" href="assets/image/portfolio/leo-kitchor-home4-banner2.jpg" class="hover-images__icon">
+                <picture>
+                  <source srcset="" type="image/webp">
+                  <img src="assets/image/portfolio/leo-kitchor-home4-banner2.jpg" alt="alt" title="title">
+                </picture>
+                <svg class="icon icon-hover">
+                  <use xlink:href="assets/image/svg/sprite.svg#hover-img"></use>
+                </svg>
+              </a>
+            </div>
+            <p>Изготовление дымохода и монтаж приточно-вытяжной вентиляции, проектирование котельной, канализации, монтаж
+              газового котла. Проведён комплексный монтаж всех инженерных систем.</p>
+            <div class="block-price">
+              <div class="price">
+                <span>Стоимость работ</span>
+                <strong>200 000 ₽</strong>
+              </div>
+              <div class="price price-full">
+                <span>Материалы и оборудование</span>
+                <strong>345 000 ₽</strong>
+              </div>
+            </div>
+            <a href="#" class="btn btn-primary btn-primary-line">
+              Перейти в проект
+            </a>
+          </div>
+          <div class="portfolios__item">
+            <h3 class="portfolios__title">Частный дом, Остафьево</h3>
+            <ul class="portfolios__list">
+              <li>
+                <svg class="icon icon-mini">
+                  <use xlink:href="assets/image/svg/sprite.svg#clock"></use>
+                </svg>
+                14 дней
+              </li>
+              <li>
+                <svg class="icon icon-mini">
+                  <use xlink:href="assets/image/svg/sprite.svg#data"></use>
+                </svg>
+                сентябрь 2019
+              </li>
+              <li>
+                <svg class="icon icon-mini">
+                  <use xlink:href="assets/image/svg/sprite.svg#ploshad"></use>
+                </svg>
+                200 м2
+              </li>
+              <li>
+                <svg class="icon icon-mini">
+                  <use xlink:href="assets/image/svg/sprite.svg#home"></use>
+                </svg>
+                Частный дом
+              </li>
+              <li>
+                <svg class="icon icon-mini">
+                  <use xlink:href="assets/image/svg/sprite.svg#geolocation"></use>
+                </svg>
+                г. Чехов, КП Ромашка
+              </li>
+            </ul>
+            <div class="portfolios-gallery">
+              <a data-fancybox="1" href="assets/image/portfolio/leo-kitchor-home4-banner3.jpg" class="hover-images__icon">
+                <picture>
+                  <source srcset="" type="image/webp">
+                  <img src="assets/image/portfolio/leo-kitchor-home4-banner3.jpg" alt="alt" title="title">
+                </picture>
+                <svg class="icon icon-hover">
+                  <use xlink:href="assets/image/svg/sprite.svg#hover-img"></use>
+                </svg>
+              </a>
+              <a data-fancybox="1" href="assets/image/portfolio/leo-kitchor-home4-banner1.jpg" class="hover-images__icon">
+                <picture>
+                  <source srcset="" type="image/webp">
+                  <img src="assets/image/portfolio/leo-kitchor-home4-banner1.jpg" alt="alt" title="title">
+                </picture>
+                <svg class="icon icon-hover">
+                  <use xlink:href="assets/image/svg/sprite.svg#hover-img"></use>
+                </svg>
+              </a>
+              <a data-fancybox="1" href="assets/image/portfolio/leo-kitchor-home4-banner2.jpg" class="hover-images__icon">
+                <picture>
+                  <source srcset="" type="image/webp">
+                  <img src="assets/image/portfolio/leo-kitchor-home4-banner2.jpg" alt="alt" title="title">
+                </picture>
+                <svg class="icon icon-hover">
+                  <use xlink:href="assets/image/svg/sprite.svg#hover-img"></use>
+                </svg>
+              </a>
+            </div>
+            <p>Изготовление дымохода и монтаж приточно-вытяжной вентиляции, проектирование котельной, канализации, монтаж
+              газового
+              котла. Проведён комплексный монтаж всех инженерных систем.</p>
+            <div class="block-price">
+              <div class="price">
+                <span>Стоимость работ</span>
+                <strong>200 000 ₽</strong>
+              </div>
+              <div class="price price-full">
+                <span>Материалы и оборудование</span>
+                <strong>345 000 ₽</strong>
+              </div>
+            </div>
+            <a href="#" class="btn btn-primary btn-primary-line">
+              Перейти в проект
+            </a>
+          </div>
+          <div class="portfolios__item">
+            <h3 class="portfolios__title">Частный дом, Остафьево</h3>
+            <ul class="portfolios__list">
+              <li>
+                <svg class="icon icon-mini">
+                  <use xlink:href="assets/image/svg/sprite.svg#clock"></use>
+                </svg>
+                14 дней
+              </li>
+              <li>
+                <svg class="icon icon-mini">
+                  <use xlink:href="assets/image/svg/sprite.svg#data"></use>
+                </svg>
+                сентябрь 2019
+              </li>
+              <li>
+                <svg class="icon icon-mini">
+                  <use xlink:href="assets/image/svg/sprite.svg#ploshad"></use>
+                </svg>
+                200 м2
+              </li>
+              <li>
+                <svg class="icon icon-mini">
+                  <use xlink:href="assets/image/svg/sprite.svg#home"></use>
+                </svg>
+                Частный дом
+              </li>
+              <li>
+                <svg class="icon icon-mini">
+                  <use xlink:href="assets/image/svg/sprite.svg#geolocation"></use>
+                </svg>
+                г. Чехов, КП Ромашка
+              </li>
+            </ul>
+            <div class="portfolios-gallery">
+              <a data-fancybox="1" href="assets/image/portfolio/leo-kitchor-home4-banner3.jpg" class="hover-images__icon">
+                <picture>
+                  <source srcset="" type="image/webp">
+                  <img src="assets/image/portfolio/leo-kitchor-home4-banner3.jpg" alt="alt" title="title">
+                </picture>
+                <svg class="icon icon-hover">
+                  <use xlink:href="assets/image/svg/sprite.svg#hover-img"></use>
+                </svg>
+              </a>
+              <a data-fancybox="1" href="assets/image/portfolio/leo-kitchor-home4-banner1.jpg" class="hover-images__icon">
+                <picture>
+                  <source srcset="" type="image/webp">
+                  <img src="assets/image/portfolio/leo-kitchor-home4-banner1.jpg" alt="alt" title="title">
+                </picture>
+                <svg class="icon icon-hover">
+                  <use xlink:href="assets/image/svg/sprite.svg#hover-img"></use>
+                </svg>
+              </a>
+              <a data-fancybox="1" href="assets/image/portfolio/leo-kitchor-home4-banner2.jpg" class="hover-images__icon">
+                <picture>
+                  <source srcset="" type="image/webp">
+                  <img src="assets/image/portfolio/leo-kitchor-home4-banner2.jpg" alt="alt" title="title">
+                </picture>
+                <svg class="icon icon-hover">
+                  <use xlink:href="assets/image/svg/sprite.svg#hover-img"></use>
+                </svg>
+              </a>
+            </div>
+            <p>Изготовление дымохода и монтаж приточно-вытяжной вентиляции, проектирование котельной, канализации, монтаж
+              газового
+              котла. Проведён комплексный монтаж всех инженерных систем.</p>
+            <div class="block-price">
+              <div class="price">
+                <span>Стоимость работ</span>
+                <strong>200 000 ₽</strong>
+              </div>
+              <div class="price price-full">
+                <span>Материалы и оборудование</span>
+                <strong>345 000 ₽</strong>
+              </div>
+            </div>
+            <a href="#" class="btn btn-primary btn-primary-line">
+              Перейти в проект
+            </a>
+          </div>
+        </div>
+        <div class="buttons">
+          <button class="btn btn-primary btn-primary-line">
+            показать ещё
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="consultation">
+      <div class="consultation-bg">
+        <picture>
+          <source srcset="assets/image/product/consultation-bg.jpg" type="image/webp">
+          <img src="assets/image/product/consultation-bg.jpg" alt="alt" title="title">
+        </picture>
+      </div>
+      <div class="wrapper">
+        <div class="consultation-wrapper">
+          <div class="title-group">
+            <span class="intro">Консультация</span>
+            <h2>Нужна консультация специалиста?</h2>
+          </div>
+          <div class="consultation-form">
+            <p>Профессионально проконсультируем и поможем сделать правильный выбор</p>
+            <form action="">
+              <div class="wrap">
+                <input type="text" name="name" placeholder="Имя">
+                <input type="text" name="phone" placeholder="Телефон">
+                <button type="submit" class="btn btn-flex btn-bg-primary">
+                  Оставить заявку
+                  <svg class="icon icon-arrow">
+                    <use xlink:href="assets/image/svg/sprite.svg#next-arrow"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="i-agree__checkbox">
+                <label for="agree" class="custom-checkbox">
+                  <input id="agree" name="agree" type="checkbox" class="default-checkbox">
+                  <span class="fake-checkbox">
+                    <svg class="icon icon-checkbox">
+                      <use xlink:href="assets/image/svg/sprite.svg#checkbox"></use>
+                    </svg>
+                  </span>
+                  <span class="checkbox-title">
+                    Я согласен с
+                    <a href="#">Политикой обработки персональных данных</a>
+                  </span>
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="footer">
+    <div class="footer-navigation">
+      <div class="wrapper">
+        <div class="footer-label">
+          <a href="/" class="footer-label__logo">
+            <img src="assets/image/logo-new-white.png" alt="АльфаВент">
+          </a>
+          <p>Отопление, вентиляция, водоснабжение</p>
+        </div>
+        <div class="footer-catalog">
+          <h3 class="footer__title">услуги</h3>
+          <ul class="footer-catalog__list">
+            <li>
+              <a href="#">Отопление</a>
+            </li>
+            <li>
+              <a href="#">Вентиляции</a>
+            </li>
+            <li>
+              <a href="#">Водоснабжение</a>
+            </li>
+            <li>
+              <a href="#">Ремонт</a>
+            </li>
+            <li>
+              <a href="#">Сервисное обслуживание</a>
+            </li>
+            <li>
+              <a href="#">Предоставление документации для газового хозяйства</a>
+            </li>
+
+          </ul>
+        </div>
+        <div class="footer-nav">
+          <h3 class="footer__title">водоснабжение</h3>
+          <ul class="footer-catalog__list">
+            <li>
+              <a href="#">Акции</a>
+            </li>
+            <li>
+              <a href="#">Готовые решения</a>
+            </li>
+            <li>
+              <a href="#">Портфолио</a>
+            </li>
+            <li>
+              <a href="#">О компании</a>
+            </li>
+            <li>
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h3 class="footer__title">контакты</h3>
+          <a href="tel:74958008080">+7 495 800-80-80</a>
+          <a class="footer__tel" href="tel:79168888888">+7 916 888-88-88</a>
+          <p class="footer-contact__adress">М.О., д. Кукуево, ул. Водопадная, д. 45</p>
+          <a href="mailto:info@atmosfera.ru">info@atmosfera.ru</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="wrapper">
+        <a href="#" class="footer-privacy">Политика конфиденциальности</a>
+        <div class="footer-develop">
+          Сайт разработан
+          <a href="#" class="footer--develop">«МКМ-Веб»</a>
+          © 2022
+        </div>
+      </div>
+    </div>
+  </footer>
+  <button class="btn-up">
+    <svg class="icon icon-search">
+      <use xlink:href="assets/image/svg/sprite.svg#arrow-up-fix"></use>
+    </svg>
+  </button>
+
+  <div class="overlay"></div>
+  <script src="assets/libs/jquery/jquery.js"></script>
+  <script src="assets/libs/fancybox/fancybox.umd.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/sliders.js" defer></script>
+</body>
+
+</html>

@@ -4,7 +4,7 @@ btnBurger.addEventListener('click', () => {
   btnBurger.classList.toggle('active');
   const menu = document.querySelector(".header-nav");
   const overlay = document.querySelector('.overlay');
-
+  console.log(overlay);
 
   if (btnBurger.classList.contains('active')) {
     menu.classList.add('header-nav-active');

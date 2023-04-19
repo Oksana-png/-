@@ -1,11 +1,36 @@
 .portfolio-performance {
-  & .title-group {
-    margin-bottom: 60px;
+  & .portfolios__item {
     @include tablet {
-      margin-bottom: 40px;
+      &:nth-child(n + 3) {
+        display: none;
+      }
     }
-    & h2 {
-      margin-bottom: 0;
+  }
+  & .buttons {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    @include tablet {
+      margin-top: 40px;
+      justify-content: center;
+      gap: 15px;
+    }
+    & .btn:first-child {
+      margin-left: 50%;
+      transform: translateX(-50%);
+      @include tablet {
+        margin-left: 0;
+        margin-right: 0;
+        transform: translateX(0);
+      }
+    }
+    & .btn:last-child {
+      margin-right: 0;
+      margin-left: auto;
+      @include tablet {
+        margin-left: 0;
+        margin-right: 0;
+      }
     }
   }
 }

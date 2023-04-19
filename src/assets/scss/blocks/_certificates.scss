@@ -1,0 +1,11 @@
+.certificates {
+  & .title-group {
+    margin-bottom: 60px;
+    @include laptop {
+      margin-bottom: 40px;
+    }
+  }
+  & h2 {
+    margin-bottom: 0;
+  }
+}

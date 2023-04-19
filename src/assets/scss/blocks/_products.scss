@@ -1,0 +1,86 @@
+.products {
+  & .wrapper {
+    position: relative;
+    &::before {
+      @include rect(725, 383);
+      right: -909px;
+      top: 396px;
+      z-index: 1;
+    }
+    &::after {
+      @include rect(725, 206, #76C1FB);
+      right: -757px;
+      top: 296px;
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+    @include desktop {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__item {
+    & h3 {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 140%;
+      color: #30373E;
+      @include laptop {
+        font-size: 20px;
+      }
+    }
+    & figcaption {
+      padding: 17px 0 17px 12px;
+      @include laptop {
+        padding-top: 26px;
+        padding-bottom: 26px;
+      }
+      @include tablet {
+        padding-top: 13px;
+        padding-bottom: 13px;
+      }
+    }
+    & figure {
+      display: flex;
+      align-items: center;
+    }
+    & picture {
+      width: 136px;
+      height: 136px;
+      border-radius: 16px;
+      overflow: hidden;
+      flex-shrink: 0;
+      @include tablet {
+        width: 80px;
+        height: 82px;
+      }
+      & img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+  & .title-group {
+    margin-bottom: 60px;
+    @include laptop {
+      margin-bottom: 40px;
+    }
+    @include tablet {
+      margin-bottom: 30px;
+    }
+    &::after {
+      @include rect(393, 485);
+      top: 0;
+      left: -478px;
+    }
+  }
+  & h2 {
+    margin-bottom: 0;
+  }
+}
