@@ -1,4 +1,8 @@
 .certificates {
+  padding-bottom: 60px;
+  @include laptop {
+    padding-bottom: 88px;
+  }
   & .title-group {
     margin-bottom: 60px;
     @include laptop {
@@ -7,5 +11,85 @@
   }
   & h2 {
     margin-bottom: 0;
+  }
+  &-slider {
+    overflow: hidden;
+    height: 383px;
+    @include laptop {
+      overflow: visible;
+    }
+    @include phone {
+      height: 300px;
+    }
+    & picture {
+      height: 100%;
+      width: 100%;
+      & img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+    
+  }
+  &-nav {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    @include laptop {
+      justify-content: center;
+    }
+    &::before {
+      content: '';
+      width: 936px;
+      height: 450px;
+      background-color: #C5E5FD;
+      border-radius: 60px;
+      position: absolute;
+      bottom: -119px;
+      right: -214px;
+      @include desktop {
+        bottom: -82px;
+      }
+      @include laptop {
+        right: 10px;
+      }
+      @include tablet {
+        width: 524px;
+        height: 304px;
+        right: 0;
+        bottom: -77px;
+      }
+    }
+  }
+  & .certificates-pagination {
+    position: relative;
+    left: auto !important;
+    transform: translateX(-17px) !important;
+    bottom: -36px !important;
+    @include laptop {
+      right: auto;
+      transform: translateX(0) !important;
+    }
+  }
+  & .arrow {
+    &-next {
+      left: auto;
+      transform: translate(0);
+      @include laptop {
+        transform: translate(38px);
+      }
+    }
+    &-prev {
+      left: auto;
+      transform: translate(-80px);
+      @include laptop {
+        transform: translate(-27px);
+      }
+    }
+  }
+  & .slider-arrow {
+    bottom: -46px;
   }
 }

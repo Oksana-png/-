@@ -1,0 +1,60 @@
+.popular-link {
+  & .title-group {
+    margin-bottom: 60px;
+    @include laptop {
+      margin-bottom: 40px;
+    }
+  }
+  & h2 {
+    margin-bottom: 0;
+  }
+  &__item {
+    & a {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+    @include laptop {
+      gap: 30px;
+    }
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+    @include hover {
+      & a:hover {
+        & figcaption {
+          color: $c-primary;
+        }
+      }
+    }
+  }
+  & picture {
+    width: 100%;
+    height: 200px;
+    border-radius: 16px;
+    overflow: hidden;
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  & figcaption {
+    margin-top: 24px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 140%;
+    color: #30373E;
+    transition: color 0.3s;
+
+    @include laptop {
+      font-size: 20px;
+      margin-top: 15px;
+    }
+  }
+}

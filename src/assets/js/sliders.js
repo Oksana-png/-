@@ -175,3 +175,37 @@ const swiperPortfolio = new Swiper(".portfolio-slider", {
     }
   }
 });
+
+
+const swiperCertificates = new Swiper(".certificates-slider", {
+  direction: 'horizontal',
+  spaceBetween: 48,
+  slidesPerView: 1.95,
+  pagination: {
+    el: ".certificates-pagination",
+    dynamicBullets: true,
+  },
+  navigation: {
+    nextEl: '.certificates-arrows-next',
+    prevEl: '.certificates-arrows-prev',
+  },
+  breakpoints: {
+    290: {
+      slidesPerView: 1.3,
+      spaceBetween: 30,
+    },
+    730: {
+      slidesPerView: 2.4,
+    },
+    1000: {
+      slidesPerView: 4,
+    },
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 48,
+    },
+    1201: {
+      slidesPerView: 4,
+    }
+  }
+});

@@ -1,0 +1,64 @@
+.links {
+  & .title-group {
+    margin-bottom: 60px;
+    @include desktop {
+      margin-bottom: 40px;
+    }
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+  & h2 {
+    margin-bottom: 0;
+  }
+  &-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 48px;
+  }
+  & a {
+    position: relative;
+    padding: 12px 20px 12px 44px;
+    line-height: 150%;
+    text-decoration: none;
+    
+    overflow: hidden;
+    background: linear-gradient(to right, $c-primary, $c-primary 50%, #30373E 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position .4s ease-out;
+    &::before {
+      content: '';
+      display: block;
+      width: 9.72px;
+      height: 16.5px;
+      position: absolute;
+      top: 16px;
+      left: 12px;
+      transition: left .3s ease-out;
+      background-image: url("../image/icons/arrow-next.png");
+    }
+    &::after {
+      content: '';
+      display: block;
+      width: 9.72px;
+      height: 16.5px;
+      position: absolute;
+      top: 16px;
+      left: 22px;
+      background-image: url("../image/icons/arrow-next.png");
+    }
+    &:hover {
+      background-position: 0 100%;
+      transition: background-position .5s ease-out;
+      &::before {
+        transition: left .5s ease-out;
+        left: calc(100% - 10px);
+      }
+    }
+  }
+}
+

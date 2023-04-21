@@ -1,0 +1,122 @@
+.production {
+  & .wrapper {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    gap: 48px;
+    @include desktop {
+      grid-template-columns: 1fr;
+      gap: 60px;
+    }
+    @include tablet {
+      gap: 36px;
+    }
+  }
+  & .title-group {
+    position: relative;
+  }
+  & .wrap {
+    position: relative;
+  }
+  & .label {
+    color: $c-white;
+    font-size: 16px;
+    line-height: 150%;
+    position: absolute;
+    top: -45px;
+    left: -75px;
+    z-index: 2;
+    @include media(1100px) {
+      display: none;
+    }
+    & .wrap {
+      width: 152px;
+      height: 152px;
+      border-radius: 50%;
+      background-color: #3E9AE0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    &::before {
+      @include curcle();
+      bottom: -45px;
+      right: -49px;
+      z-index: -1;
+    }
+    & strong {
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 130%;
+    }
+  }
+  & .content {
+    & p {
+      margin-bottom: 24px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    & li {
+      position: relative;
+      padding-left: 40px;
+      line-height: 20px;
+      letter-spacing: 0.03em;
+      color: #85919E;
+      margin-bottom: 24px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &::before {
+        content: '';
+        background-image: url('../image/svg/icon-ok.svg');
+        position: absolute;
+        left: 0;
+        width: 24px;
+        height: 24px;
+        @include laptop {
+          top: 24px;
+        }
+      }
+    }
+  }
+  &-slider {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 379px 200px;
+    gap: 24px;
+    border-radius: 60px;
+    overflow: hidden;
+    position: relative;
+    @include desktop {
+      grid-template-rows: 420px 200px;
+      gap: 30px;
+    }
+    @include laptop {
+      grid-template-rows: 373px 200px;
+    }
+    @include tablet {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 200px 200px;
+      gap: 15px;
+    }
+    @include phone {
+      grid-template-rows: 138px 138px;
+    }
+    & a {
+      width: 100%;
+      height: 100%;
+      &:first-child {
+        grid-column: span 3;
+        @include tablet {
+          grid-column: span 1;
+        }
+      }
+      & picture, img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

@@ -182,8 +182,17 @@
   opacity: 1;
 }
 
-.swiper-pagination-bullet-active-prev-prev {
-  display: none;
+.swiper-pagination-bullet {
+  visibility: hidden;
+}
+.swiper-pagination-bullet-active {
+  visibility: visible;
+}
+.swiper-pagination-bullet-active-next {
+  visibility: visible;
+}
+.swiper-pagination-bullet-active-prev {
+  visibility: visible;
 }
 
 .slider-arrow {
