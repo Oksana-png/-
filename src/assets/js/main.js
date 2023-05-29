@@ -125,7 +125,18 @@ const modal = () => {
 
 }
 
+const breadCrumbs = () => {
+  const bread = document.querySelector('.breadcrumbs');
+
+  if (document.querySelector('.hero')) {
+    bread.classList.add('bread-hero');
+  } else if (document.querySelector('.new-item-page')) {
+    bread.querySelector('ol').classList.add('pad');
+  }
+}
+
 
 
 tabs();
 modal();
+breadCrumbs();

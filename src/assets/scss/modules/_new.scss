@@ -1,5 +1,6 @@
 .new-item-page {
   position: relative;
+  margin-top: 0;
   &::before {
     @include rect(393, 485);
     top: 130px;

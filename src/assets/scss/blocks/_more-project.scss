@@ -1,5 +1,13 @@
 .more-project {
   position: relative;
+  &::before {
+    @include rect(393, 485);
+    left: -191px;
+    top: -150px;
+    @include media(1650px) {
+      display: none;
+    }
+  }
   @include phone {
     margin: 80px 0;
     padding-bottom: 80px;

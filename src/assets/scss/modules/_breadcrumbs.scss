@@ -1,0 +1,58 @@
+.breadcrumbs {
+  position: relative;
+  font-size: 13px;
+  line-height: 130%;
+  color: #85919E;
+  margin-top: 60px;
+  margin-bottom: 23px;
+  @include laptop {
+    margin-top: 40px;
+  }
+  @include tablet {
+    margin-top: 30px;
+  }
+  & ol {
+    position: relative;
+    padding: 0;
+    margin: 0;
+  }
+  & .pad {
+    padding-left: 101px;
+    @include desktop {
+      padding-left: 82px;
+    }
+    @include laptop {
+      padding-left: 0;
+    }
+  }
+  &.bread-hero {
+    margin-bottom: 0;
+    margin-top: 0;
+    @include tablet {
+      display: none;
+    }
+    & ol {
+      position: absolute;
+      z-index: 1;
+      bottom: -80px;
+    }
+  }
+  & li {
+    display: inline-block;
+    margin-right: 4px;
+    margin-left: 4px;
+    &::after {
+      content: '/';
+    }
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+      &::after {
+        content: '';
+        display: none;
+      }
+    }
+  }
+}
