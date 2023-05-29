@@ -1,3 +1,5 @@
+// menu burger
+
 const btnBurger = document.querySelector('.burger-menu__btn ');
 
 btnBurger.addEventListener('click', () => {
@@ -21,6 +23,7 @@ btnBurger.addEventListener('click', () => {
   });
 });
 
+// плавный скролл
 const btnUp = document.querySelector('.btn-up');
 
 btnUp.addEventListener('click', () => {
@@ -30,7 +33,6 @@ btnUp.addEventListener('click', () => {
     behavior: 'smooth',
   })
 });
-
 window.addEventListener('scroll', () => {
   if (window.innerHeight < window.scrollY) {
     btnUp.style.display = 'flex';
@@ -52,3 +54,78 @@ window.addEventListener('click', (event) => {
     event.target.closest('.has-submenu').classList.toggle('active');
   }
 });
+
+// tabs
+const openTab = (index, buttons) => {
+  const contentTabs = document.querySelectorAll('.tabs__content');
+
+  contentTabs.forEach((item, i) => {
+    if (item.classList.contains('active')) {
+      item.classList.remove('active');
+    }
+    if (i == index) {
+      item.classList.add('active');
+    }
+  });
+
+  buttons.forEach((item, i) => {
+    if (item.classList.contains('active')) {
+      item.classList.remove('active');
+    }
+    if (i == index) {
+      item.classList.add('active');
+    }
+  });
+}
+
+const tabs = () => {
+  if (document.querySelector('.tabs')) {
+    const buttonTabs = document.querySelectorAll('.tabs__btn');
+
+    buttonTabs.forEach((item, i) => {
+      if (item.classList.contains('active')) {
+        openTab(i, buttonTabs);
+      }
+    });
+
+    buttonTabs.forEach((btn, i) => {
+      btn.addEventListener('click', () => {
+        openTab(i, buttonTabs);
+      });
+    });
+  }
+}
+
+const modalOpen = () => {
+  const modal = document.querySelector('.modal__form');
+  const modalBody = modal.querySelector('.modal__body');
+
+  modal.classList.add('active');
+  modalBody.classList.add('active');
+  document.querySelector('html').style.overflowY = 'hidden';
+
+  modal.addEventListener('click', (e) => {
+    if (e.target.closest(".modal__body")) {
+      return;
+    }
+    modal.classList.remove('active');
+    modalBody.classList.remove('active');
+    document.querySelector('html').style.overflowY = 'scroll';
+  });
+}
+
+const modal = () => {
+  const buttonOpenForm = document.querySelectorAll('.btn-open-form');
+
+  buttonOpenForm.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      modalOpen();
+    });
+  });
+
+}
+
+
+
+tabs();
+modal();

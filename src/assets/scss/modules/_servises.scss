@@ -1,0 +1,112 @@
+.tabs {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  @include desktop {
+    grid-template-columns: 1fr;
+  }
+  &__header {
+    @include desktop {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    @include tablet {
+      max-width: 100%;
+      overflow: auto;
+      padding-bottom: 10px;
+    }
+  }
+  &__body {
+    padding: 48px;
+    @include phone {
+      padding: 40px 0;
+    }
+  }
+  &__content {
+    display: none;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 24px;
+    &.active {
+      display: flex;
+    }
+    & .content {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 24px;
+    }
+    & h3 {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 140%;
+    }
+    & p {
+      line-height: 150%;
+      color: #85919E;
+    }
+    li {
+      position: relative;
+      margin-bottom: 16px;
+      padding-left: 40px;
+      line-height: 150%;
+      &::before {
+        content: "";
+        background-image: url("../image/svg/icon-ok.svg");
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 24px;
+        height: 24px;
+      }
+    }
+    strong {
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 150%;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: #3E9AE0;
+    }
+  }
+  &__btn {
+    position: relative;
+    border-radius: 16px 0px 0px 16px;
+    background: $c-white;
+    color: $c-main;
+    padding: 12px;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease-out;
+    transition-property: background-color, color;
+    cursor: pointer;
+    @include desktop {
+      padding: 12px 24px;
+      border-radius: 16px 16px 0px 0px;
+    }
+    @include tablet  {
+      min-width: max-content;
+    }
+    @include hover {
+      &:hover {
+        background-color: #F1F9FF;
+        color: $c-primary;
+      }
+    }
+    &.active {
+      background: #3E9AE0;
+      color: $c-white;
+      cursor: auto;
+      & .icon {
+        fill: $c-white;
+      }
+    }
+    & .icon {
+      width: 20px;
+      height: 24px;
+      margin-right: 12px;
+      fill: $c-primary;
+    }
+  }
+}

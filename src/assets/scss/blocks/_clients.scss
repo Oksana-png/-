@@ -1,5 +1,8 @@
 .clients {
   margin-bottom: 60px;
+  @include laptop {
+    margin-bottom: 100px;
+  }
   &-slider {
     position: relative;
     width: calc(251 * 5 - 32);

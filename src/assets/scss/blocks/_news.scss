@@ -1,4 +1,9 @@
 .news-block {
+  &.section-padding {
+    @include phone {
+      padding: 0;
+    }
+  }
   & .news {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

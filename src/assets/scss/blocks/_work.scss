@@ -11,6 +11,9 @@
       grid-template-columns: 1fr;
       gap: 30px;
     }
+    @include tablet790 {
+      padding-bottom: 25px;
+    }
     &::before {
       content: "";
       display: block;
@@ -60,7 +63,6 @@
   &-slider {
     @include tablet {
       max-width: 260px;
-      margin: 0 auto;
     }
     & .swiper-wrapper {
       display: grid;
@@ -83,7 +85,7 @@
       padding: 24px;
       @include tablet {
         padding: 24px 20px;
-        max-width: 220px;
+        min-width: 260px;
         height: 372px;
       }
     }

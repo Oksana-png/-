@@ -15,6 +15,9 @@
       justify-content: center;
       gap: 15px;
     }
+    @include small {
+      gap: 12px;
+    }
     & .btn:first-child {
       margin-left: 50%;
       transform: translateX(-50%);

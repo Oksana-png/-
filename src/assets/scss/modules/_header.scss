@@ -170,10 +170,10 @@
   & .grey-bg {
     padding: 16px 0;
     background-color: $c-main;
-  
     @include laptop {
       background-color: $c-white;
       color: $c-main;
+      border-bottom: 1px solid #F1F9FF;
     }
   
     @include tablet {

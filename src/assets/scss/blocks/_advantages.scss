@@ -2,10 +2,14 @@
   background: #F1F9FF;
   border-radius: 0px 0px 360px 0px;
   @include media(1440px) {
-      border-radius: 0;
-    }
+    border-radius: 0;
+  }
+  @include tablet {
+    padding-bottom: 90px;
+  }
   &-slider {
     position: relative;
+    padding-bottom: 30px;
     &__item {
       display: flex;
       align-items: center;

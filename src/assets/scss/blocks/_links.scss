@@ -15,6 +15,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 48px;
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
   }
   & a {
     position: relative;

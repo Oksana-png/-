@@ -5,11 +5,16 @@
     border-radius: 0;
   }
   &-card {
+    min-height: 100%;
+    max-height: 100%;
     border-radius: 16px;
     background-color: $c-white;
     color: $c-main;
     overflow: hidden;
     transition: box-shadow .3s linear;
+    @include tablet790 {
+      padding-bottom: 24px;
+    }
     &:hover {
       box-shadow: 0px 0px 40px rgba(41, 105, 153, 0.2);
       & .services-card__link {
@@ -63,6 +68,12 @@
         height: 369px;
         object-fit: cover;
         transition: transform 1s ease-in;
+        @include tablet {
+          height: 300px;
+        }
+        @include phone {
+          height: 369px;
+        }
       }
     }
     &__link {
@@ -73,7 +84,7 @@
       @include tablet790 {
         opacity: 1;
         position: absolute;
-        bottom: 0;
+        bottom: 24px;
       }
       &::after {
         content: "";
@@ -113,11 +124,21 @@
           height: 100%;
         }
       }
-      @include tablet790 {
+      @include laptop {
         &:nth-child(3) {
           grid-row: span 3;
-          & .services-card__link {
-            position: relative;
+          @include phone {
+            grid-row: span 1;
+          }
+          & .services-card {
+            min-height: auto;
+            max-height: auto;
+            &__link {
+              position: relative;
+              @include tablet {
+                position: absolute;
+              }
+            }
           }
       }
       }

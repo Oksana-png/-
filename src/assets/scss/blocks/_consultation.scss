@@ -8,6 +8,9 @@
   @include laptop {
     margin-top: 80px;
   }
+  @include phone {
+    margin-top: 60px;
+  }
   &::before {
     content: '';
     display: block;
