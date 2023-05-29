@@ -249,16 +249,32 @@ const swiperCertificates = new Swiper(".certificates-slider", {
 });
 
 
-var swiperThumbsGallery = new Swiper(".thumbsGallery", {
+var swiperThumbsGallery = new Swiper(".thumbs-gallery", {
   spaceBetween: 24,
   slidesPerView: 4,
-  freeMode: true,
+  watchSlidesProgress: true,
+  centeredSlidesBounds: true,
+  breakpoints: {
+    290: {
+      spaceBetween: 16,
+    },
+    730: {
+      spaceBetween: 30,
+    },
+    1200: {
+      spaceBetween: 24,
+    },
+  }
 });
 var swiperMainGallery = new Swiper(".main-gallery", {
   spaceBetween: 24,
+  pagination: {
+    el: ".portfolio-item-pagination",
+    dynamicBullets: true,
+  },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: '.portfolio-item-arrows-next',
+    prevEl: '.portfolio-item-arrows-prev',
   },
   thumbs: {
     swiper: swiperThumbsGallery,
