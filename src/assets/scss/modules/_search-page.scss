@@ -1,0 +1,78 @@
+.search-page {
+  position: relative;
+  margin: 60px 0;
+  margin-bottom: 160px;
+  @include tablet {
+    margin-top: 30px;
+    margin-bottom: 90px;
+  }
+  &::after {
+    @include rect(393, 285, #76C1FB);
+    right: -105px;
+    bottom: 290px;
+  }
+  &::before {
+    @include rect(393, 485);
+    right: -228px;
+    bottom: 0px;
+  }
+  & .wrapper {
+    position: relative;
+    &::before {
+      @include curcle();
+      bottom: 101px;
+      left: -158px;
+    }
+    & p {
+      font-size: 13px;
+      line-height: 130%;
+      color: #85919E;
+      margin-bottom: 60px;
+      @include tablet {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  & .wrap {
+    display: grid;
+    grid-template-columns: 1fr 7fr 4fr;
+    gap: 48px;
+    @include desktop {
+      grid-template-columns: 1fr;
+    }
+  }
+  & .search-wrap {
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    @include desktop {
+      grid-column: 1/2;
+    }
+    & h3 {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 140%;
+      margin-bottom: 16px;
+      @include tablet  {
+        font-size: 20px;
+      }
+    }
+    & p {
+      font-size: 16px;
+      line-height: 150%;
+      color: #85919E;
+      margin-bottom: 0;
+    }
+    & .search-item {
+      @include hover {
+        &:hover {
+          & h3 {
+            color: #FF7B43;
+          }
+        }
+      }
+    }
+  }
+}

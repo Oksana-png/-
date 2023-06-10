@@ -18,8 +18,14 @@
   }
   &__body {
     padding: 48px;
+    background: #F1F9FF;
+    border-radius: 0px 60px 60px 60px;
+    @include desktop {
+      border-radius: 0px 0px 60px 60px;
+    }
     @include phone {
       padding: 40px 0;
+      
     }
   }
   &__content {

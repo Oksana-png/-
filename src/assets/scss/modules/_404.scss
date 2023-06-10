@@ -1,0 +1,43 @@
+.page-error {
+  margin-top: 40px;
+  @include laptop {
+    margin-top: 100px;
+  }
+  @include tablet {
+    margin-top: 30px;
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  & h1 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 130%;
+    color: #30373E;
+    margin-bottom: 20px;
+    @include tablet {
+      font-size: 24px;
+      line-height: 140%;
+      margin-bottom: 20px;
+    }
+  }
+  & .image {
+    margin-bottom: 64px;
+    @include tablet {
+      margin-bottom: 40px;
+    }
+  }
+  & p {
+    max-width: 590px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: #30373E;
+    margin-bottom: 40px;
+  }
+}
