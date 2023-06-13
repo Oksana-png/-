@@ -18,7 +18,7 @@
     grid-template-columns: 2fr 10fr;
     gap: 44px;
     padding-top: 16px;
-    padding-bottom: 9px;
+    padding-bottom: 0;
     border-bottom: 1px solid #F1F9FF;
     @include desktop {
       gap: 23.5px;
@@ -45,6 +45,24 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 24px;
+      }
+    }
+    & .mobile-menu {
+      display: none;
+      @include laptop {
+        display: block;
+      }
+    }
+    & .row {
+      & .header__list-nav {
+        @include laptop {
+          display: none;
+        }
+      }
+    }
+    & .nav {
+      @include laptop {
+        margin-bottom: 24px;
       }
     }
     &-active {
@@ -80,6 +98,9 @@
     & .header__list-nav {
       gap: 16px;
     }
+  }
+  & .header__item {
+    padding-bottom: 9px;
   }
   & .has-submenu {
     display: flex;
@@ -224,7 +245,7 @@
   visibility: hidden;
   position: absolute;
   left: -3px;
-  top: 22px;
+  top: 35px;
   z-index: 20;
   background: #F1F9FF;
   border-radius: 0px 60px 60px 60px;

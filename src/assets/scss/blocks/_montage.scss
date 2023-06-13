@@ -1,0 +1,56 @@
+.montage {
+  & h2 {
+    margin-bottom: 0;
+  }
+  & .title-group {
+    margin-bottom: 60px;
+    @include tablet {
+      margin-bottom: 40px;
+    }
+  }
+  & .wrap {
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+    gap: 48px;
+    @include laptop {
+      gap: 30px;
+      grid-template-columns: 1fr 5fr;
+    }
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+  & ul {
+    grid-column: 2/3;
+    @include tablet{
+      grid-column: auto;
+    }
+  }
+  & li {
+    margin-bottom: 40px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+  & h3 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 140%;
+    color: #30373E;
+    margin-bottom: 30px;
+    @include laptop {
+      font-size: 20px;
+    }
+    @include tablet {
+      margin-bottom: 24px;
+    }
+  }
+  & p {
+    font-size: 16px;
+    line-height: 150%;
+    color: #85919E;
+  }
+}

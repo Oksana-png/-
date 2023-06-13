@@ -1,0 +1,62 @@
+.content {
+  background: #F1F9FF;
+  padding: 100px 0;
+  @include laptop {
+    padding: 60px 0;
+  }
+  & p {
+    font-size: 16px;
+    line-height: 150%;
+    color: #000000;
+    margin-bottom: 48px;
+    max-width: 555px;
+    @include tablet {
+      max-width: 100%;
+    }
+  }
+  & ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 48px;
+    @include desktop {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+  & li {
+    padding: 24px;
+    background-color: $c-white;
+    border-radius: 16px;
+    @include desktop {
+      display: flex;
+      align-items: center;
+    }
+    @include tablet {
+      padding: 20px;
+    }
+    & span {
+      display: block;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 130%;
+      color: #C5E5FD;
+      margin-bottom: 16px;
+      @include desktop {
+        margin-right: 16px;
+        margin-bottom: 0;
+      }
+    }
+    & h3 {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 140%;
+      @include laptop {
+        font-size: 20px;
+      }
+    }
+  }
+
+}
