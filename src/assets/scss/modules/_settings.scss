@@ -534,15 +534,34 @@ textarea {
     margin-top: 40px;
   }
   & a {
-    color: c-main;
+    color: inherit;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 13px;
   }
 }
 .pagination {
   display: flex;
   align-items: center;
 }
+.paginator-button {
+  display: flex;
+  align-items: center;
+  & .icon-arrow {
+    stroke: $c-primary;
+  }
+}
 .page-item {
+  cursor: pointer;
   padding: 0px 5px;
+  @include hover {
+    &:hover {
+      color: $c-primary;
+    }
+  }
+  &.active {
+    color: $c-primary;
+  }
 }
 
 .swiper-button-disabled {

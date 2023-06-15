@@ -96,6 +96,24 @@ const tabs = () => {
   }
 }
 
+const modalClose = () => {
+  const modal = document.querySelector('.modal__form');
+  const modalBody = modal.querySelector('.modal__body');
+  const inputs = document.querySelectorAll(".modal.active input");
+
+  modal.classList.remove('active');
+  modalBody.classList.remove('active');
+  document.querySelector('html').style.overflowY = 'scroll';
+
+  if (modal.querySelector('.default-checkbox')) {
+    modal.querySelector('.default-checkbox').checked = false;
+  }
+  modal.querySelector("textarea").value = "";
+  inputs.forEach(input => {
+    input.value = "";
+  });
+}
+
 const modalOpen = () => {
   const modal = document.querySelector('.modal__form');
   const modalBody = modal.querySelector('.modal__body');
@@ -105,14 +123,16 @@ const modalOpen = () => {
   document.querySelector('html').style.overflowY = 'hidden';
 
   modal.addEventListener('click', (e) => {
+    if (e.target.closest(".modal-close")) {
+      modalClose();
+    }
     if (e.target.closest(".modal__body")) {
       return;
     }
-    modal.classList.remove('active');
-    modalBody.classList.remove('active');
-    document.querySelector('html').style.overflowY = 'scroll';
+    modalClose();
   });
 }
+
 
 const modal = () => {
   const buttonOpenForm = document.querySelectorAll('.btn-open-form');
@@ -126,6 +146,9 @@ const modal = () => {
 }
 
 const breadCrumbs = () => {
+  if (!document.querySelector('.breadcrumbs')) {
+    return;
+  }
   const bread = document.querySelector('.breadcrumbs');
 
   if (document.querySelector('.hero')) {

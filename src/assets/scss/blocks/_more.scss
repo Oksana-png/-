@@ -21,7 +21,13 @@
     }
   }
   &.section-margin {
-    margin-bottom: 190px;
+    margin-bottom: 160px;
+    @include desktop {
+      margin-bottom: 80px;
+    }
+    @include tablet {
+      margin-bottom: 60px;
+    }
   }
   &__wrapper {
     display: grid;

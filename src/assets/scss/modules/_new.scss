@@ -64,8 +64,9 @@
       width: 100%;
     }
   }
-  & .content {
+  & .content-new-item {
     & blockquote {
+      clear: both;
       margin: 0;
       margin-left: 104px;
       margin-bottom: 48px;

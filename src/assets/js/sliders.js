@@ -139,6 +139,7 @@ const swiperParthrers = new Swiper(".partners-slider", {
   direction: 'horizontal',
   slidesPerView: 1,
   centeredSlidesBounds: true,
+
   pagination: {
     el: ".partners-pagination",
     dynamicBullets: true,

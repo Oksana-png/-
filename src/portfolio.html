@@ -180,10 +180,22 @@
         </div>
         <div class="filter">
           <form method="POST">
-            <input type="checkbox" name="type" id="" placeholder="Все проекты">
-            <input type="checkbox" name="type" id="">
-            <input type="checkbox" name="type" id="">
-            <input type="checkbox" name="type" id="">
+            <label for="all">
+              <input value="Все проекты" type="radio" name="type" id="all">
+              <span>Все проекты</span>
+            </label>
+            <label for="ventilation">
+              <input value="Вентиляция" type="radio" name="type" id="ventilation">
+              <span>Вентиляция</span>
+            </label>
+            <label for="heating">
+              <input value="Отопление" type="radio" name="type" id="heating">
+              <span>Отопление</span>
+            </label>
+            <label for="water">
+              <input value="Водоснабжение" type="radio" name="type" id="water">
+              <span>Водоснабжение</span>
+            </label>
           </form>
         </div>
         <div class="pdopage">
@@ -669,10 +681,17 @@
           </div>
           <div class="paginator">
             <ul class="pagination">
-              <li class="page-item active">
+              <li class="paginator-button prev">
+                <a href="#" class="page-link">
+                  <svg class="icon icon-arrow">
+                    <use xlink:href="assets/image/svg/sprite.svg#prev-arrow"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="page-item ">
                 <a href="#" class="page-link">1</a>
               </li>
-              <li class="page-item">
+              <li class="page-item active">
                 <a href="#" class="page-link">2</a>
               </li>
               <li class="page-item disabled">
@@ -683,6 +702,13 @@
               </li>
               <li class="page-item">
                 <a href="#" class="page-link">5</a>
+              </li>
+              <li class="paginator-button last">
+                <a href="#" class="page-link">
+                  <svg class="icon icon-arrow">
+                    <use xlink:href="assets/image/svg/sprite.svg#next-arrow"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
           </div>

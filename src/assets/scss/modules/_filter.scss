@@ -1,0 +1,62 @@
+.filter {
+  margin-bottom: 60px;
+  @include tablet {
+    margin-bottom: 40px;
+  }
+  & form {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-radius: 16px;
+    border: 2px solid $c-primary;
+    overflow: hidden;
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+  & input {
+    display: none;
+    &:checked+span {
+      background-color: $c-primary;
+      color: $c-white;
+      cursor: default;
+      @include hover {
+        &:hover {
+          background-color: $c-primary;
+          color: $c-white;
+          opacity: 1;
+        }
+      }
+    }
+  }
+  & label {
+    font-size: 16px;
+    line-height: 150%;
+    border-right: 2px solid $c-primary;
+    @include tablet {
+      border-right: 0;
+      border-bottom: 2px solid $c-primary;
+    }
+    &:last-child {
+      border-right: 0;
+      @include tablet {
+        border-bottom: 0;
+      }
+    }
+    & span {
+      width: 100%;
+      cursor: pointer;
+      display: inline-block;
+      text-align: center;
+      padding: 12px 0;
+      transition: 0.2s ease-out;
+      @include hover {
+        &:hover {
+          transition: 0.3s ease-out;
+          background-color: $c-primary;
+          color: $c-white;
+          opacity: 0.85;
+        }
+      }
+    }
+  } 
+}

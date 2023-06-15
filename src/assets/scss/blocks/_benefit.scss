@@ -7,6 +7,7 @@
     align-items: center;
     & .wrapper {
       position: relative;
+      margin-bottom: 0;
       &::before {
         @include curcle();
         right: -148px;
@@ -28,6 +29,9 @@
     position: absolute;
     height: 722px;
     width: 100% / 12 * 4.5;
+    @include media(1800px) {
+      width: 100% / 12 * 4;
+    }
     @include media(1450px) {
       display: none;
     }
@@ -54,9 +58,7 @@
     width: calc(col(8) - 24px);
     margin-right: 0;
     margin-left: auto;
-    @include media(1800px) {
-      width: calc(col(8) - 100px);
-    }
+    
     @include media(1450px) {
       width: 100%;
     }
