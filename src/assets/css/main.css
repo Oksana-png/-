@@ -1803,7 +1803,7 @@ textarea:focus {
   height: 100%;
   width: 100%;
 }
-.new-item-page .content-new-item blockquote {
+.new-item-page .content blockquote {
   clear: both;
   margin: 0;
   margin-left: 104px;
@@ -1811,19 +1811,19 @@ textarea:focus {
   position: relative;
 }
 @media (max-width: 1000px) {
-  .new-item-page .content-new-item blockquote {
+  .new-item-page .content blockquote {
     margin-bottom: 40px;
   }
 }
 @media (max-width: 730px) {
-  .new-item-page .content-new-item blockquote {
+  .new-item-page .content blockquote {
     margin-left: 0;
   }
 }
-.new-item-page .content-new-item blockquote:last-child() {
+.new-item-page .content blockquote:last-child() {
   margin-bottom: 0;
 }
-.new-item-page .content-new-item blockquote::before {
+.new-item-page .content blockquote::before {
   content: "";
   display: block;
   position: absolute;
@@ -1837,28 +1837,28 @@ textarea:focus {
   transform: translateY(-50%);
 }
 @media (max-width: 730px) {
-  .new-item-page .content-new-item blockquote::before {
+  .new-item-page .content blockquote::before {
     display: none;
   }
 }
-.new-item-page .content-new-item blockquote > p {
+.new-item-page .content blockquote > p {
   line-height: 150%;
   color: #3E9AE0;
 }
-.new-item-page .content-new-item p {
+.new-item-page .content p {
   line-height: 150%;
   color: #30373E;
   margin-bottom: 48px;
 }
 @media (max-width: 1000px) {
-  .new-item-page .content-new-item p {
+  .new-item-page .content p {
     margin-bottom: 40px;
   }
 }
-.new-item-page .content-new-item p:last-child {
+.new-item-page .content p:last-child {
   margin-bottom: 0;
 }
-.new-item-page .content-new-item h2 {
+.new-item-page .content h2 {
   font-weight: 700;
   font-size: 24px;
   margin-bottom: 24px;
@@ -1866,7 +1866,7 @@ textarea:focus {
   line-height: 140%;
 }
 @media (max-width: 730px) {
-  .new-item-page .content-new-item h2 {
+  .new-item-page .content h2 {
     font-size: 20px;
   }
 }
@@ -5660,23 +5660,23 @@ textarea:focus {
     max-width: 310px;
   }
 }
-.akt .akt-content {
+.akt .content {
   margin-bottom: 36px;
   line-height: 150%;
 }
 @media (max-width: 1200px) {
-  .akt .akt-content {
+  .akt .content {
     max-width: 482px;
   }
 }
-.akt .akt-content p {
+.akt .content p {
   color: #85919E;
   margin-bottom: 24px;
 }
-.akt .akt-content p:last-child {
+.akt .content p:last-child {
   margin-bottom: 0;
 }
-.akt .akt-content strong {
+.akt .content strong {
   font-weight: 700;
   font-size: 15px;
   line-height: 160%;
@@ -5684,14 +5684,14 @@ textarea:focus {
   text-transform: uppercase;
   color: #fff;
 }
-.akt .akt-content ul {
+.akt .content ul {
   margin-bottom: 24px;
 }
-.akt .akt-content li {
+.akt .content li {
   padding-left: 32px;
   position: relative;
 }
-.akt .akt-content li::before {
+.akt .content li::before {
   content: "";
   background-image: url("../image/svg/icon-ok.svg");
   position: absolute;
@@ -5707,21 +5707,21 @@ textarea:focus {
 .installation .title-group {
   margin-bottom: 60px;
 }
-.installation .content-installation {
+.installation .content {
   width: 83.3333333333%;
   margin: 0 auto;
 }
 @media (max-width: 1200px) {
-  .installation .content-installation {
+  .installation .content {
     width: 100%;
   }
 }
-.installation .content-installation p {
+.installation .content p {
   line-height: 150%;
   color: #85919E;
   margin-bottom: 24px;
 }
-.installation .content-installation p:last-child {
+.installation .content p:last-child {
   margin-bottom: 0;
 }
 
@@ -6945,13 +6945,13 @@ textarea:focus {
   font-size: 48px;
   line-height: 130%;
 }
-.production .production-content p {
+.production .content p {
   margin-bottom: 24px;
 }
-.production .production-content p:last-child {
+.production .content p:last-child {
   margin-bottom: 0;
 }
-.production .production-content li {
+.production .content li {
   position: relative;
   padding-left: 40px;
   line-height: 20px;
@@ -6959,10 +6959,10 @@ textarea:focus {
   color: #85919E;
   margin-bottom: 24px;
 }
-.production .production-content li:last-child {
+.production .content li:last-child {
   margin-bottom: 0;
 }
-.production .production-content li::before {
+.production .content li::before {
   content: "";
   background-image: url("../image/svg/icon-ok.svg");
   position: absolute;
@@ -6971,7 +6971,7 @@ textarea:focus {
   height: 24px;
 }
 @media (max-width: 1000px) {
-  .production .production-content li::before {
+  .production .content li::before {
     top: 24px;
   }
 }
@@ -7766,16 +7766,16 @@ textarea:focus {
   color: #85919E;
 }
 
-.content {
+.content-ventilation {
   background: #F1F9FF;
   padding: 100px 0;
 }
 @media (max-width: 1000px) {
-  .content {
+  .content-ventilation {
     padding: 60px 0;
   }
 }
-.content p {
+.content-ventilation p {
   font-size: 16px;
   line-height: 150%;
   color: #000000;
@@ -7783,43 +7783,43 @@ textarea:focus {
   max-width: 555px;
 }
 @media (max-width: 730px) {
-  .content p {
+  .content-ventilation p {
     max-width: 100%;
   }
 }
-.content ul {
+.content-ventilation ul {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 48px;
 }
 @media (max-width: 1200px) {
-  .content ul {
+  .content-ventilation ul {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
 }
 @media (max-width: 730px) {
-  .content ul {
+  .content-ventilation ul {
     grid-template-columns: 1fr;
   }
 }
-.content li {
+.content-ventilation li {
   padding: 24px;
   background-color: #fff;
   border-radius: 16px;
 }
 @media (max-width: 1200px) {
-  .content li {
+  .content-ventilation li {
     display: flex;
     align-items: center;
   }
 }
 @media (max-width: 730px) {
-  .content li {
+  .content-ventilation li {
     padding: 20px;
   }
 }
-.content li span {
+.content-ventilation li span {
   display: block;
   font-weight: 700;
   font-size: 48px;
@@ -7828,18 +7828,18 @@ textarea:focus {
   margin-bottom: 16px;
 }
 @media (max-width: 1200px) {
-  .content li span {
+  .content-ventilation li span {
     margin-right: 16px;
     margin-bottom: 0;
   }
 }
-.content li h3 {
+.content-ventilation li h3 {
   font-weight: 700;
   font-size: 24px;
   line-height: 140%;
 }
 @media (max-width: 1000px) {
-  .content li h3 {
+  .content-ventilation li h3 {
     font-size: 20px;
   }
 }

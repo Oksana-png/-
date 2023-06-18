@@ -270,6 +270,11 @@
 
   <div class="modal modal__form">
     <div class="modal__body">
+      <button class="modal-close">
+        <svg class="icon">
+          <use xlink:href="assets/image/svg/sprite.svg#close"></use>
+        </svg>
+      </button>
       <div class="title-group">
         <span class="intro">Оставьте заявку</span>
         <h2>Оставьте заявку на консультацию</h2>
@@ -279,7 +284,7 @@
         <input name="phone" type="tel" inputmode="tel" placeholder="Телефон">
         <textarea name="message"
           placeholder="Опишите ваши требования максимально подробно (необязательно). При необходимости можете прикрепить файл ниже"></textarea>
-
+  
         <div class="i-agree__checkbox">
           <label class="custom-checkbox">
             <input name="agree" type="checkbox" class="default-checkbox">
@@ -294,7 +299,7 @@
             </span>
           </label>
         </div>
-
+  
         <div class="buttons">
           <button class="btn btn-flex btn-bg-primary" type="submit">
             Оставить заявку
@@ -302,7 +307,7 @@
               <use xlink:href="assets/image/svg/sprite.svg#next-arrow"></use>
             </svg>
           </button>
-
+  
           <div class="input-button-file">
             <input id="fileModal" type="file">
             <label for="fileModal">
