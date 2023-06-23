@@ -281,3 +281,13 @@ var swiperMainGallery = new Swiper(".main-gallery", {
     swiper: swiperThumbsGallery,
   },
 });
+
+
+const quizClients = new Swiper(".quiz-slider", {
+  slidesPerView: 1,
+  centeredSlides: true,
+  navigation: {
+    nextEl: '.clients-arrows-next',
+    prevEl: '.clients-arrows-prev',
+  },
+});

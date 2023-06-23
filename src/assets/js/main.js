@@ -96,8 +96,8 @@ const tabs = () => {
   }
 }
 
-const modalClose = () => {
-  const modal = document.querySelector('.modal__form');
+const modalClose = (selector) => {
+  const modal = document.querySelector(selector);
   const modalBody = modal.querySelector('.modal__body');
   const inputs = document.querySelectorAll(".modal.active input");
 
@@ -108,14 +108,19 @@ const modalClose = () => {
   if (modal.querySelector('.default-checkbox')) {
     modal.querySelector('.default-checkbox').checked = false;
   }
-  modal.querySelector("textarea").value = "";
+  if (modal.querySelector("textarea")) {
+    modal.querySelector("textarea").value = "";
+  }
+
   inputs.forEach(input => {
     input.value = "";
   });
 }
 
-const modalOpen = () => {
-  const modal = document.querySelector('.modal__form');
+const modalOpen = (selector) => {
+  const elem = selector;
+
+  const modal = document.querySelector(elem);
   const modalBody = modal.querySelector('.modal__body');
 
   modal.classList.add('active');
@@ -124,22 +129,35 @@ const modalOpen = () => {
 
   modal.addEventListener('click', (e) => {
     if (e.target.closest(".modal-close")) {
-      modalClose();
+      modalClose(elem);
     }
     if (e.target.closest(".modal__body")) {
       return;
     }
-    modalClose();
+    modalClose(elem);
   });
 }
-
 
 const modal = () => {
   const buttonOpenForm = document.querySelectorAll('.btn-open-form');
 
   buttonOpenForm.forEach((btn) => {
     btn.addEventListener('click', () => {
-      modalOpen();
+      modalOpen('.modal__form');
+    });
+  });
+
+  const buttonOpenFormBell = document.querySelectorAll('.btn-open-form-bell');
+  buttonOpenFormBell.forEach(btn => {
+    btn.addEventListener('click', () => {
+      modalOpen('.modal__bell');
+    });
+  })
+
+  const buttonOpenQuiz = document.querySelectorAll('.btn-open-form-quiz');
+  buttonOpenQuiz.forEach(btn => {
+    btn.addEventListener('click', () => {
+      modalOpen('.quiz');
     });
   });
 

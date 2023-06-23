@@ -72,7 +72,6 @@
             <li class="header__item"><a href="#" class="header__link">Акции</a></li>
             <li class="header__item"><a href="#" class="header__link">Контакты</a></li>
           </ul>
-
           <div class="wrap">
             <form>
               <input type="text" name="search" placeholder="Поиск">
@@ -80,7 +79,7 @@
                 <use xlink:href="assets/image/svg/sprite.svg#search"></use>
               </svg>
             </form>
-            <button class="btn btn-primary btn-primary-line">Перезвоните мне</button>
+            <button class="btn btn-primary btn-primary-line btn-open-form-bell">Перезвоните мне</button>
           </div>
         </div>
         <div class="nav">
@@ -194,7 +193,7 @@
             </button>
           </div>
           <p>Полный спектр инженерных услуг на высоком уровне по цене частного мастера</p>
-          <button class="btn btn-flex btn-bg-primary btn-open-form">
+          <button class="btn btn-flex btn-bg-primary btn-open-form-quiz">
             Заказать расчёт
             <svg class="icon icon-arrow">
               <use xlink:href="assets/image/svg/sprite.svg#next-arrow"></use>
@@ -1102,6 +1101,264 @@
       </form>
     </div>
   </div>
+
+  <div class="modal modal__bell">
+    <div class="modal__body">
+      <button class="modal-close">
+        <svg class="icon">
+          <use xlink:href="assets/image/svg/sprite.svg#close"></use>
+        </svg>
+      </button>
+      <div class="title-group">
+        <span class="intro">Оставьте заявку</span>
+        <h2>Обратный звонок</h2>
+      </div>
+
+      <form>
+        <input name="name" type="text" placeholder="Ваше имя">
+        <input name="phone" type="tel" inputmode="tel" placeholder="Телефон">
+        
+        <div class="i-agree__checkbox">
+          <label class="custom-checkbox">
+            <input name="agree" type="checkbox" class="default-checkbox">
+            <span class="fake-checkbox">
+              <svg class="icon icon-checkbox">
+                <use xlink:href="assets/image/svg/sprite.svg#checkbox"></use>
+              </svg>
+            </span>
+            <span class="checkbox-title">
+              Я согласен с
+              <a href="#">Политикой обработки персональных данных</a>
+            </span>
+          </label>
+        </div>
+      
+        <div class="buttons">
+          <button class="btn btn-flex btn-bg-primary" type="submit">
+            Оставить заявку
+            <svg class="icon icon-arrow">
+              <use xlink:href="assets/image/svg/sprite.svg#next-arrow"></use>
+            </svg>
+          </button>
+      
+          <div class="input-button-file">
+            <input id="fileModalBell" type="file">
+            <label for="fileModalBell">
+              Прикрепить файл
+            </label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <div class="modal quiz">
+    <div class="modal__body">
+      <div class="quiz-form">
+        <button class="modal-close">
+          <svg class="icon">
+            <use xlink:href="assets/image/svg/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <form method="POST">
+          <div class="quiz-main">
+            <div class="quiz-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide hero-slider__item">
+                  <div class="quiz-counter">
+                    <span class="quiz-count">4 шага к уюту</span>
+                    <div class="quiz-title">Пройдите опрос и получите персональное предложение</div>
+                    <p>Всего 4 вопроса и мы подготовим расчёт стоимости проекта по вашим параметрам в трёх вариантах бюджета</p>
+                  </div>
+                </div>
+                <div class="swiper-slide hero-slider__item">
+                  <div class="quiz-counter">
+                    <span class="quiz-count">Шаг 1 из 4</span>
+                    <div class="quiz-title">Какие инженерные системы необходимо смонтировать?</div>
+                  </div>
+                  <ul class="quiz-options__list">
+                    <li class="quiz__option">
+                      <label class="custom-checkbox">
+                        <input name="step1-type" type="checkbox" class="default-checkbox">
+                        <span class="fake-checkbox">
+                          <svg class="icon icon-checkbox">
+                            <use xlink:href="assets/image/svg/sprite.svg#checkbox"></use>
+                          </svg>
+                        </span>
+                        <span class="checkbox-title">Вентиляция</span>
+                      </label>
+                    </li>
+                    <li class="quiz__option">
+                      <label class="custom-checkbox">
+                        <input name="step1-type" type="checkbox" class="default-checkbox">
+                        <span class="fake-checkbox">
+                          <svg class="icon icon-checkbox">
+                            <use xlink:href="assets/image/svg/sprite.svg#checkbox"></use>
+                          </svg>
+                        </span>
+                        <span class="checkbox-title">Отопление</span>
+                      </label>
+                    </li>
+                    <li class="quiz__option">
+                      <label class="custom-checkbox">
+                        <input name="step1-type" type="checkbox" class="default-checkbox">
+                        <span class="fake-checkbox">
+                          <svg class="icon icon-checkbox">
+                            <use xlink:href="assets/image/svg/sprite.svg#checkbox"></use>
+                          </svg>
+                        </span>
+                        <span class="checkbox-title">Водоснабжение</span>
+                      </label>
+                    </li>
+                  </ul>
+                  <textarea name="step1-description" placeholder="Можете дополнительно описать необходимые работы (при необходимости)"></textarea>
+                </div>
+                <div class="swiper-slide hero-slider__item">
+                  <div class="quiz-counter">
+                    <span class="quiz-count">Шаг 2 из 4</span>
+                    <div class="quiz-title">Укажите тип объекта</div>
+                  </div>
+                  <ul class="quiz-options__list">
+                    <li class="quiz__option">
+                      <label class="custom-checkbox">
+                        <input name="step2" type="checkbox" class="default-checkbox">
+                        <span class="fake-checkbox">
+                          <svg class="icon icon-checkbox">
+                            <use xlink:href="assets/image/svg/sprite.svg#checkbox"></use>
+                          </svg>
+                        </span>
+                        <span class="checkbox-title">Частный дом</span>
+                      </label>
+                    </li>
+                    <li class="quiz__option">
+                      <label class="custom-checkbox">
+                        <input name="step2" type="checkbox" class="default-checkbox">
+                        <span class="fake-checkbox">
+                          <svg class="icon icon-checkbox">
+                            <use xlink:href="assets/image/svg/sprite.svg#checkbox"></use>
+                          </svg>
+                        </span>
+                        <span class="checkbox-title">Квартира</span>
+                      </label>
+                    </li>
+                    <li class="quiz__option">
+                      <label class="custom-checkbox">
+                        <input name="step2" type="checkbox" class="default-checkbox">
+                        <span class="fake-checkbox">
+                          <svg class="icon icon-checkbox">
+                            <use xlink:href="assets/image/svg/sprite.svg#checkbox"></use>
+                          </svg>
+                        </span>
+                        <span class="checkbox-title">Баня</span>
+                      </label>
+                    </li>
+                    <li class="quiz__option">
+                      <label class="custom-checkbox">
+                        <input name="step2" type="checkbox" class="default-checkbox">
+                        <span class="fake-checkbox">
+                          <svg class="icon icon-checkbox">
+                            <use xlink:href="assets/image/svg/sprite.svg#checkbox"></use>
+                          </svg>
+                        </span>
+                        <span class="checkbox-title">Коммерческий объект</span>
+                      </label>
+                    </li>
+                    <li class="quiz__option">
+                      <label class="custom-checkbox">
+                        <input name="step2" type="checkbox" class="default-checkbox">
+                        <span class="fake-checkbox">
+                          <svg class="icon icon-checkbox">
+                            <use xlink:href="assets/image/svg/sprite.svg#checkbox"></use>
+                          </svg>
+                        </span>
+                        <span class="checkbox-title">Бассейн</span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+                <div class="swiper-slide hero-slider__item">
+                  <div class="quiz-counter">
+                    <span class="quiz-count">Шаг 3 из 4</span>
+                    <div class="quiz-title">Укажите площадь объекта</div>
+                  </div>
+                  
+                </div>
+                <div class="swiper-slide hero-slider__item">
+                  <div class="quiz-counter">
+                    <span class="quiz-count">Шаг 4 из 4</span>
+                    <div class="quiz-title">Оставьте контактные данные</div>
+                  </div>
+                  <div class="content">
+                    <div class="quiz-data">
+                      <input name="name" type="text" placeholder="Ваше имя">
+                      <input name="phone" type="phone" placeholder="Телефон">
+                      <input name="email" type="email" placeholder="Электронная почта">
+                    </div>
+                    <div class="quiz-options">
+                      <span class="quiz-options__title">Предпочтительный способ связи</span>
+                      <ul class="quiz-options__list">
+                        <li class="quiz__option">
+                          <label class="custom-checkbox">
+                            <input name="contact" type="checkbox" class="default-checkbox">
+                            <span class="fake-checkbox">
+                              <svg class="icon icon-checkbox">
+                                <use xlink:href="assets/image/svg/sprite.svg#checkbox"></use>
+                              </svg>
+                            </span>
+                            <span class="checkbox-title">Электронная почта</span>
+                          </label>
+                        </li>
+                        <li class="quiz__option">
+                          <label class="custom-checkbox">
+                            <input name="contact" type="checkbox" class="default-checkbox">
+                            <span class="fake-checkbox">
+                              <svg class="icon icon-checkbox">
+                                <use xlink:href="assets/image/svg/sprite.svg#checkbox"></use>
+                              </svg>
+                            </span>
+                            <span class="checkbox-title">Телефон</span>
+                          </label>
+                        </li>
+                        <li class="quiz__option">
+                          <label class="custom-checkbox">
+                            <input name="contact" type="checkbox" class="default-checkbox">
+                            <span class="fake-checkbox">
+                              <svg class="icon icon-checkbox">
+                                <use xlink:href="assets/image/svg/sprite.svg#checkbox"></use>
+                              </svg>
+                            </span>
+                            <span class="checkbox-title">WhatsApp</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="quiz-footer">
+            <button class="btn btn-primary btn-primary-line">пропустить</button>
+            <button class="btn btn-flex btn-bg-primary">
+              Далее/начать
+              <svg class="icon icon-arrow">
+                <use xlink:href="assets/image/svg/sprite.svg#next-arrow"></use>
+              </svg>
+            </button>
+            <button class="btn btn-flex btn-bg-primary" type="submit">
+              Получить расчет
+              <svg class="icon icon-arrow">
+                <use xlink:href="assets/image/svg/sprite.svg#next-arrow"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
   <div class="overlay"></div>
 
   <script src="assets/libs/jquery/jquery.js"></script>

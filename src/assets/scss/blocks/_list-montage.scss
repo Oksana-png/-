@@ -7,7 +7,7 @@
   &-bg {
     position: absolute;
     right: 0;
-    bottom: 0;
+    top: 206px;
     width: calc(46% - 24px);
     height: 406px;
     @include desktop {
@@ -90,9 +90,6 @@
     margin-bottom: 24px;
     &:last-child {
       margin-bottom: 0;
-      text-transform: uppercase;
-      color: #30373E;
-      font-weight: 700;
     }
     &::before {
       content: '';
@@ -102,10 +99,14 @@
       left: 0;
       width: 24px;
       height: 24px;
-
       @include laptop {
         top: 24px;
       }
+    }
+    & strong {
+      text-transform: uppercase;
+      color: #30373E;
+      font-weight: 700;
     }
   }
 }
