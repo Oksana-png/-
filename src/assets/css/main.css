@@ -2477,6 +2477,62 @@ textarea:focus {
   fill: #FF7B43;
 }
 
+.servises-slider {
+  max-width: 840px;
+  overflow: hidden;
+}
+@media (max-width: 1200px) {
+  .servises-slider {
+    max-width: 874px;
+  }
+}
+@media (max-width: 1000px) {
+  .servises-slider {
+    max-width: 642px;
+  }
+}
+@media (max-width: 730px) {
+  .servises-slider {
+    max-width: 454px;
+  }
+}
+@media (max-width: 580px) {
+  .servises-slider {
+    max-width: 390px;
+  }
+}
+.servises-wrap {
+  margin-bottom: 20px;
+}
+.servises-wrap .servises-pagination {
+  position: relative;
+  bottom: -21px;
+  transform: translateX(-39%) !important;
+}
+.servises-wrap .arrow-next {
+  left: calc(50% + 39px);
+}
+.servises-wrap .arrow-prev {
+  left: calc(50% - 32px);
+}
+.servises-nav {
+  position: relative;
+}
+.servises-slider__item {
+  border-radius: 16px;
+  overflow: hidden;
+  height: 232px;
+}
+@media (max-width: 1000px) {
+  .servises-slider__item {
+    height: 200px;
+  }
+}
+.servises-slider__item img, .servises-slider__item picture {
+  width: 100%;
+  height: 100%;
+}
+
 .modal {
   position: fixed;
   width: 100%;

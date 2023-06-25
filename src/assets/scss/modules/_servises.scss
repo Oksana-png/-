@@ -116,3 +116,51 @@
     }
   }
 }
+
+.servises {
+  &-slider {
+    max-width: 840px;
+    overflow: hidden;
+    @include desktop {
+      max-width: 874px;
+    }
+    @include laptop {
+      max-width: 642px;
+    }
+    @include tablet {
+      max-width: 454px;
+    }
+    @include phone {
+      max-width: 390px;
+    }
+  }
+  &-wrap {
+    margin-bottom: 20px;
+    & .servises-pagination {
+      position: relative;
+      bottom: -21px;
+      transform: translateX(-39%) !important;
+    }
+    & .arrow-next {
+      left: calc(50% + 39px);
+    }
+    & .arrow-prev {
+      left: calc(50% - 32px);
+    }
+  }
+  &-nav {
+    position: relative;
+  }
+  &-slider__item {
+    border-radius: 16px;
+    overflow: hidden;
+    height: 232px;
+    @include laptop {
+      height: 200px;
+    }
+    & img, & picture {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

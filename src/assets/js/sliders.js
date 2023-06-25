@@ -291,3 +291,26 @@ const quizClients = new Swiper(".quiz-slider", {
     prevEl: '.clients-arrows-prev',
   },
 });
+
+
+
+const swiperServises = new Swiper(".servises-slider", {
+  spaceBetween: 48,
+  slidesPerView: 2,
+  pagination: {
+    el: ".servises-pagination",
+    dynamicBullets: true,
+  },
+  navigation: {
+    nextEl: '.servises-arrows-next',
+    prevEl: '.servises-arrows-prev',
+  },
+  breakpoints: {
+    290: {
+      slidesPerView: 1,
+    },
+    730: {
+      slidesPerView: 2,
+    },
+  }
+});
