@@ -119,7 +119,7 @@
 
 .servises {
   &-slider {
-    max-width: 840px;
+    width: 840px;
     overflow: hidden;
     @include desktop {
       max-width: 874px;
@@ -132,6 +132,12 @@
     }
     @include phone {
       max-width: 390px;
+    }
+    @include small {
+      max-width: 300px;
+    }
+    @include media(340px) {
+      max-width: 290px;
     }
   }
   &-wrap {

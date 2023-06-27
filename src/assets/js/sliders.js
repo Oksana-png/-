@@ -70,38 +70,40 @@ window.addEventListener("resize", function () {
 });
 
 
-const swiperClients = new Swiper(".clients-slider", {
-  slidesPerView: 1.5,
-  centeredSlides: true,
-  centeredSlidesBounds: true,
-  pagination: {
-    el: ".swiper-pagination",
-    dynamicBullets: true,
-  },
-  freeMode: true,
-  navigation: {
-    nextEl: '.clients-arrows-next',
-    prevEl: '.clients-arrows-prev',
-  },
-  autoplay: {
-    delay: 3000,
-  },
-  spaceBetween: 16,
-  breakpoints: {
-    580: {
-      slidesPerView: 2,
+if (document.querySelector('.clients-slider')) {
+  const swiperClients = new Swiper(".clients-slider", {
+    slidesPerView: 1.5,
+    centeredSlides: true,
+    centeredSlidesBounds: true,
+    pagination: {
+      el: ".swiper-pagination",
+      dynamicBullets: true,
     },
-    730: {
-      slidesPerView: 3.5,
+    freeMode: true,
+    navigation: {
+      nextEl: '.clients-arrows-next',
+      prevEl: '.clients-arrows-prev',
     },
-    790: {
-      slidesPerView: 4,
+    autoplay: {
+      delay: 3000,
     },
-    1000: {
-      slidesPerView: 5,
+    spaceBetween: 16,
+    breakpoints: {
+      580: {
+        slidesPerView: 2,
+      },
+      730: {
+        slidesPerView: 3.5,
+      },
+      790: {
+        slidesPerView: 4,
+      },
+      1000: {
+        slidesPerView: 5,
+      }
     }
-  }
-});
+  });
+}
 
 const swiperMoreProject = new Swiper(".more-project-slider", {
   slidesPerView: 1.5,
@@ -281,17 +283,6 @@ var swiperMainGallery = new Swiper(".main-gallery", {
     swiper: swiperThumbsGallery,
   },
 });
-
-
-const quizClients = new Swiper(".quiz-slider", {
-  slidesPerView: 1,
-  centeredSlides: true,
-  navigation: {
-    nextEl: '.clients-arrows-next',
-    prevEl: '.clients-arrows-prev',
-  },
-});
-
 
 
 const swiperServises = new Swiper(".servises-slider", {

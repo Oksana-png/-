@@ -1165,14 +1165,14 @@
           <div class="quiz-main">
             <div class="quiz-slider">
               <div class="swiper-wrapper">
-                <div class="swiper-slide hero-slider__item">
+                <div class="swiper-slide swiper-slide__quiz">
                   <div class="quiz-counter">
-                    <span class="quiz-count">4 шага к уюту</span>
-                    <div class="quiz-title">Пройдите опрос и получите персональное предложение</div>
-                    <p>Всего 4 вопроса и мы подготовим расчёт стоимости проекта по вашим параметрам в трёх вариантах бюджета</p>
+                    <span class="quiz-count">4 шага к уюту</span>
+                    <div class="quiz-title">Пройдите опрос и получите персональное предложение</div>
+                    <p>Всего 4 вопроса и мы подготовим расчёт стоимости проекта по вашим параметрам в трёх вариантах бюджета</p>
                   </div>
                 </div>
-                <div class="swiper-slide hero-slider__item">
+                <div class="swiper-slide swiper-slide__quiz">
                   <div class="quiz-counter">
                     <span class="quiz-count">Шаг 1 из 4</span>
                     <div class="quiz-title">Какие инженерные системы необходимо смонтировать?</div>
@@ -1214,7 +1214,7 @@
                   </ul>
                   <textarea name="step1-description" placeholder="Можете дополнительно описать необходимые работы (при необходимости)"></textarea>
                 </div>
-                <div class="swiper-slide hero-slider__item">
+                <div class="swiper-slide swiper-slide__quiz">
                   <div class="quiz-counter">
                     <span class="quiz-count">Шаг 2 из 4</span>
                     <div class="quiz-title">Укажите тип объекта</div>
@@ -1222,7 +1222,7 @@
                   <ul class="quiz-options__list">
                     <li class="quiz__option">
                       <label class="custom-checkbox">
-                        <input name="step2" type="checkbox" class="default-checkbox">
+                        <input name="step2" type="radio" class="default-checkbox">
                         <span class="fake-checkbox">
                           <svg class="icon icon-checkbox">
                             <use xlink:href="assets/image/svg/sprite.svg#checkbox"></use>
@@ -1233,7 +1233,7 @@
                     </li>
                     <li class="quiz__option">
                       <label class="custom-checkbox">
-                        <input name="step2" type="checkbox" class="default-checkbox">
+                        <input name="step2" type="radio" class="default-checkbox">
                         <span class="fake-checkbox">
                           <svg class="icon icon-checkbox">
                             <use xlink:href="assets/image/svg/sprite.svg#checkbox"></use>
@@ -1244,7 +1244,7 @@
                     </li>
                     <li class="quiz__option">
                       <label class="custom-checkbox">
-                        <input name="step2" type="checkbox" class="default-checkbox">
+                        <input name="step2" type="radio" class="default-checkbox">
                         <span class="fake-checkbox">
                           <svg class="icon icon-checkbox">
                             <use xlink:href="assets/image/svg/sprite.svg#checkbox"></use>
@@ -1255,7 +1255,7 @@
                     </li>
                     <li class="quiz__option">
                       <label class="custom-checkbox">
-                        <input name="step2" type="checkbox" class="default-checkbox">
+                        <input name="step2" type="radio" class="default-checkbox">
                         <span class="fake-checkbox">
                           <svg class="icon icon-checkbox">
                             <use xlink:href="assets/image/svg/sprite.svg#checkbox"></use>
@@ -1266,7 +1266,7 @@
                     </li>
                     <li class="quiz__option">
                       <label class="custom-checkbox">
-                        <input name="step2" type="checkbox" class="default-checkbox">
+                        <input name="step2" type="radio" class="default-checkbox">
                         <span class="fake-checkbox">
                           <svg class="icon icon-checkbox">
                             <use xlink:href="assets/image/svg/sprite.svg#checkbox"></use>
@@ -1277,14 +1277,14 @@
                     </li>
                   </ul>
                 </div>
-                <div class="swiper-slide hero-slider__item">
+                <div class="swiper-slide swiper-slide__quiz">
                   <div class="quiz-counter">
                     <span class="quiz-count">Шаг 3 из 4</span>
                     <div class="quiz-title">Укажите площадь объекта</div>
                   </div>
                   
                 </div>
-                <div class="swiper-slide hero-slider__item">
+                <div class="swiper-slide swiper-slide__quiz">
                   <div class="quiz-counter">
                     <span class="quiz-count">Шаг 4 из 4</span>
                     <div class="quiz-title">Оставьте контактные данные</div>
@@ -1339,14 +1339,14 @@
             </div>
           </div>
           <div class="quiz-footer">
-            <button class="btn btn-primary btn-primary-line">пропустить</button>
-            <button class="btn btn-flex btn-bg-primary">
-              Далее/начать
+            <button id="quiz-pass" class="btn btn-primary btn-primary-line quiz-button-next">пропустить</button>
+            <button id="quiz-next" class="btn btn-flex btn-bg-primary quiz-button-next">
+              начать
               <svg class="icon icon-arrow">
                 <use xlink:href="assets/image/svg/sprite.svg#next-arrow"></use>
               </svg>
             </button>
-            <button class="btn btn-flex btn-bg-primary" type="submit">
+            <button id="quiz-finish" class="btn btn-flex btn-bg-primary" type="submit">
               Получить расчет
               <svg class="icon icon-arrow">
                 <use xlink:href="assets/image/svg/sprite.svg#next-arrow"></use>
@@ -1355,6 +1355,27 @@
           </div>
         </form>
       </div>
+    </div>
+  </div>
+
+  <div class="modal modal__success ">
+    <div class="modal__body ">
+      <button class="modal-close">
+        <svg class="icon">
+          <use xlink:href="assets/image/svg/sprite.svg#close"></use>
+        </svg>
+      </button>
+      <div class="title-group">
+        <span class="intro">Заявка успешно отправлена</span>
+        <h2>Благодарим за оставленную заявку!</h2>
+      </div>
+      <p>Наши специалисты свяжуться с вами в кратчайшие сроки</p>
+      <button class="btn btn-flex btn-primary btn-primary-line">
+        на главную
+        <svg class="icon icon-arrow">
+          <use xlink:href="assets/image/svg/sprite.svg#next-arrow"></use>
+        </svg>
+      </button>
     </div>
   </div>
 

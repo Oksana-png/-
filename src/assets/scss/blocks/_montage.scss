@@ -26,6 +26,12 @@
       grid-column: auto;
     }
   }
+  p {
+    grid-column: 2/3;
+    @include tablet {
+      grid-column: auto;
+    }
+  }
   & li {
     margin-bottom: 40px;
     &:last-child {

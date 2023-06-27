@@ -3,7 +3,7 @@
   @include tablet {
     margin-bottom: 40px;
   }
-  & form {
+  & ul {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     border-radius: 16px;
@@ -13,50 +13,34 @@
       grid-template-columns: 1fr;
     }
   }
-  & input {
-    display: none;
-    &:checked+span {
-      background-color: $c-primary;
-      color: $c-white;
-      cursor: default;
-      @include hover {
-        &:hover {
-          background-color: $c-primary;
-          color: $c-white;
-          opacity: 1;
-        }
-      }
-    }
-  }
-  & label {
+  & .portfolio__header-item {
+    text-align: center;
+    font-weight: 400;
     font-size: 16px;
     line-height: 150%;
     border-right: 2px solid $c-primary;
-    @include tablet {
-      border-right: 0;
-      border-bottom: 2px solid $c-primary;
-    }
     &:last-child {
       border-right: 0;
-      @include tablet {
-        border-bottom: 0;
-      }
     }
-    & span {
+    & a {
       width: 100%;
-      cursor: pointer;
-      display: inline-block;
-      text-align: center;
       padding: 12px 0;
-      transition: 0.2s ease-out;
+      transition: background-color 0.3s ease-out;
       @include hover {
         &:hover {
-          transition: 0.3s ease-out;
-          background-color: $c-primary;
-          color: $c-white;
-          opacity: 0.85;
+          background-color: rgba(255, 123, 67, 0.2);
         }
       }
     }
-  } 
+    &.active {
+      background-color: $c-primary;
+      color: $c-white;
+      cursor: default;
+      & span {
+        display: inline-block;
+        padding: 12px 0;
+      }
+    }
+  }
+
 }

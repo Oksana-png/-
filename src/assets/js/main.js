@@ -176,8 +176,70 @@ const breadCrumbs = () => {
   }
 }
 
+const quiz = () => {
+  const quizClients = new Swiper(".quiz-slider", {
+    slidesPerView: 1,
+    centeredSlides: true,
+    navigation: {
+      nextEl: '.quiz-button-next',
+      prevEl: '.clients-arrows-prev',
+    },
+    allowTouchMove: false,
+  });
+
+  quizClients.on('slideChange', () => {
+    const indexSlideActive = quizClients.activeIndex;
+    const btnNext = document.querySelector('#quiz-next');
+    const btnPass = document.querySelector('#quiz-pass');
+    const btnFinish = document.querySelector('#quiz-finish');
+    const slides = document.querySelectorAll('.swiper-slide__quiz');
+    let isChecked = false;
+    btnNext.disabled = !isChecked;
+
+    if (indexSlideActive == 1) {
+      btnNext.innerHTML = `Далее<svg class="icon icon-arrow"><use xlink:href="assets/image/svg/sprite.svg#next-arrow"></use></svg>`;
+      btnPass.style.display = 'inline-block';
+      btnNext.disabled = true;
+
+      slides[indexSlideActive].querySelectorAll('input').forEach((input, i, inputs) => {
+        input.addEventListener('change', (e) => {
+          isChecked = false;
+          for (let i = 0; i < inputs.length; i++) {
+            if (inputs[i].checked) {
+              isChecked = true;
+              break;
+            }
+          }
+          btnNext.disabled = !isChecked;
+        });
+      });
+    } else if (indexSlideActive == 2) {
+      slides[indexSlideActive].querySelectorAll('input').forEach((input, i, inputs) => {
+        input.addEventListener('change', (e) => {
+          isChecked = false;
+          for (let i = 0; i < inputs.length; i++) {
+            if (inputs[i].checked) {
+              isChecked = true;
+              break;
+            }
+          }
+          btnNext.disabled = !isChecked;
+        });
+      });
+    } else if (indexSlideActive == 4) {
+      isChecked = false;
+      btnPass.style.display = 'none';
+      btnNext.style.display = 'none';
+      btnFinish.style.display = 'flex';
+      btnFinish.disabled = !isChecked;
+
+      
+    }
+  });
+}
 
 
 tabs();
 modal();
+quiz();
 breadCrumbs();

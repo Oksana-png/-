@@ -28,6 +28,7 @@
     }
     @include tablet {
       padding: 40px 30px;
+      align-items: flex-start;
     }
     @include small {
       padding: 40px 15px;
@@ -75,6 +76,7 @@
   & .title-group {
     padding-left: 104px;
     padding-right: 50px;
+    max-width: 773px;
     @include desktop {
       margin-bottom: 50px;
       max-width: 100%;

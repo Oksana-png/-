@@ -258,7 +258,7 @@
     transition-property: stroke, transform;
   }
   @include hover {
-    &:hover {
+    &:not(.swiper-button-disabled):hover {
       color: $c-main;
       &> .icon {
         stroke: $c-main;
@@ -283,9 +283,8 @@
   & .icon {
     transition: transform 0.3s ease-out;
   }
-
   @include hover {
-    &:hover {
+    &:not(.swiper-button-disabled):hover {
       color: $c-primary;
       &::after {
         width: 0;
@@ -567,4 +566,8 @@ textarea {
 .swiper-button-disabled {
   cursor: auto;
   opacity: 0.3;
+}
+
+label {
+  user-select: none;
 }
