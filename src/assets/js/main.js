@@ -96,6 +96,7 @@ const tabs = () => {
   }
 }
 
+// открытие, закрытие модалок
 const modalClose = (selector) => {
   const modal = document.querySelector(selector);
   const modalBody = modal.querySelector('.modal__body');
@@ -163,6 +164,7 @@ const modal = () => {
 
 }
 
+// проверка хлебных крошек
 const breadCrumbs = () => {
   if (!document.querySelector('.breadcrumbs')) {
     return;
@@ -176,6 +178,7 @@ const breadCrumbs = () => {
   }
 }
 
+// квиз
 const quiz = () => {
   const quizClients = new Swiper(".quiz-slider", {
     slidesPerView: 1,
@@ -238,8 +241,20 @@ const quiz = () => {
   });
 }
 
+// выпадающее меню
+const submenu = () => {
+  const menu = document.querySelectorAll('.submenu');
+
+  menu.forEach(item => {
+    console.log(window.innerWidth);
+    if (item.getBoundingClientRect().left + item.offsetWidth > window.innerWidth) {
+      item.classList.add('submenu-left');
+    }
+  });
+}
 
 tabs();
 modal();
 quiz();
 breadCrumbs();
+submenu();

@@ -2,15 +2,13 @@
   position: relative;
   z-index: 1000;
   background-color: white;
-  @include laptop {
+  @include desktop {
+    position: relative;
     &-row {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-  }
-  @include laptop {
-    position: relative;
   }
   &-nav {
     display: grid;
@@ -20,9 +18,6 @@
     padding-bottom: 0;
     border-bottom: 1px solid #F1F9FF;
     @include desktop {
-      gap: 23.5px;
-    }
-    @include laptop {
       display: none;
       position: absolute;
       z-index: 1000;
@@ -48,19 +43,19 @@
     }
     & .mobile-menu {
       display: none;
-      @include laptop {
+      @include desktop {
         display: block;
       }
     }
     & .row {
       & .header__list-nav {
-        @include laptop {
+        @include desktop {
           display: none;
         }
       }
     }
     & .nav {
-      @include laptop {
+      @include desktop {
         margin-bottom: 24px;
       }
     }
@@ -108,7 +103,7 @@
     position: relative;
     line-height: 150%;
     color: #30373E;
-    @include laptop {
+    @include desktop {
       width: 100%;
     }
     &:hover {
@@ -134,7 +129,7 @@
       background-color: transparent;
     }
     &.active {
-      @include laptop {
+      @include desktop {
         & .header__link {
           color: #3E9AE0;
         }
@@ -190,7 +185,7 @@
   & .grey-bg {
     padding: 16px 0;
     background-color: $c-main;
-    @include laptop {
+    @include desktop {
       background-color: $c-white;
       color: $c-main;
       border-bottom: 1px solid #F1F9FF;
@@ -202,7 +197,7 @@
   }
   &-logo {
     display: none;
-    @include laptop {
+    @include desktop {
       display: flex;
       width: 170px;
     }
@@ -215,7 +210,7 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 28px;
-    @include laptop {
+    @include desktop {
       flex-direction: column-reverse;
       align-items: flex-start;
       gap: 24px;
@@ -249,7 +244,7 @@
   background: #F1F9FF;
   border-radius: 0px 60px 60px 60px;
   padding: 24px 60px 60px;
-  @include laptop {
+  @include desktop {
     left: auto;
     top: auto;
     position: relative;
@@ -261,7 +256,7 @@
   }
   &__item {
     width: 330px;
-    @include laptop {
+    @include desktop {
       width: 100%;
     }
   }
@@ -272,7 +267,7 @@
     color: #30373E
   }
   &.show {
-    @include laptop {
+    @include desktop {
       min-width: calc(100% + 60px);
       right: 0px;
       left: -15px;
@@ -285,13 +280,18 @@
       transition: all .5s ease-out;
     }
   }
+  &-left {
+    border-radius: 60px 0px 60px 60px;
+    left: auto;
+    right: 0;
+  }
 }
 
 .contact {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  @include laptop {
+  @include desktop {
     gap: 30px;
   }
   &-mobile {
@@ -299,7 +299,7 @@
     flex-wrap: wrap;
     margin-top: 24px;
     padding-top: 15px;
-    @include laptop {
+    @include desktop {
       display: flex;
       justify-content: space-between;
     }
@@ -334,11 +334,11 @@
     &:nth-child(n+4) {
       font-size: 16px;
       line-height: 150%;
-      @include laptop {
+      @include desktop {
         display: block;
       }
     }
-    @include laptop {
+    @include desktop {
       display: none;
       &>.icon {
         fill: $c-main;

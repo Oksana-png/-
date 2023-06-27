@@ -8,7 +8,7 @@
   height: 48px;
   overflow: hidden;
   padding: 0;
-  @include laptop{
+  @include desktop{
     display: block;
   }
   & span {

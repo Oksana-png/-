@@ -196,7 +196,7 @@ figure {
   overflow: hidden;
   padding: 0;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .burger-menu__btn {
     display: block;
   }
@@ -799,16 +799,14 @@ label {
   z-index: 1000;
   background-color: white;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
+  .header {
+    position: relative;
+  }
   .header-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-}
-@media (max-width: 1000px) {
-  .header {
-    position: relative;
   }
 }
 .header-nav {
@@ -820,11 +818,6 @@ label {
   border-bottom: 1px solid #F1F9FF;
 }
 @media (max-width: 1200px) {
-  .header-nav {
-    gap: 23.5px;
-  }
-}
-@media (max-width: 1000px) {
   .header-nav {
     display: none;
     position: absolute;
@@ -853,17 +846,17 @@ label {
 .header-nav .mobile-menu {
   display: none;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .header-nav .mobile-menu {
     display: block;
   }
 }
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .header-nav .row .header__list-nav {
     display: none;
   }
 }
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .header-nav .nav {
     margin-bottom: 24px;
   }
@@ -911,12 +904,12 @@ label {
   line-height: 150%;
   color: #30373E;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .header .has-submenu {
     width: 100%;
   }
 }
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .header .has-submenu:hover .header__link {
     color: #3E9AE0;
   }
@@ -936,7 +929,7 @@ label {
   border: none;
   background-color: transparent;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .header .has-submenu.active .header__link {
     color: #3E9AE0;
   }
@@ -995,7 +988,7 @@ label {
   padding: 16px 0;
   background-color: #30373E;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .header .grey-bg {
     background-color: #fff;
     color: #30373E;
@@ -1010,7 +1003,7 @@ label {
 .header-logo {
   display: none;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .header-logo {
     display: flex;
     width: 170px;
@@ -1027,7 +1020,7 @@ label {
   justify-content: space-between;
   margin-bottom: 28px;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .header .row {
     flex-direction: column-reverse;
     align-items: flex-start;
@@ -1064,7 +1057,7 @@ label {
   border-radius: 0px 60px 60px 60px;
   padding: 24px 60px 60px;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .submenu {
     left: auto;
     top: auto;
@@ -1079,7 +1072,7 @@ label {
 .submenu__item {
   width: 330px;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .submenu__item {
     width: 100%;
   }
@@ -1090,7 +1083,7 @@ label {
   line-height: 150%;
   color: #30373E;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .submenu.show {
     min-width: calc(100% + 60px);
     right: 0px;
@@ -1104,13 +1097,18 @@ label {
     transition: all 0.5s ease-out;
   }
 }
+.submenu-left {
+  border-radius: 60px 0px 60px 60px;
+  left: auto;
+  right: 0;
+}
 
 .contact {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .contact {
     gap: 30px;
   }
@@ -1121,7 +1119,7 @@ label {
   margin-top: 24px;
   padding-top: 15px;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .contact-mobile {
     display: flex;
     justify-content: space-between;
@@ -1163,12 +1161,12 @@ label {
   font-size: 16px;
   line-height: 150%;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .contact__block:nth-child(n+4) {
     display: block;
   }
 }
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .contact__block {
     display: none;
     color: #30373E;
