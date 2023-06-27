@@ -5020,6 +5020,24 @@ label {
   width: 28px;
   height: 28px;
 }
+.hero-mini .wrapper {
+  grid-template-columns: 1fr;
+}
+.hero-mini h1 {
+  max-width: 100%;
+  margin: 0;
+}
+.hero-mini .title-group {
+  min-height: auto;
+  padding-bottom: 0;
+  padding-top: 40px;
+}
+.hero-mini .title-group::after {
+  display: none;
+}
+.hero-mini .title-group::before {
+  display: none;
+}
 
 .portfolio-slider {
   overflow: hidden;
