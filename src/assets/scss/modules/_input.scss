@@ -1,0 +1,75 @@
+.quiz {
+  input[type=range] {
+    appearance: none;
+    padding: 0;
+    width: 100%;
+    max-height: 6px;
+    border-radius: 16px;
+    background: -webkit-linear-gradient(left, $c-primary 0%, $c-primary var(--progress, 25%),#F1F9FF var(--progress, 25%), #F1F9FF 100%);
+    transition: .2s;
+  }
+  input[type=range]::-moz-range-track {
+    -moz-appearance: none;
+    padding: 0;
+    width: 100%;
+    max-height: 6px;
+    border-radius: 16px;
+    background: -moz-linear-gradient(left, $c-primary 0%, $c-primary var(--progress, 25%) , #F1F9FF var(--progress, 25%), #F1F9FF 100%);
+  }
+
+  &-range__item {
+    &:nth-child(2) {
+      input[type=range] {
+        appearance: none;
+        padding: 0;
+        width: 100%;
+        max-height: 6px;
+        border-radius: 16px;
+        background: -webkit-linear-gradient(left, $c-primary 0%, $c-primary var(--progress2, 25%), #F1F9FF var(--progress2, 25%), #F1F9FF 100%);
+        transition: .2s;
+      }
+    
+      input[type=range]::-moz-range-track {
+        -moz-appearance: none;
+        padding: 0;
+        width: 100%;
+        max-height: 6px;
+        border-radius: 16px;
+        background: -moz-linear-gradient(left, $c-primary 0%, $c-primary var(--progress2, 25%), #F1F9FF var(--progress2, 25%), #F1F9FF 100%);
+      }
+    }
+  }
+
+  input[type=range]:focus {
+    border-color: transparent;
+  }
+  input[type=range]::-webkit-slider-thumb:hover, input[type=range]::-webkit-slider-thumb:active {
+    height: 24px;
+    width: 24px;
+  }
+  input[type=range]::-moz-slider-thumb:hover,
+  input[type=range]::-moz-slider-thumb:active {
+    height: 24px;
+    width: 24px;
+  }
+
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border-radius: 16px;
+    padding: 0;
+    background-color: #FF7B43;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+  input[type=range]::-moz-slider-thumb {
+    -moz-appearance: none;
+    border-radius: 16px;
+    padding: 0;
+    background-color: #FF7B43;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+
+}

@@ -178,6 +178,41 @@ const breadCrumbs = () => {
   }
 }
 
+
+const splitRange = (min, max) => {
+  const range = max - min;
+  const sectionLenght = range / 4;
+  const result = [];
+  for (let i = 0; i < 5; i++) {
+    if (i == 0) {
+      result.push(min);
+    } else if (i == 4) {
+      result.push(max);
+    } else {
+      const res = sectionLenght * i;
+      result.push(res.toString());
+    }
+  }
+  return result;
+}
+
+const addRange = (e) => {
+  e.preventDefault();
+  const range = document.querySelector('.quiz-range__item');
+  document.querySelector('.btn-quiz-add').style.display = "none";
+
+  const elem = range.cloneNode(true);
+  const newInput = elem.querySelector('input');
+  newInput.name = 'square2';
+  newInput.addEventListener('input', () => {
+    document.querySelectorAll('.quiz-range__value')[1].textContent = newInput.value;
+    let value = newInput.value * 100 / 1000;
+    newInput.style.setProperty('--progress2', `${value}%`);
+  });
+
+  document.querySelector('.quiz-range').append(elem);
+}
+
 // квиз
 const quiz = () => {
   const quizClients = new Swiper(".quiz-slider", {
@@ -229,14 +264,80 @@ const quiz = () => {
           btnNext.disabled = !isChecked;
         });
       });
+    } else if (indexSlideActive == 3) {
+      const input = slides[indexSlideActive].querySelector('input[type=range]');
+      const rangeDatalist = document.querySelector('.quiz-range__datalist');
+      const arrSplit = splitRange(input.min, input.max);
+      const btnAdd = document.querySelector('.btn-quiz-add');
+      btnAdd.addEventListener('click', addRange);
+
+      arrSplit.forEach(item => {
+        const elem = document.createElement('span');
+        elem.textContent = item;
+        rangeDatalist.append(elem);
+      });
+
+      input.addEventListener('input', () => {
+        document.querySelector('.quiz-range__value').textContent = input.value;
+        let value = input.value * 100 / 1000;
+        input.style.setProperty('--progress', `${value}%`);
+      });
+      btnNext.disabled = false;
+
+
     } else if (indexSlideActive == 4) {
       isChecked = false;
+      let agree = false;
+      let data = false;
       btnPass.style.display = 'none';
       btnNext.style.display = 'none';
       btnFinish.style.display = 'flex';
-      btnFinish.disabled = !isChecked;
+      btnFinish.disabled = true;
 
-      
+      slides[indexSlideActive].querySelectorAll('input[type=checkbox][name=contact]').forEach((input, i, inputs) => {
+        input.addEventListener('change', () => {
+          isChecked = false;
+          for (let i = 0; i < inputs.length; i++) {
+            if (inputs[i].checked) {
+              isChecked = true;
+              break;
+            }
+          }
+          submitForm();
+        });
+      });
+
+      slides[indexSlideActive].querySelector('#agree-quiz').addEventListener('click', (e) => {
+        if (e.target.disabled) {
+          agree = false;
+        } else {
+          agree = true;
+        }
+        submitForm();
+      });
+
+      slides[indexSlideActive].querySelectorAll('.quiz-data > input').forEach((input, i, inputs) => {
+        input.addEventListener('input', () => {
+          data = true;
+          for (let i = 0; i < inputs.length; i++) {
+            if (inputs[i].value && data) {
+              data = true;
+            } else {
+              data = false;
+              break;
+            }
+          }
+          submitForm();
+        });
+      });
+
+      const submitForm = () => {
+        if (isChecked && data && agree) {
+          btnFinish.disabled = false;
+        } else {
+          btnFinish.disabled = true;
+        }
+      }
     }
   });
 }
@@ -246,11 +347,21 @@ const submenu = () => {
   const menu = document.querySelectorAll('.submenu');
 
   menu.forEach(item => {
-    console.log(window.innerWidth);
     if (item.getBoundingClientRect().left + item.offsetWidth > window.innerWidth) {
       item.classList.add('submenu-left');
     }
   });
+}
+
+const maskPhone = () => {
+  const element = document.querySelectorAll('.mask-phone');
+  const maskOptions = {
+      mask: '+7 (000) 000-00-00',
+      lazy: false
+  } 
+  element.forEach(item => {
+    let mask = new IMask(item, maskOptions);
+  })
 }
 
 tabs();
@@ -258,3 +369,4 @@ modal();
 quiz();
 breadCrumbs();
 submenu();
+maskPhone();

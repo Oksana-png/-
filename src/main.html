@@ -1128,7 +1128,7 @@
 
       <form>
         <input name="name" type="text" placeholder="Ваше имя">
-        <input name="phone" type="tel" inputmode="tel" placeholder="Телефон">
+        <input class="mask-phone" name="phone" type="tel" inputmode="tel" placeholder="Телефон">
         
         <div class="i-agree__checkbox">
           <label class="custom-checkbox">
@@ -1294,7 +1294,19 @@
                     <span class="quiz-count">Шаг 3 из 4</span>
                     <div class="quiz-title">Укажите площадь объекта</div>
                   </div>
-                  
+                  <div class="quiz-range">
+                    <div class="quiz-range__item">
+                      <div class="quiz-range__info">
+                        <p class="quiz-range__title">Площадь объекта, м2</p>
+                        <span class="quiz-range__value">250</span>
+                      </div>
+                      <div class="quiz-range__input">
+                        <input name="square1" type="range" min="0" max="1000" step="10" value="250">
+                        <div class="quiz-range__datalist"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary btn-primary-line btn-quiz-add">Добавить второй объект</button>
                 </div>
                 <div class="swiper-slide swiper-slide__quiz">
                   <div class="quiz-counter">
@@ -1304,7 +1316,7 @@
                   <div class="content">
                     <div class="quiz-data">
                       <input name="name" type="text" placeholder="Ваше имя">
-                      <input name="phone" type="phone" placeholder="Телефон">
+                      <input class="mask-phone" name="phone" type="phone" placeholder="Телефон">
                       <input name="email" type="email" placeholder="Электронная почта">
                     </div>
                     <div class="quiz-options">
@@ -1345,6 +1357,20 @@
                         </li>
                       </ul>
                     </div>
+                    <div class="i-agree__checkbox">
+                      <label for="agree-quiz" class="custom-checkbox">
+                        <input id="agree-quiz" name="agree" type="checkbox" class="default-checkbox">
+                        <span class="fake-checkbox">
+                          <svg class="icon icon-checkbox">
+                            <use xlink:href="assets/image/svg/sprite.svg#checkbox"></use>
+                          </svg>
+                        </span>
+                        <span class="checkbox-title">
+                          Я согласен с
+                          <a href="#">Политикой обработки персональных данных</a>
+                        </span>
+                      </label>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1370,8 +1396,8 @@
     </div>
   </div>
 
-  <div class="modal modal__success ">
-    <div class="modal__body ">
+  <div class="modal modal__success "> <!-- active -->
+    <div class="modal__body "> <!-- active -->
       <button class="modal-close">
         <svg class="icon">
           <use xlink:href="assets/image/svg/sprite.svg#close"></use>
@@ -1382,18 +1408,19 @@
         <h2>Благодарим за оставленную заявку!</h2>
       </div>
       <p>Наши специалисты свяжуться с вами в кратчайшие сроки</p>
-      <button class="btn btn-flex btn-primary btn-primary-line">
+      <a href="#" class="btn btn-flex btn-primary btn-primary-line">
         на главную
         <svg class="icon icon-arrow">
           <use xlink:href="assets/image/svg/sprite.svg#next-arrow"></use>
         </svg>
-      </button>
+      </a>
     </div>
   </div>
 
 
   <div class="overlay"></div>
 
+  <script src="https://unpkg.com/imask"></script>
   <script src="assets/libs/jquery/jquery.js"></script>
   <script src="assets/libs/fancybox/fancybox.umd.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>

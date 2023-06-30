@@ -107,19 +107,50 @@
     }
   }
   &__success {
+    &::after {
+      @include rect(393, 370, #76C1FB);
+      top: 140px;
+      left: 50%;
+      transform: translateX(-472px);
+      @include desktop {
+        display: none;
+      }
+    }
+    &::before {
+      @include rect(393, 370);
+      top: 310px;
+      left: 50%;
+      transform: translateX(131px);
+      z-index: -1;
+      @include desktop {
+        display: none;
+      }
+    }
     & .modal__body {
+      width: 100%;
       &::after {
-        @include rect(393, 370, #76C1FB);
-        z-index: -1;
+        @include curcle();
+        bottom: -57px;
+        left: -61px;
+        @include desktop {
+          display: none;
+        }
       }
     }
     & p {
       color: rgba(0, 0, 0, 1);
       margin-bottom: 50px;
     }
-    & button {
+    & a {
+      justify-content: flex-end;
+      width: 145px;
       margin-left: auto;
       margin-right: 0;
+      @include small {
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
   }
 }
@@ -205,17 +236,24 @@
     }
   }
   & .content {
-    display: flex;
-    gap: 45px;
+    display: grid;
+    grid-template-columns: 276px 257px;
+    gap: 16px 45px;
     @include tablet {
-      flex-direction: column;
-      gap: 20px;
+      grid-template-columns: 1fr;
+      gap: 16px;
     }
     & input {
       @include phone {
         margin-bottom: 0;
       }
     }
+    & .i-agree__checkbox {
+      grid-column: span 2;
+      @include tablet {
+        grid-column: span 1;
+      }
+    } 
   }
   &-data {
     flex-basis: 47%;
@@ -236,10 +274,69 @@
       }
     }
   }
+  & .btn-quiz-add {
+    text-transform: inherit;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.48px;
+  }
+  &-range {
+    &__info {
+      padding: 12px 0;
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    &__title {
+      color: #000;
+      font-size: 16px;
+      line-height: 150%;
+      margin-right: 36px;
+    }
+    &__value {
+      font-size: 16px;
+      line-height: 150%;
+      color: #85919E;
+    }
+    &__input {
+      margin-bottom: 48px;
+      & input {
+        width: 100%;
+        margin-bottom: 17px;
+      }
+    }
+    &__datalist {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #85919E;
+      font-size: 13px;
+      line-height: 130%;
+      margin-left: 7px;
+      & span {
+        &:nth-child(2) {
+          padding-left: 10px;
+        }
+      }
+    }
+  }
   & #quiz-pass {
     display: none;
   }
   & #quiz-finish {
     display: none;
+    &:disabled {
+      cursor: auto;
+      opacity: 0.3;
+  
+      &:hover {
+        color: $c-white;
+  
+        &>.icon {
+          stroke: $c-white;
+          transform: translate(0);
+        }
+      }
+    }
   }
 }
