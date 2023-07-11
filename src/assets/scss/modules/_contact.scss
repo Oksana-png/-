@@ -75,12 +75,24 @@
       }
     }
     & .icon {
+      transition: 0.3s ease-out;
       fill: $c-main;
+      margin-left: 8px;
       &-mini {
         width: 20px;
         height: 20px;
         padding: 0;
         stroke: transparent;
+      }
+    }
+  }
+
+  & .btn-primary-line {
+    @include hover {
+      &:hover {
+        & .icon {
+          fill: $c-primary;
+        }
       }
     }
   }

@@ -1,4 +1,8 @@
 .tabs-link {
+  margin-top: 60px;
+  @include tablet {
+    margin-top: 40px;
+  }
   & .wrapper {
     position: relative;
     display: grid;
@@ -84,7 +88,6 @@
     }
     & a {
       width: 100%;
-      padding: 12px;
       line-height: 150%;
       display: flex;
       align-items: center;

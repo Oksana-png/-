@@ -1502,13 +1502,20 @@ label {
   }
 }
 .page-contact__item .icon {
+  transition: 0.3s ease-out;
   fill: #30373E;
+  margin-left: 8px;
 }
 .page-contact__item .icon-mini {
   width: 20px;
   height: 20px;
   padding: 0;
   stroke: transparent;
+}
+@media (min-width: 790px) {
+  .page-contact .btn-primary-line:hover .icon {
+    fill: #FF7B43;
+  }
 }
 
 .page-about {
@@ -2568,12 +2575,13 @@ label {
 .modal__body {
   border-radius: 60px;
   text-align: left;
-  margin-top: 214px;
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
   display: inline-block;
   background-color: #fff;
   padding: 60px;
-  transform: translateY(-50px);
+  transform: translate(-52%, -50%);
   transition: all 0.3s ease-in-out;
   max-width: 696px;
 }
@@ -2607,7 +2615,7 @@ label {
   }
 }
 .modal__body.active {
-  transform: translateY(0);
+  transform: translate(-50%, -50%);
 }
 .modal textarea {
   margin: 24px 0;
@@ -7434,6 +7442,14 @@ label {
   height: 100%;
 }
 
+.tabs-link {
+  margin-top: 60px;
+}
+@media (max-width: 730px) {
+  .tabs-link {
+    margin-top: 40px;
+  }
+}
 .tabs-link .wrapper {
   position: relative;
   display: grid;
@@ -7552,7 +7568,6 @@ label {
 }
 .tabs-link__nav a {
   width: 100%;
-  padding: 12px;
   line-height: 150%;
   display: flex;
   align-items: center;

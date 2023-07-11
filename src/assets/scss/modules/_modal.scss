@@ -18,12 +18,13 @@
   &__body {
     border-radius: 60px;
     text-align: left;
-    margin-top: 214px;
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
     display: inline-block;
     background-color: #fff;
     padding: 60px;
-    transform: translateY(-50px);
+    transform: translate(-52%, -50%);
     transition: all .3s ease-in-out;
     max-width: 696px;
     @include tablet {
@@ -50,7 +51,7 @@
       }
     }
     &.active {
-      transform: translateY(0);
+      transform: translate(-50%, -50%);;
     }
   }
   & textarea {

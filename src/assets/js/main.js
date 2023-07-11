@@ -1,5 +1,20 @@
-// menu burger
+let quizClients;
 
+// проверка на длинный текст в главном слайдере
+const heroSldier = () => {
+  if (document.querySelector('.hero')) {
+    const title = document.querySelector('.hero').querySelector('.title-group');
+
+    if (title.clientHeight > 660) {
+      document.querySelectorAll('.hero .slider-arrow').forEach(arrow => {
+        arrow.style.bottom = '18px';
+      });
+      document.querySelector('.hero .swiper-pagination').style.bottom = '27px';
+    }
+  }
+}
+
+// menu burger
 const btnBurger = document.querySelector('.burger-menu__btn ');
 
 btnBurger.addEventListener('click', () => {
@@ -204,6 +219,10 @@ const addRange = (e) => {
   const elem = range.cloneNode(true);
   const newInput = elem.querySelector('input');
   newInput.name = 'square2';
+  newInput.value = 250;
+  elem.querySelector('.quiz-range__value').textContent = newInput.value;
+
+
   newInput.addEventListener('input', () => {
     document.querySelectorAll('.quiz-range__value')[1].textContent = newInput.value;
     let value = newInput.value * 100 / 1000;
@@ -213,9 +232,39 @@ const addRange = (e) => {
   document.querySelector('.quiz-range').append(elem);
 }
 
+const eventCalllback = (e) => {
+  
+  var el = e.target,
+  clearVal = el.dataset.phoneClear,
+  pattern = el.dataset.phonePattern,
+  matrix_def = "+7 (___) ___-__-__",
+  matrix = pattern ? pattern : matrix_def,
+  i = 0,
+  def = matrix.replace(/\D/g, ""),
+  val = e.target.value.replace(/\D/g, "");
+  if (clearVal !== 'false' && e.type === 'blur') {
+      if (val.length < matrix.match(/([\_\d])/g).length) {
+          e.target.value = '';
+          return;
+      }
+  }
+  if (def.length >= val.length) val = def;
+  e.target.value = matrix.replace(/./g, function (a) {
+      return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a
+  });
+}
+
+
+var phone_inputs = document.querySelectorAll('[data-phone-pattern]');
+for (let elem of phone_inputs) {
+    for (let ev of ['input', 'blur', 'focus']) {
+        elem.addEventListener(ev, eventCalllback);
+    }
+}
+
 // квиз
 const quiz = () => {
-  const quizClients = new Swiper(".quiz-slider", {
+  quizClients = new Swiper(".quiz-slider", {
     slidesPerView: 1,
     centeredSlides: true,
     navigation: {
@@ -223,6 +272,10 @@ const quiz = () => {
       prevEl: '.clients-arrows-prev',
     },
     allowTouchMove: false,
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
   });
 
   quizClients.on('slideChange', () => {
@@ -308,27 +361,23 @@ const quiz = () => {
       });
 
       slides[indexSlideActive].querySelector('#agree-quiz').addEventListener('click', (e) => {
-        if (e.target.disabled) {
-          agree = false;
-        } else {
+        console.dir(e.target.checked);
+        if (e.target.checked) {
           agree = true;
+        } else {
+          agree = false;
         }
         submitForm();
       });
 
-      slides[indexSlideActive].querySelectorAll('.quiz-data > input').forEach((input, i, inputs) => {
-        input.addEventListener('input', () => {
+      const phone = slides[indexSlideActive].querySelector('input[type=phone]');
+      phone.addEventListener('input', () => {
+        if (phone.value.length == 18) {
           data = true;
-          for (let i = 0; i < inputs.length; i++) {
-            if (inputs[i].value && data) {
-              data = true;
-            } else {
-              data = false;
-              break;
-            }
-          }
-          submitForm();
-        });
+        } else {
+          data = false;
+        }
+        submitForm();
       });
 
       const submitForm = () => {
@@ -342,6 +391,11 @@ const quiz = () => {
   });
 }
 
+const btnCloseModalSuccess = document.querySelector('.modal__success .modal-close');
+btnCloseModalSuccess.addEventListener('click', () => {
+  modalClose('.modal__success');
+});
+
 // выпадающее меню
 const submenu = () => {
   const menu = document.querySelectorAll('.submenu');
@@ -353,20 +407,10 @@ const submenu = () => {
   });
 }
 
-const maskPhone = () => {
-  const element = document.querySelectorAll('.mask-phone');
-  const maskOptions = {
-      mask: '+7 (000) 000-00-00',
-      lazy: false
-  } 
-  element.forEach(item => {
-    let mask = new IMask(item, maskOptions);
-  })
-}
 
+heroSldier();
 tabs();
 modal();
 quiz();
 breadCrumbs();
 submenu();
-maskPhone();
