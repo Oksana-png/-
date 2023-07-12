@@ -266,6 +266,19 @@
       }
     }
   }
+  &:disabled {
+    cursor: auto;
+    opacity: 0.3;
+
+    &:hover {
+      color: $c-white;
+
+      &>.icon {
+        stroke: $c-white;
+        transform: translate(0);
+      }
+    }
+  }
 }
 
 .btn-primary-line {

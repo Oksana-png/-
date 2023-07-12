@@ -21,7 +21,6 @@ btnBurger.addEventListener('click', () => {
   btnBurger.classList.toggle('active');
   const menu = document.querySelector(".header-nav");
   const overlay = document.querySelector('.overlay');
-  console.log(overlay);
 
   if (btnBurger.classList.contains('active')) {
     menu.classList.add('header-nav-active');
@@ -269,7 +268,7 @@ const quiz = () => {
     centeredSlides: true,
     navigation: {
       nextEl: '.quiz-button-next',
-      prevEl: '.clients-arrows-prev',
+      prevEl: '.quiz-button-prev',
     },
     allowTouchMove: false,
     effect: 'fade',
@@ -280,6 +279,7 @@ const quiz = () => {
 
   quizClients.on('slideChange', () => {
     const indexSlideActive = quizClients.activeIndex;
+    const btnPrev = document.querySelector('#quiz-prev');
     const btnNext = document.querySelector('#quiz-next');
     const btnPass = document.querySelector('#quiz-pass');
     const btnFinish = document.querySelector('#quiz-finish');
@@ -289,10 +289,20 @@ const quiz = () => {
 
     if (indexSlideActive == 1) {
       btnNext.innerHTML = `Далее<svg class="icon icon-arrow"><use xlink:href="assets/image/svg/sprite.svg#next-arrow"></use></svg>`;
-      btnPass.style.display = 'inline-block';
-      btnNext.disabled = true;
+      btnPass.style.display = "inline-block";
+      btnPrev.style.display = "none";
 
       slides[indexSlideActive].querySelectorAll('input').forEach((input, i, inputs) => {
+        isChecked = false;
+        for (let i = 0; i < inputs.length; i++) {
+          if (inputs[i].checked) {
+            isChecked = true;
+            break;
+          }
+        }
+        btnNext.disabled = !isChecked;
+
+        
         input.addEventListener('change', (e) => {
           isChecked = false;
           for (let i = 0; i < inputs.length; i++) {
@@ -305,7 +315,18 @@ const quiz = () => {
         });
       });
     } else if (indexSlideActive == 2) {
+      btnPrev.style.display = "block";
+
       slides[indexSlideActive].querySelectorAll('input').forEach((input, i, inputs) => {
+        isChecked = false;
+        for (let i = 0; i < inputs.length; i++) {
+          if (inputs[i].checked) {
+            isChecked = true;
+            break;
+          }
+        }
+        btnNext.disabled = !isChecked;
+        
         input.addEventListener('change', (e) => {
           isChecked = false;
           for (let i = 0; i < inputs.length; i++) {
@@ -320,9 +341,15 @@ const quiz = () => {
     } else if (indexSlideActive == 3) {
       const input = slides[indexSlideActive].querySelector('input[type=range]');
       const rangeDatalist = document.querySelector('.quiz-range__datalist');
+      rangeDatalist.textContent = '';
       const arrSplit = splitRange(input.min, input.max);
       const btnAdd = document.querySelector('.btn-quiz-add');
       btnAdd.addEventListener('click', addRange);
+
+      btnPrev.style.display = "block";
+      btnPass.style.display = 'flex';
+      btnNext.style.display = 'flex';
+      btnFinish.style.display = 'none';
 
       arrSplit.forEach(item => {
         const elem = document.createElement('span');
@@ -345,6 +372,7 @@ const quiz = () => {
       btnPass.style.display = 'none';
       btnNext.style.display = 'none';
       btnFinish.style.display = 'flex';
+      btnPrev.style.display = "block";
       btnFinish.disabled = true;
 
       slides[indexSlideActive].querySelectorAll('input[type=checkbox][name=contact]').forEach((input, i, inputs) => {
@@ -407,6 +435,35 @@ const submenu = () => {
   });
 }
 
+const modalValid = (selector) => {
+  const phone = document.querySelector(`${selector} input[type=tel]`);
+  const agree = document.querySelector(`${selector} input[name=agree]`);
+  const btn = document.querySelector(`${selector} button[type=submit]`);
+  btn.disabled = true;
+
+  phone.addEventListener('input', () => {
+    if (phone.value.length == 18 && agree.checked) {
+      btn.disabled = false;
+    } else {
+      btn.disabled = true;
+    }
+  })
+  agree.addEventListener('change', () => {
+    if (phone.value.length == 18 && agree.checked) {
+      btn.disabled = false;
+    } else {
+      btn.disabled = true;
+    }
+  })
+}
+
+// валидация полей
+const modalValidate = () => {
+  modalValid('.modal__bell');
+  modalValid('.modal__form');
+  modalValid('.consultation-form');
+}
+
 
 heroSldier();
 tabs();
@@ -414,3 +471,4 @@ modal();
 quiz();
 breadCrumbs();
 submenu();
+modalValidate();

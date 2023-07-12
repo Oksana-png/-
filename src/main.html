@@ -953,7 +953,7 @@
             <form action="">
               <div class="wrap">
                 <input type="text" name="name" placeholder="Имя">
-                <input type="text" name="phone" placeholder="Телефон">
+                <input data-phone-pattern type="tel" name="phone" placeholder="Телефон">
                 <button type="submit" class="btn btn-flex btn-bg-primary">
                   Оставить заявку
                   <svg class="icon icon-arrow">
@@ -1077,7 +1077,7 @@
       </div>
       <form>
         <input name="name" type="text" placeholder="Ваше имя">
-        <input name="phone" type="tel" inputmode="tel" placeholder="Телефон">
+        <input data-phone-pattern  name="phone" type="tel" inputmode="tel" placeholder="Телефон">
         <textarea name="message" placeholder="Опишите ваши требования максимально подробно (необязательно). При необходимости можете прикрепить файл ниже"></textarea>
 
         <div class="i-agree__checkbox">
@@ -1376,6 +1376,11 @@
             </div>
           </div>
           <div class="quiz-footer">
+            <button class="btn btn-primary quiz-button-prev" id="quiz-prev">
+              <svg class="icon icon-arrow">
+                <use xlink:href="assets/image/svg/sprite.svg#next-arrow"></use>
+              </svg>
+            </button>
             <button id="quiz-pass" class="btn btn-primary btn-primary-line quiz-button-next">пропустить</button>
             <button id="quiz-next" class="btn btn-flex btn-bg-primary quiz-button-next">
               начать
