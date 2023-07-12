@@ -26,10 +26,12 @@
     padding: 60px;
     transform: translate(-52%, -50%);
     transition: all .3s ease-in-out;
-    max-width: 696px;
+    width: 100%;
+    max-width: 696px;;
     @include tablet {
       border-radius: 0;
       margin-top: 0;
+      width: 100%;
       max-width: 100%;
     }
     @include phone {

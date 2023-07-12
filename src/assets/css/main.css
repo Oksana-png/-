@@ -2594,12 +2594,14 @@ label {
   padding: 60px;
   transform: translate(-52%, -50%);
   transition: all 0.3s ease-in-out;
+  width: 100%;
   max-width: 696px;
 }
 @media (max-width: 730px) {
   .modal__body {
     border-radius: 0;
     margin-top: 0;
+    width: 100%;
     max-width: 100%;
   }
 }
